@@ -22,6 +22,11 @@
       "map": "MAP_LITTLEROOT_TOWN",
       "offset": 9,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE104",
+      "offset": -16,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -144,7 +149,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 5,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
