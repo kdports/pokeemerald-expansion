@@ -1319,6 +1319,8 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
 	if (gTasks[taskId].tTimer)
 	{
 		gTasks[taskId].tTimer--;
+		gTasks[taskId].tTimer--;
+		gTasks[taskId].tTimer--;
 	}
 	else
 	{

@@ -17,12 +17,13 @@ gText_Birch_MainSpeech::
 	.string "$"
 
 gText_Birch_AndYouAre::
-	.string "Grr...$"
+	.string "Grr... this sucks.\p"
+	.string "I'm gonna give them a piece\n"
+	.string "of my mind when we get there!$"
 
 gText_Birch_BoyOrGirl::
-	.string "It's so dark!\n"
-	.string "Do you look like...\p"
-	.string "Or, wait, do you look more like...$"
+	.string "Hey, I can barely see you.\p"
+	.string "Describe how you look.$"
 
 gText_Birch_WhatsYourName::
 	.string "Hey, what's your name?$"
@@ -35,6 +36,5 @@ gText_Birch_YourePlayer::
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "We've gotta be getting there soon.\n"
-	.string "This sucks!\p"
+	.string "We've gotta be getting there soon.\p"
 	.string "$"
