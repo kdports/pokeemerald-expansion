@@ -36,5 +36,8 @@ gText_Birch_YourePlayer::
 	.string "$"
 
 gText_Birch_AreYouReady::
+	.string "{PLAYER}{KUN}? I'm Emerson.\n"
+	.string "Good luck on the climb.\p"
+	.string "I'm gonna try and nap for a bit.\n"
 	.string "We've gotta be getting there soon.\p"
 	.string "$"
