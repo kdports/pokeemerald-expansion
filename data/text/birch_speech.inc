@@ -26,7 +26,7 @@ gText_Birch_BoyOrGirl::
 	.string "Describe how you look.$"
 
 gText_Birch_WhatsYourName::
-	.string "Hey, what's your name?$"
+	.string "And what's your name?$"
 
 gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
