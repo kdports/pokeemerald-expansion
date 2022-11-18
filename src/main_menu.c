@@ -1283,7 +1283,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     AddBirchSpeechObjects(taskId);
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     gTasks[taskId].tBG1HOFS = 0;
-    gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
+    gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome; //Task_NewGameBirchSpeech_WaitToShowBirch;
     gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
     gTasks[taskId].data[3] = 0xFF;
     gTasks[taskId].tTimer = 0xD8;
@@ -1316,27 +1316,23 @@ static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
 
 static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
 {
-    if (gTasks[taskId].tIsDoneFadingSprites)
-    {
-        gSprites[gTasks[taskId].tBirchSpriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
-        if (gTasks[taskId].tTimer)
-        {
-            gTasks[taskId].tTimer--;
-        }
-        else
-        {
-            InitWindows(sNewGameBirchSpeechTextWindows);
-            LoadMainMenuWindowFrameTiles(0, 0xF3);
-            LoadMessageBoxGfx(0, 0xFC, 0xF0);
-            NewGameBirchSpeech_ShowDialogueWindow(0, 1);
-            PutWindowTilemap(0);
-            CopyWindowToVram(0, COPYWIN_GFX);
-            NewGameBirchSpeech_ClearWindow(0);
-            StringExpandPlaceholders(gStringVar4, gText_Birch_Welcome);
-            AddTextPrinterForMessage(TRUE);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_ThisIsAPokemon;
-        }
-    }
+	if (gTasks[taskId].tTimer)
+	{
+		gTasks[taskId].tTimer--;
+	}
+	else
+	{
+		InitWindows(sNewGameBirchSpeechTextWindows);
+		LoadMainMenuWindowFrameTiles(0, 0xF3);
+		LoadMessageBoxGfx(0, 0xFC, 0xF0);
+		NewGameBirchSpeech_ShowDialogueWindow(0, 1);
+		PutWindowTilemap(0);
+		CopyWindowToVram(0, COPYWIN_GFX);
+		NewGameBirchSpeech_ClearWindow(0);
+		StringExpandPlaceholders(gStringVar4, gText_Birch_Welcome);
+		AddTextPrinterForMessage(TRUE);
+		gTasks[taskId].func = Task_NewGameBirchSpeech_MainSpeech;
+	}
 }
 
 static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8 taskId)
