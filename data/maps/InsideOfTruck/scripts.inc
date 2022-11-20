@@ -18,7 +18,9 @@ InsideOfTruck_OnResume:
 
 InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-	setdynamicwarp MAP_LITTLEROOT_TOWN, 8, 3
+	setdynamicwarp MAP_LITTLEROOT_TOWN, 12, 29
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD
 	goto InsideOfTruck_EventScript_DoorOpen
 	end
 

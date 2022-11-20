@@ -1,12 +1,55 @@
 LittlerootTown_EventScript_StepOffTruckMale::
-	releaseall
+	delay 15
+	playse SE_LEDGE
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
+	waitmovement 0
+	delay 15
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_ApproachEmerson
+	waitmovement 0
+	msgbox LittlerootTown_EmersonComplains, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LEADERF, LittlerootTown_LeaderFIntervenes
+	waitmovement 0
+	msgbox LittlerootTown_LeaderFSpeaks, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LEADERF, LittlerootTown_LeaderFReturns
+	waitmovement 0
+	msgbox LittlerootTown_LeaderMAgrees, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_JoinCrowd
+	applymovement LOCALID_EMERSON, LittlerootTown_JoinCrowd
+	waitmovement 0
 	end
 
+
+LittlerootTown_JoinCrowd:
+	walk_right
+	face_up
+	step_end
+
+LittlerootTown_ApproachEmerson:
+	face_up
+	walk_up
+	walk_up
+	step_end
+
+LittlerootTown_LeaderFIntervenes:
+	walk_left
+	walk_down
+	step_end
+
+LittlerootTown_LeaderFReturns:
+	walk_right
+	walk_up
+	face_down
+	step_end
 
 .set LOCALID_TWIN, 1
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
-.set LOCALID_BIRCH, 8
+.set LOCALID_LEADERF, 14
+.set LOCALID_LEADERM, 15
+.set LOCALID_EMERSON, 25
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
@@ -96,7 +139,6 @@ LittlerootTown_EventScript_SetTwinGuardingRoutePos::
 	return
 
 LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_DOWN
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetMomInFrontOfDoorMale
@@ -149,7 +191,6 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	applymovement LOCALID_MOM, LittlerootTown_Movement_MomEnterHouse
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
 	waitmovement 0
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	hideobjectat OBJ_EVENT_ID_PLAYER, 0
 	closedoor VAR_0x8004, VAR_0x8005
@@ -1008,3 +1049,23 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
+
+LittlerootTown_EmersonComplains::
+	.string "EMERSON: Just who do you think you\n"
+	.string "are?! Who do you think we are? We're\l"
+	.string "climbers! You can't just throw us\l"
+	.string "around like that!\p"
+	.string "ATTENDANT: Please join the rest of the\n"
+	.string "crowd.\p"
+	.string "EMERSON: Don't order me around like\n"
+	.string "that!$"
+
+LittlerootTown_LeaderFSpeaks::
+	.string "NATASHA: Don't bother the attendants.\n"
+	.string "And pay attention, unless you want to\l"
+	.string "be disqualified before receiving your\l"
+	.string "first POKéMON.\p"
+	.string "EMERSON: Urp!$"
+
+LittlerootTown_LeaderMAgrees::
+	.string "MATTHEW: What she said.$"
