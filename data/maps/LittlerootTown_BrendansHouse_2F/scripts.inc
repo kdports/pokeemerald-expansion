@@ -1,3 +1,15 @@
+LittlerootTown_BrendansHouse_2F_EventScript_EmersonTalk::
+	msgbox LittlerootTown_EmersonGetsStarter, MSGBOX_DEFAULT
+	closemessage
+	return
+
+
+LittlerootTown_BrendansHouse_2F_EventScript_HopeTalk::
+	msgbox LittlerootTown_HopeGetsStarter, MSGBOX_DEFAULT
+	closemessage
+	return
+
+
 .set LOCALID_RIVAL, 1
 
 LittlerootTown_BrendansHouse_2F_MapScripts::
@@ -8,7 +20,7 @@ LittlerootTown_BrendansHouse_2F_MapScripts::
 LittlerootTown_BrendansHouse_2F_OnTransition:
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
@@ -302,3 +314,14 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+LittlerootTown_EmersonGetsStarter::
+	.string "EMERSON: Alright Poliwhirl, let's do\n"
+	.string "this!\p"
+	.string "We're going all the way to the top.$"
+
+LittlerootTown_HopeGetsStarter::
+	.string "HOPE: You can come out from under the\n"
+	.string "table Ralts.\p"
+	.string "I know it's scary, but I promise I'm not\n"
+	.string "mean!$"

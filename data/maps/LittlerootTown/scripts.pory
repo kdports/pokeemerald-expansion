@@ -1,5 +1,4 @@
 script LittlerootTown_EventScript_StepOffTruckMale {
-	delay(15)
 	playse(SE_LEDGE)
 	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck)
 	waitmovement(0)
@@ -19,6 +18,7 @@ script LittlerootTown_EventScript_StepOffTruckMale {
 	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_JoinCrowd)
 	applymovement(LOCALID_EMERSON, LittlerootTown_JoinCrowd)
 	waitmovement(0)
+	setvar(VAR_LITTLEROOT_INTRO_STATE, 3)
 	//setflag(FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD)
 	end
 }
@@ -32,7 +32,7 @@ text LittlerootTown_LeaderFSpeaks {
 }
 
 text LittlerootTown_LeaderMAgrees {
-    format("MATTHEW: What she said.")
+    format("MATTHEW: Uh, what she said.")
 }
 
 movement LittlerootTown_JoinCrowd {
@@ -42,7 +42,7 @@ movement LittlerootTown_JoinCrowd {
 
 movement LittlerootTown_ApproachEmerson {
 	face_up
-	walk_up * 2
+	walk_up
 }
 
 movement LittlerootTown_LeaderFIntervenes {
@@ -60,9 +60,9 @@ raw `
 .set LOCALID_TWIN, 1
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
-.set LOCALID_LEADERF, 14
-.set LOCALID_LEADERM, 15
-.set LOCALID_EMERSON, 25
+.set LOCALID_LEADERF, 7
+.set LOCALID_LEADERM, 8
+.set LOCALID_EMERSON, 12
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition

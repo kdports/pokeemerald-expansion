@@ -1,3 +1,23 @@
+//	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+
+script LittlerootTown_BrendansHouse_2F_EventScript_EmersonTalk {
+    msgbox(LittlerootTown_EmersonGetsStarter, MSGBOX_DEFAULT)
+	closemessage
+}
+
+text LittlerootTown_EmersonGetsStarter {
+    format("EMERSON: Alright Poliwhirl, let's do this!\pWe're going all the way to the top.")
+}
+
+script LittlerootTown_BrendansHouse_2F_EventScript_HopeTalk {
+    msgbox(LittlerootTown_HopeGetsStarter, MSGBOX_DEFAULT)
+	closemessage
+}
+
+text LittlerootTown_HopeGetsStarter {
+    format("HOPE: You can come out from under the table Ralts.\pI know it's scary, but I promise I'm not mean!")
+}
+
 raw `
 .set LOCALID_RIVAL, 1
 
@@ -9,7 +29,7 @@ LittlerootTown_BrendansHouse_2F_MapScripts::
 LittlerootTown_BrendansHouse_2F_OnTransition:
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end

@@ -1,5 +1,4 @@
 LittlerootTown_EventScript_StepOffTruckMale::
-	delay 15
 	playse SE_LEDGE
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
 	waitmovement 0
@@ -19,6 +18,7 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_JoinCrowd
 	applymovement LOCALID_EMERSON, LittlerootTown_JoinCrowd
 	waitmovement 0
+	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	end
 
 
@@ -29,7 +29,6 @@ LittlerootTown_JoinCrowd:
 
 LittlerootTown_ApproachEmerson:
 	face_up
-	walk_up
 	walk_up
 	step_end
 
@@ -47,9 +46,9 @@ LittlerootTown_LeaderFReturns:
 .set LOCALID_TWIN, 1
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
-.set LOCALID_LEADERF, 14
-.set LOCALID_LEADERM, 15
-.set LOCALID_EMERSON, 25
+.set LOCALID_LEADERF, 7
+.set LOCALID_LEADERM, 8
+.set LOCALID_EMERSON, 12
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
@@ -1068,4 +1067,4 @@ LittlerootTown_LeaderFSpeaks::
 	.string "EMERSON: Urp!$"
 
 LittlerootTown_LeaderMAgrees::
-	.string "MATTHEW: What she said.$"
+	.string "MATTHEW: Uh, what she said.$"
