@@ -33,6 +33,8 @@
 #define BOX3_X_OFFSET -3
 #define BOX3_Y_OFFSET  0
 
+extern const u8 InsideOfTruck_EventScript_DoorOpen[];
+
 // porthole states
 enum
 {
@@ -275,7 +277,9 @@ void EndTruckSequence(u8 taskId)
         SetObjectEventSpritePosByLocalIdAndMap(LOCALID_TRUCK_BOX_TOP,      gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, BOX1_X_OFFSET, BOX1_Y_OFFSET);
         SetObjectEventSpritePosByLocalIdAndMap(LOCALID_TRUCK_BOX_BOTTOM_L, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, BOX2_X_OFFSET, BOX2_Y_OFFSET);
         SetObjectEventSpritePosByLocalIdAndMap(LOCALID_TRUCK_BOX_BOTTOM_R, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, BOX3_X_OFFSET, BOX3_Y_OFFSET);
-    }
+		//RunOnReturnToFieldMapScript();
+		//RunScriptImmediately(InsideOfTruck_EventScript_DoorOpen);
+	}
 }
 
 bool8 TrySetPortholeWarpDestination(void)

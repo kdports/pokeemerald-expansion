@@ -1,6 +1,9 @@
+.set LOCALID_EMERSON, 4
+
 InsideOfTruck_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, InsideOfTruck_OnLoad
 	map_script MAP_SCRIPT_ON_RESUME, InsideOfTruck_OnResume
+	//map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, InsideOfTruck_EventScript_DoorOpen
 	.byte 0
 
 InsideOfTruck_OnLoad:
@@ -14,11 +17,9 @@ InsideOfTruck_OnResume:
 	end
 
 InsideOfTruck_EventScript_SetIntroFlags::
-	lockall
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_SetIntroFlagsMale
-	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_SetIntroFlagsMale
+	setdynamicwarp MAP_LITTLEROOT_TOWN, 8, 3
+	goto InsideOfTruck_EventScript_DoorOpen
 	end
 
 InsideOfTruck_EventScript_SetIntroFlagsMale::
@@ -55,3 +56,23 @@ InsideOfTruck_Text_BoxPrintedWithMonLogo:
 	.string "TODO\p"
 	.string "It's a POKéMON brand moving and\n"
 	.string "delivery service.$"
+
+InsideOfTruck_EventScript_DoorOpen::
+	msgbox InsideOfTruck_DoorOpenSpeak, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_EMERSON, EmersonLeave
+	waitmovement 0
+	hideobjectat LOCALID_EMERSON, MAP_INSIDE_OF_TRUCK
+	setvar VAR_TEMP_0, 1
+	end
+
+
+EmersonLeave:
+	walk_down
+	face_right
+	jump_right
+	step_end
+
+InsideOfTruck_DoorOpenSpeak::
+	.string "EMERSON: Finally! Catch you around, I'm\n"
+	.string "outta here!$"
