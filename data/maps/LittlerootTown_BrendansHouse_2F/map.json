@@ -5,7 +5,7 @@
   "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
-  "weather": "WEATHER_FOG_DIAGONAL",
+  "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
@@ -65,7 +65,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var_value": "3",
+      "script": "LittlerootTown_BrendansHouse_2F_EventScript_BlockBackroom"
+    }
   ],
   "bg_events": [
 

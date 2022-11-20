@@ -1,3 +1,52 @@
+LittlerootTown_MaysHouse_2F_StarterScene::
+	msgbox LittlerootTown_RoofScary, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_WalkAwayFromShadow
+	waitmovement 0
+	delay 15
+	playmoncry SPECIES_EEVEE, 2
+	delay 40
+	waitmoncry
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_MaysHouse_2F_FaceRight
+	waitmovement 0
+	msgbox LittlerootTown_GetEevee, MSGBOX_DEFAULT
+	closemessage
+	givemon SPECIES_EEVEE, 5
+	delay 20
+	msgbox LittlerootTown_StartBattleText, MSGBOX_DEFAULT
+	closemessage
+	setwildbattle SPECIES_GRIMER, 5
+	dowildbattle
+	hideobjectat LOCALID_RIVAL, MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F
+	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+	msgbox LittlerootTown_MaysHouse_2F_StarterScene_Text_0
+	closemessage
+	msgbox LittlerootTown_MaysHouse_2F_StarterScene_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq LittlerootTown_MaysHouse_2F_StarterScene_1
+	return
+
+LittlerootTown_MaysHouse_2F_StarterScene_1:
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	return
+
+
+LittlerootTown_MaysHouse_2F_WalkAwayFromShadow:
+	walk_left
+	walk_left
+	step_end
+
+LittlerootTown_MaysHouse_2F_FaceRight:
+	face_right
+	step_end
+
+LittlerootTown_MaysHouse_2F_Box::
+	msgbox LittlerootTown_MaysHouse_2F_Box_Text_0
+	closemessage
+	return
+
+
 .set LOCALID_RIVAL, 1
 
 LittlerootTown_MaysHouse_2F_MapScripts::
@@ -6,9 +55,6 @@ LittlerootTown_MaysHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_MaysHouse_2F_OnTransition:
-	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay
-	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
@@ -397,3 +443,25 @@ RivalsHouse_2F_Text_BrendanWhereShouldIGoNext:
 	.string "Hey, {PLAYER}, if I see you while I'm out\n"
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
+
+LittlerootTown_MaysHouse_2F_StarterScene_Text_0:
+	.string "Eevee seems relieved, and snuggles into\n"
+	.string "your Pokéball.$"
+
+LittlerootTown_MaysHouse_2F_StarterScene_Text_1:
+	.string "Give it a nickname?$"
+
+LittlerootTown_MaysHouse_2F_Box_Text_0:
+	.string "It's an odd box, but nothing is inside.$"
+
+LittlerootTown_RoofScary::
+	.string "You feel an ominous presence above\n"
+	.string "you...\p"
+	.string "Maybe this isn't a good idea.$"
+
+LittlerootTown_GetEevee::
+	.string "An Eevee jumped into your arms!\p"
+	.string "It's quivering with fear.$"
+
+LittlerootTown_StartBattleText::
+	.string "Something fell from the ceiling!$"

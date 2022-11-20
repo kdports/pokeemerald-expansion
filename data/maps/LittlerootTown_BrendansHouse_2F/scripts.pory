@@ -1,4 +1,21 @@
 //	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+//	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
+//	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
+
+script LittlerootTown_BrendansHouse_2F_EventScript_BlockBackroom {
+    msgbox(LittlerootTown_BackroomScary, MSGBOX_DEFAULT)
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_DontEnterRoom)
+	waitmovement(0)
+}
+
+movement LittlerootTown_BrendansHouse_2F_DontEnterRoom {
+	walk_down
+}
+
+text LittlerootTown_BackroomScary {
+    format("Sounds of a fierce battle emanate from the back. It may be best not to go there yet...")
+}
 
 script LittlerootTown_BrendansHouse_2F_EventScript_EmersonTalk {
     msgbox(LittlerootTown_EmersonGetsStarter, MSGBOX_DEFAULT)

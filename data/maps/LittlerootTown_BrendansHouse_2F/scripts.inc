@@ -1,3 +1,15 @@
+LittlerootTown_BrendansHouse_2F_EventScript_BlockBackroom::
+	msgbox LittlerootTown_BackroomScary, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_DontEnterRoom
+	waitmovement 0
+	return
+
+
+LittlerootTown_BrendansHouse_2F_DontEnterRoom:
+	walk_down
+	step_end
+
 LittlerootTown_BrendansHouse_2F_EventScript_EmersonTalk::
 	msgbox LittlerootTown_EmersonGetsStarter, MSGBOX_DEFAULT
 	closemessage
@@ -314,6 +326,11 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+LittlerootTown_BackroomScary::
+	.string "Sounds of a fierce battle emanate from\n"
+	.string "the back. It may be best not to go\l"
+	.string "there yet...$"
 
 LittlerootTown_EmersonGetsStarter::
 	.string "EMERSON: Alright Poliwhirl, let's do\n"
