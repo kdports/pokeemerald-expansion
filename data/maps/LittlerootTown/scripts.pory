@@ -18,21 +18,46 @@ script LittlerootTown_EventScript_StepOffTruckMale {
 	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_JoinCrowd)
 	applymovement(LOCALID_EMERSON, LittlerootTown_JoinCrowd)
 	waitmovement(0)
+	msgbox(LittlerootTown_PreHouseTalk)
+	closemessage
 	setvar(VAR_LITTLEROOT_INTRO_STATE, 3)
-	//setflag(FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD)
+	fadescreen(FADE_TO_BLACK)
+	setobjectxy(LOCALID_LEADERF, 7, 22)
+	setobjectxy(LOCALID_LEADERM, 9, 21)
+	setobjectxy(OBJ_EVENT_ID_PLAYER, 4, 10)
+	applymovement(LOCALID_LEADERF, LittlerootTown_FaceRight)
+	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_ApproachLeaderF)
+	waitmovement(0)
+    msgbox(format("NATASHA: You're the last one to go in. Nervous?\pMATTHEW: Here's your Pokéball. Good luck!"))
+	closemessage
+	warp(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 7, 10)
+	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_FaceUp)
+	waitmovement(0)
+	setflag(FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD)
+	setflag(FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT)
 	end
 }
 
+	//fadescreen(FADE_FROM_BLACK)
+
 text LittlerootTown_EmersonComplains {
-    format("EMERSON: Just who do you think you are?! Who do you think we are? We're climbers! You can't just throw us around like that!\pATTENDANT: Please join the rest of the crowd.\pEMERSON: Don't order me around like that!")
+    format("EMERSON: Just who do you think you are?! Who do you think we are? We're climbers! You can't just throw us around like that!\pATTENDANT: Please join the rest of the crowd.\pEMERSON: Don't order me around!")
+}
+
+text LittlerootTown_PreHouseTalk {
+	format("MATTHEW: Alright, eyes up here please.\pNATASHA: This is the first part of your climb. If you fail here you'll be quickly disqualified. Sorry, but we don't make the rules.\pMATTHEW: Right. Also, don't think that this will be easy just because it's the first camp.\pNATASHA: You need to defeat both of us before moving on.\pMATTHEW: We won't give you the Pokémon to do that.\pEMERSON: Wait, then how-\pNATASHA: Pay attention!\nBehind us is an abandoned home. We've released a variety of Pokémon inside.\pMATTHEW: Convince one of those Pokémon to ascend the mountain with you. If you fail at that...\pNATASHA: Then your climb will end here.")
 }
 
 text LittlerootTown_LeaderFSpeaks {
-    format("NATASHA: Don't bother the attendants. And pay attention, unless you want to be disqualified before receiving your first POKéMON.\pEMERSON: Urp!")
+    format("NATASHA: Don't bother the attendants. And pay attention, unless you want to be disqualified before receiving your first Pokémon.\pEMERSON: Urp!")
 }
 
 text LittlerootTown_LeaderMAgrees {
     format("MATTHEW: Uh, what she said.")
+}
+
+movement LittlerootTown_FaceRight {
+	face_right
 }
 
 movement LittlerootTown_JoinCrowd {
@@ -40,9 +65,18 @@ movement LittlerootTown_JoinCrowd {
 	face_up
 }
 
+movement LittlerootTown_ApproachLeaderF {
+	face_left
+	walk_left * 2
+}
+
 movement LittlerootTown_ApproachEmerson {
 	face_up
 	walk_up
+}
+
+movement LittlerootTown_FaceUp {
+	face_up
 }
 
 movement LittlerootTown_LeaderFIntervenes {

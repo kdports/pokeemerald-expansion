@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_INTRO"
     }
   ],
   "warp_events": [
@@ -34,7 +34,7 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

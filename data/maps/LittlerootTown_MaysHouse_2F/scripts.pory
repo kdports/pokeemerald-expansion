@@ -2,6 +2,8 @@
 //	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
 //	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 
+// TODO: Have a flag for people in bottom floor to hide them, set up new versions near top door and have a flag there
+
 script LittlerootTown_MaysHouse_2F_StarterScene {
     msgbox(LittlerootTown_RoofScary, MSGBOX_DEFAULT)
 	closemessage
@@ -15,25 +17,37 @@ script LittlerootTown_MaysHouse_2F_StarterScene {
 	waitmovement(0)
     msgbox(LittlerootTown_GetEevee, MSGBOX_DEFAULT)
 	closemessage
-	givemon(SPECIES_EEVEE, 5)
+	givemon(SPECIES_EEVEE, 5, ITEM_ORAN_BERRY)
 	delay(20)
     msgbox(LittlerootTown_StartBattleText, MSGBOX_DEFAULT)
 	closemessage
-    setwildbattle(SPECIES_GRIMER, 5)
+    setwildbattle(SPECIES_GRIMER, 5, ITEM_NONE)
     dowildbattle
 	hideobjectat(LOCALID_RIVAL, MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F)
-	setvar(VAR_LITTLEROOT_INTRO_STATE, 2)
-	msgbox(format("Eevee seems relieved, and snuggles into your Pokéball."))
+	setvar(VAR_LITTLEROOT_INTRO_STATE, 4)
+	msgbox(LittlerootTown_MaysHouse_2F_EeveeMeet)
 	closemessage
     msgbox("Give it a nickname?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
         call(Common_EventScript_GetGiftMonPartySlot)
         call(Common_EventScript_NameReceivedPartyMon)
     }
+	waitmessage
+	special(HealPlayerParty)
+	setflag(FLAG_SYS_POKEMON_GET)
+	clearflag(FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT)
+	releaseall
+	end
 }
+
+//	hideobjectat(6, MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F)
 
 text LittlerootTown_RoofScary {
     format("You feel an ominous presence above you...\pMaybe this isn't a good idea.")
+}
+
+text LittlerootTown_MaysHouse_2F_EeveeMeet {
+	format("Eevee seems relieved, and snuggles into your Pokéball.")
 }
 
 text LittlerootTown_GetEevee {

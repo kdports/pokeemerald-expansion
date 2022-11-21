@@ -18,18 +18,48 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_JoinCrowd
 	applymovement LOCALID_EMERSON, LittlerootTown_JoinCrowd
 	waitmovement 0
+	msgbox LittlerootTown_PreHouseTalk
+	closemessage
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
+	fadescreen FADE_TO_BLACK
+	setobjectxy LOCALID_LEADERF, 7, 22
+	setobjectxy LOCALID_LEADERM, 9, 21
+	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 10
+	applymovement LOCALID_LEADERF, LittlerootTown_FaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_ApproachLeaderF
+	waitmovement 0
+	msgbox LittlerootTown_EventScript_StepOffTruckMale_Text_0
+	closemessage
+	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 7, 10
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_FaceUp
+	waitmovement 0
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT
 	end
 
+
+LittlerootTown_FaceRight:
+	face_right
+	step_end
 
 LittlerootTown_JoinCrowd:
 	walk_right
 	face_up
 	step_end
 
+LittlerootTown_ApproachLeaderF:
+	face_left
+	walk_left
+	walk_left
+	step_end
+
 LittlerootTown_ApproachEmerson:
 	face_up
 	walk_up
+	step_end
+
+LittlerootTown_FaceUp:
+	face_up
 	step_end
 
 LittlerootTown_LeaderFIntervenes:
@@ -1049,6 +1079,12 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+LittlerootTown_EventScript_StepOffTruckMale_Text_0:
+	.string "NATASHA: You're the last one to go in.\n"
+	.string "Nervous?\p"
+	.string "MATTHEW: Here's your Pokéball. Good\n"
+	.string "luck!$"
+
 LittlerootTown_EmersonComplains::
 	.string "EMERSON: Just who do you think you\n"
 	.string "are?! Who do you think we are? We're\l"
@@ -1056,14 +1092,35 @@ LittlerootTown_EmersonComplains::
 	.string "around like that!\p"
 	.string "ATTENDANT: Please join the rest of the\n"
 	.string "crowd.\p"
-	.string "EMERSON: Don't order me around like\n"
-	.string "that!$"
+	.string "EMERSON: Don't order me around!$"
+
+LittlerootTown_PreHouseTalk::
+	.string "MATTHEW: Alright, eyes up here please.\p"
+	.string "NATASHA: This is the first part of your\n"
+	.string "climb. If you fail here you'll be quickly\l"
+	.string "disqualified. Sorry, but we don't make\l"
+	.string "the rules.\p"
+	.string "MATTHEW: Right. Also, don't think that\n"
+	.string "this will be easy just because it's the\l"
+	.string "first camp.\p"
+	.string "NATASHA: You need to defeat both of us\n"
+	.string "before moving on.\p"
+	.string "MATTHEW: We won't give you the Pokémon\n"
+	.string "to do that.\p"
+	.string "EMERSON: Wait, then how-\p"
+	.string "NATASHA: Pay attention!\n"
+	.string "Behind us is an abandoned home. We've\l"
+	.string "released a variety of Pokémon inside.\p"
+	.string "MATTHEW: Convince one of those\n"
+	.string "Pokémon to ascend the mountain with\l"
+	.string "you. If you fail at that...\p"
+	.string "NATASHA: Then your climb will end here.$"
 
 LittlerootTown_LeaderFSpeaks::
 	.string "NATASHA: Don't bother the attendants.\n"
 	.string "And pay attention, unless you want to\l"
 	.string "be disqualified before receiving your\l"
-	.string "first POKéMON.\p"
+	.string "first Pokémon.\p"
 	.string "EMERSON: Urp!$"
 
 LittlerootTown_LeaderMAgrees::

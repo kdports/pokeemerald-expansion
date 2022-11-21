@@ -11,25 +11,31 @@ LittlerootTown_MaysHouse_2F_StarterScene::
 	waitmovement 0
 	msgbox LittlerootTown_GetEevee, MSGBOX_DEFAULT
 	closemessage
-	givemon SPECIES_EEVEE, 5
+	givemon SPECIES_EEVEE, 5, ITEM_ORAN_BERRY
 	delay 20
 	msgbox LittlerootTown_StartBattleText, MSGBOX_DEFAULT
 	closemessage
-	setwildbattle SPECIES_GRIMER, 5
+	setwildbattle SPECIES_GRIMER, 5, ITEM_NONE
 	dowildbattle
 	hideobjectat LOCALID_RIVAL, MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F
-	setvar VAR_LITTLEROOT_INTRO_STATE, 2
-	msgbox LittlerootTown_MaysHouse_2F_StarterScene_Text_0
+	setvar VAR_LITTLEROOT_INTRO_STATE, 4
+	msgbox LittlerootTown_MaysHouse_2F_EeveeMeet
 	closemessage
-	msgbox LittlerootTown_MaysHouse_2F_StarterScene_Text_1, MSGBOX_YESNO
+	msgbox LittlerootTown_MaysHouse_2F_StarterScene_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq LittlerootTown_MaysHouse_2F_StarterScene_1
-	return
-
+	goto_if_eq LittlerootTown_MaysHouse_2F_StarterScene_2
 LittlerootTown_MaysHouse_2F_StarterScene_1:
+	waitmessage
+	special HealPlayerParty
+	setflag FLAG_SYS_POKEMON_GET
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT
+	releaseall
+	end
+
+LittlerootTown_MaysHouse_2F_StarterScene_2:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	return
+	goto LittlerootTown_MaysHouse_2F_StarterScene_1
 
 
 LittlerootTown_MaysHouse_2F_WalkAwayFromShadow:
@@ -445,10 +451,6 @@ RivalsHouse_2F_Text_BrendanWhereShouldIGoNext:
 	.string "battle if you'd like.$"
 
 LittlerootTown_MaysHouse_2F_StarterScene_Text_0:
-	.string "Eevee seems relieved, and snuggles into\n"
-	.string "your Pokéball.$"
-
-LittlerootTown_MaysHouse_2F_StarterScene_Text_1:
 	.string "Give it a nickname?$"
 
 LittlerootTown_MaysHouse_2F_Box_Text_0:
@@ -458,6 +460,10 @@ LittlerootTown_RoofScary::
 	.string "You feel an ominous presence above\n"
 	.string "you...\p"
 	.string "Maybe this isn't a good idea.$"
+
+LittlerootTown_MaysHouse_2F_EeveeMeet::
+	.string "Eevee seems relieved, and snuggles into\n"
+	.string "your Pokéball.$"
 
 LittlerootTown_GetEevee::
 	.string "An Eevee jumped into your arms!\p"

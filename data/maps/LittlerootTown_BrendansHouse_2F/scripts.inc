@@ -22,7 +22,159 @@ LittlerootTown_BrendansHouse_2F_EventScript_HopeTalk::
 	return
 
 
-.set LOCALID_RIVAL, 1
+LittlerootTown_BrendansHouse_2F_EventScript_DontLeave::
+	msgbox LittlerootTown_BrendansHouse_2F_EventScript_DontLeave_Text_0
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_GoUp
+	waitmovement 0
+	return
+
+
+LittlerootTown_BrendansHouse_2F_GoUp:
+	walk_up
+	step_end
+
+LittlerootTown_BrendansHouse_2F_EventScript_TTileLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_PlayerViewFight
+	goto LittlerootTown_BrendansHouse_2F_EventScript_HouseFight
+	return
+
+
+LittlerootTown_BrendansHouse_2F_EventScript_TTileBottom::
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_PlayerViewFight2
+	goto LittlerootTown_BrendansHouse_2F_EventScript_HouseFight
+	return
+
+
+LittlerootTown_BrendansHouse_2F_EventScript_TTileRight::
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_PlayerViewFight3
+	goto LittlerootTown_BrendansHouse_2F_EventScript_HouseFight
+	return
+
+
+LittlerootTown_BrendansHouse_2F_EventScript_HouseFight::
+	playmoncry SPECIES_HONEDGE, 2
+	delay 40
+	waitmoncry
+	applymovement LOCALID_HOPE, LittlerootTown_BrendansHouse_2F_HopeViewFight
+	waitmovement 0
+	applymovement 6, LittlerootTown_BrendansHouse_2F_EmersonViewFight
+	waitmovement 0
+	playmoncry SPECIES_HONEDGE, 2
+	delay 40
+	waitmoncry
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_JaceRetreat
+	waitmovement 0
+	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_0
+	closemessage
+	applymovement LOCALID_SADIE, LittlerootTown_BrendansHouse_2F_SadieMovePast
+	waitmovement 0
+	delay 40
+	applymovement 6, LittlerootTown_BrendansHouse_2F_EmersonBackUp
+	waitmovement 0
+	applymovement LOCALID_SADIE, LittlerootTown_BrendansHouse_2F_SadieMovePast2
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_FaceDown
+	waitmovement 0
+	applymovement 6, LittlerootTown_BrendansHouse_2F_FaceDown
+	waitmovement 0
+	applymovement LOCALID_HOPE, LittlerootTown_BrendansHouse_2F_FaceDown
+	waitmovement 0
+	applymovement LOCALID_NATASHA, LittlerootTown_BrendansHouse_2F_LeadersApproach
+	applymovement LOCALID_MATTHEW, LittlerootTown_BrendansHouse_2F_LeadersApproach
+	waitmovement 0
+	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1
+	closemessage
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_JaceMoveUp
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_SadieMovePast2
+	waitmovement 0
+	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_2
+	closemessage
+	fadescreen FADE_TO_BLACK
+	warp MAP_LITTLEROOT_TOWN, 8, 21
+	waitstate
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_INTRO
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT
+	setvar VAR_LITTLEROOT_INTRO_STATE, 5
+	return
+
+
+LittlerootTown_BrendansHouse_2F_PlayerViewFight:
+	walk_left
+	face_left
+	step_end
+
+LittlerootTown_BrendansHouse_2F_PlayerViewFight2:
+	walk_left
+	walk_up
+	face_left
+	step_end
+
+LittlerootTown_BrendansHouse_2F_PlayerViewFight3:
+	walk_left
+	walk_left
+	face_left
+	step_end
+
+LittlerootTown_BrendansHouse_2F_EmersonViewFight:
+	walk_left
+	walk_up
+	face_up
+	step_end
+
+LittlerootTown_BrendansHouse_2F_HopeViewFight:
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	face_up
+	step_end
+
+LittlerootTown_BrendansHouse_2F_JaceRetreat:
+	walk_down
+	walk_down
+	face_up
+	step_end
+
+LittlerootTown_BrendansHouse_2F_JaceMoveUp:
+	walk_up
+	face_down
+	step_end
+
+LittlerootTown_BrendansHouse_2F_SadieMovePast:
+	walk_down
+	walk_down
+	walk_right
+	face_down
+	step_end
+
+LittlerootTown_BrendansHouse_2F_SadieMovePast2:
+	walk_down
+	walk_down
+	step_end
+
+LittlerootTown_BrendansHouse_2F_FaceDown:
+	face_down
+	step_end
+
+LittlerootTown_BrendansHouse_2F_EmersonBackUp:
+	jump_right
+	face_left
+	step_end
+
+LittlerootTown_BrendansHouse_2F_LeadersApproach:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+.set LOCALID_EMERSON, 6
+.set LOCALID_HOPE, 1
+.set LOCALID_JACE, 2
+.set LOCALID_SADIE, 3
+.set LOCALID_NATASHA, 4
+.set LOCALID_MATTHEW, 5
 
 LittlerootTown_BrendansHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_2F_OnTransition
@@ -47,8 +199,8 @@ LittlerootTown_BrendansHouse_2F_EventScript_TryUpdateBrendanPos::
 	goto_if_eq VAR_RESULT, MALE, LittlerootTown_BrendansHouse_2F_EventScript_Ret
 	@ Odd that the MaysHouse equivalent was used below instead
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_Ret
-	setobjectxyperm LOCALID_RIVAL, 0, 2
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_UP
+	setobjectxyperm LOCALID_JACE, 0, 2
+	setobjectmovementtype LOCALID_JACE, MOVEMENT_TYPE_FACE_UP
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_Ret::
@@ -81,13 +233,13 @@ LittlerootTown_BrendansHouse_2F_EventScript_RivalsPokeBall::
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendan::
 	delay 10
-	addobject LOCALID_RIVAL
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanEnters
+	addobject LOCALID_JACE
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanEnters
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_JACE, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_JACE, Common_Movement_Delay48
 	waitmovement 0
 	delay 10
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
@@ -105,49 +257,49 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendan::
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanNorth::
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerNorth
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerNorth
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanNorth
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCNorth
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCNorth
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanSouth::
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerSouth
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerSouth
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanSouth
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCSouth
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCSouth
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanWest::
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerWest
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerWest
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanWest
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCWest
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCWest
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanEast::
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerEast
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerEast
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCEast
+	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCEast
 	waitmovement 0
 	return
 
@@ -327,6 +479,34 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
 
+LittlerootTown_BrendansHouse_2F_EventScript_DontLeave_Text_0:
+	.string "You still need to find your Pokémon...$"
+
+LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_0:
+	.string "JACE: Hey, I give up!\n"
+	.string "You win, alright?\p"
+	.string "SADIE: Mmhmm.\n"
+	.string "If you'll excuse me, I'll be headed to\l"
+	.string "the camp leaders.$"
+
+LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1:
+	.string "MATTHEW: Looking for us?$"
+
+LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_2:
+	.string "NATASHA: I thought I said that this\n"
+	.string "won't be easy.\p"
+	.string "MATTHEW: Three different captains,\n"
+	.string "each with their own pin, is somewhere\l"
+	.string "within or nearby the city.\p"
+	.string "NATASHA: The only way to challenge us\n"
+	.string "is to collect those three pins.\p"
+	.string "EMERSON: C'mon, man!\p"
+	.string "MATTHEW: I'd say your best best to\n"
+	.string "collect the pin from the eastern\l"
+	.string "neighborhood.\p"
+	.string "NATASHA: Both the north and northwest\n"
+	.string "captains are more challenging.$"
+
 LittlerootTown_BackroomScary::
 	.string "Sounds of a fierce battle emanate from\n"
 	.string "the back. It may be best not to go\l"
@@ -342,3 +522,6 @@ LittlerootTown_HopeGetsStarter::
 	.string "table Ralts.\p"
 	.string "I know it's scary, but I promise I'm not\n"
 	.string "mean!$"
+
+LittlerootTown_JaceConcedetoSadie::
+	.string "JACE:$"
