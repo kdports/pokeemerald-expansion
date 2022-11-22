@@ -5220,6 +5220,7 @@ static void HandleEndTurn_FinishBattle(void)
         if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
             TryRestoreStolenItems();
     #endif
+		TryRestoreUsedBerries();
         for (i = 0; i < PARTY_SIZE; i++)
         {
             UndoMegaEvolution(i);

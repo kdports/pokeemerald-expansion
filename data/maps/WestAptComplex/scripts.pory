@@ -1,0 +1,17 @@
+script LittlerootTown_WestAptComplex_Man {
+	faceplayer
+	msgbox(format("Ah, a climber! I bet you're hoping to go all the way to the top. Well, best of luck to you. Overcoming the camps is no easy feat."))
+	closemessage
+}
+
+script LittlerootTown_WestAptComplex_Woman {
+	faceplayer
+	msgbox(format("Have you noticed all the old men that work as camp attendants? Well, they aren't really old men. They're mostly normal people dressed to look like that. It's like a uniform!"))
+	closemessage
+}
+
+raw `
+WestAptComplex_MapScripts::
+	.byte 0
+
+`

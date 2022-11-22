@@ -1,3 +1,17 @@
+LittlerootTown_MaysHouse_1F_EventScript_YoungBoy::
+	faceplayer
+	msgbox LittlerootTown_MaysHouse_1F_EventScript_YoungBoy_Text_0
+	closemessage
+	return
+
+
+LittlerootTown_MaysHouse_1F_EventScript_Parent1::
+	faceplayer
+	msgbox LittlerootTown_MaysHouse_1F_EventScript_Parent1_Text_0
+	closemessage
+	return
+
+
 .set LOCALID_MOM, 1
 .set LOCALID_RIVAL_MOM, 4
 .set LOCALID_RIVAL, 7
@@ -407,3 +421,12 @@ RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Hi, neighbor!\p"
 	.string "Do you already have your\n"
 	.string "own POKéMON?$"
+
+LittlerootTown_MaysHouse_1F_EventScript_YoungBoy_Text_0:
+	.string "I wanna move into the country...\p"
+	.string "But Mom and Dad always tell me no!$"
+
+LittlerootTown_MaysHouse_1F_EventScript_Parent1_Text_0:
+	.string "My wife and I were once climbers like\n"
+	.string "you. But we met and, well, there just\l"
+	.string "wasn't much point after that!$"

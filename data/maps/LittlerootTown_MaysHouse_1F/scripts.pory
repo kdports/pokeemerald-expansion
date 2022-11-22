@@ -1,3 +1,15 @@
+script LittlerootTown_MaysHouse_1F_EventScript_YoungBoy {
+	faceplayer
+	msgbox(format("I wanna move into the country...\pBut Mom and Dad always tell me no!"))
+	closemessage
+}
+
+script LittlerootTown_MaysHouse_1F_EventScript_Parent1 {
+	faceplayer
+	msgbox(format("My wife and I were once climbers like you. But we met and, well, there just wasn't much point after that!"))
+	closemessage
+}
+
 raw `
 .set LOCALID_MOM, 1
 .set LOCALID_RIVAL_MOM, 4

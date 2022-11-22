@@ -1,0 +1,17 @@
+script LittlerootTown_NorthApts_2F_Hider {
+	faceplayer
+	msgbox(format("I buried something special underneath one of the small trees on Route 103.\pI'm so sneaky!"))
+	closemessage
+}
+
+script LittlerootTown_NorthApts_2F_Concerned {
+	faceplayer
+	msgbox(format("He always buries rare things he finds! I just no one will dig them up..."))
+	closemessage
+}
+
+raw `
+LittlerootTown_NorthApts_2F_MapScripts::
+	.byte 0
+
+`

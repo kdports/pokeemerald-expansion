@@ -10267,6 +10267,22 @@ void TryRestoreStolenItems(void)
     }
 }
 
+void TryRestoreUsedBerries(void)
+{
+    u32 i;
+    u16 stolenItem = ITEM_NONE;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (gBattleStruct->itemStolen[i].stolen)
+        {
+            stolenItem = gBattleStruct->itemStolen[i].originalItem;
+            if (stolenItem != ITEM_NONE && ItemId_GetPocket(stolenItem) == POCKET_BERRIES)
+                SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &stolenItem);  // Restore berry item
+        }
+    }
+}
+
 bool32 CanStealItem(u8 battlerStealing, u8 battlerItem, u16 item)
 {
     u8 stealerSide = GetBattlerSide(battlerStealing);

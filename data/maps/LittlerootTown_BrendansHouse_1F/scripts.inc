@@ -1,3 +1,22 @@
+LittlerootTown_BrendansHouse_1F_Togepi::
+	msgbox LittlerootTown_BrendansHouse_1F_Togepi_Text_0
+	closemessage
+	return
+
+
+LittlerootTown_BrendansHouse_1F_LittleGirl::
+	msgbox LittlerootTown_BrendansHouse_1F_LittleGirl_Text_0
+	closemessage
+	return
+
+
+LittlerootTown_BrendansHouse_1F_Mother::
+	faceplayer
+	msgbox LittlerootTown_BrendansHouse_1F_Mother_Text_0
+	closemessage
+	return
+
+
 .set LOCALID_MOM, 1
 .set LOCALID_RIVAL_MOM, 4
 .set LOCALID_RIVAL, 7
@@ -438,3 +457,14 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "MOM: Well, isn't that something!\n"
 	.string "There are still unknown POKéMON.$"
+
+LittlerootTown_BrendansHouse_1F_Togepi_Text_0:
+	.string "The Togepi gives a happy cry.$"
+
+LittlerootTown_BrendansHouse_1F_LittleGirl_Text_0:
+	.string "Togepi, do you want to play dress-up?$"
+
+LittlerootTown_BrendansHouse_1F_Mother_Text_0:
+	.string "My daughter does nothing but play with\n"
+	.string "her Togepi. But it keeps her from\l"
+	.string "watching TV, so I don't mind!$"

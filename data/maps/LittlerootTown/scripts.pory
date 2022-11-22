@@ -33,6 +33,7 @@ script LittlerootTown_EventScript_StepOffTruckMale {
 	warp(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 7, 10)
 	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_FaceUp)
 	waitmovement(0)
+	turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
 	setflag(FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD)
 	setflag(FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT)
 	end

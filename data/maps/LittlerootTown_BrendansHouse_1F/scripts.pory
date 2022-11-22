@@ -1,3 +1,19 @@
+script LittlerootTown_BrendansHouse_1F_Togepi {
+	msgbox(format("The Togepi gives a happy cry."))
+	closemessage
+}
+
+script LittlerootTown_BrendansHouse_1F_LittleGirl {
+	msgbox(format("Togepi, do you want to play dress-up?"))
+	closemessage
+}
+
+script LittlerootTown_BrendansHouse_1F_Mother {
+	faceplayer
+	msgbox(format("My daughter does nothing but play with her Togepi. But it keeps her from watching TV, so I don't mind!"))
+	closemessage
+}
+
 raw `
 .set LOCALID_MOM, 1
 .set LOCALID_RIVAL_MOM, 4

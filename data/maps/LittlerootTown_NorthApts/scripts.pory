@@ -1,0 +1,23 @@
+script LittlerootTown_NorthApts_Boy {
+	faceplayer
+	msgbox(format("People come from all over to be climbers. Some of them are even from places I've never heard of!"))
+	closemessage
+}
+
+script LittlerootTown_NorthApts_Woman {
+	faceplayer
+	msgbox(format("Everyone knows that any human who climbs the mountain gets a wish from Jirachi.\pBut isn't it interesting that your first Pokémon gets one too?"))
+	closemessage
+}
+
+script LittlerootTown_NorthApts_Woman2 {
+	faceplayer
+	msgbox(format("It's very rare for someone born in the Base Camp to move elsewhere.\pIsn't that strange? I suppose that living next to a mountain is quite the draw."))
+	closemessage
+}
+
+raw `
+LittlerootTown_NorthApts_MapScripts::
+	.byte 0
+
+`

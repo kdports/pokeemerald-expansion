@@ -216,6 +216,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_SetReadyToMeetBrendan::
 	return
 
 LittlerootTown_BrendansHouse_2F_OnWarp:
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_SetPlayerPosForReceiveStarter
 	map_script_2 VAR_SECRET_BASE_INITIALIZED, 0, LittlerootTown_BrendansHouse_2F_EventScript_CheckInitDecor
 	.2byte 0
 
