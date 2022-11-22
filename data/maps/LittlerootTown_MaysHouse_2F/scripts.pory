@@ -17,7 +17,7 @@ script LittlerootTown_MaysHouse_2F_StarterScene {
 	waitmovement(0)
     msgbox(LittlerootTown_GetEevee, MSGBOX_DEFAULT)
 	closemessage
-	givemon(SPECIES_EEVEE, 5, ITEM_ORAN_BERRY)
+	givecustommon(SPECIES_EEVEE, 5, ITEM_ORAN_BERRY, abilityNum=1)
 	delay(20)
     msgbox(LittlerootTown_StartBattleText, MSGBOX_DEFAULT)
 	closemessage
