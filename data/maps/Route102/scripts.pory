@@ -1,3 +1,19 @@
+script Route102_GuardAttendant {
+	faceplayer
+	msgbox(format("I see you have enough pins to continue on.\pBest of luck."))
+	closemessage
+}
+
+script Route102_BlockPath {
+	msgbox(format("I shouldn't go this way until I get more pins."))
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, Route102_WalkRight)
+}
+
+movement Route102_WalkRight {
+	walk_right
+}
+
 raw `
 Route102_MapScripts::
 	.byte 0

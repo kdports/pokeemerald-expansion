@@ -1,3 +1,25 @@
+Route101_TrainerBattle1::
+	trainerbattle_single TRAINER_SAWYER_1, Route101_Text_Trainer1Intro, Route101_Text_Trainer1Defeated
+	msgbox Route101_TrainerBattle1_Text_0
+	release
+	return
+
+
+Route101_TrainerBattle2::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_1, Route101_Text_Trainer2Intro, Route101_Text_Trainer2Defeated
+	msgbox Route101_TrainerBattle2_Text_0
+	release
+	return
+
+
+Route101_ExpertBattle::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_2, Route101_Text_ExpertBattleIntro, Route101_Text_ExpertBattleDefeated
+	msgbox Route101_ExpertBattle_Text_0
+	setvar VAR_NUM_WON_PINS, 1
+	release
+	return
+
+
 .set LOCALID_BIRCH, 2
 .set LOCALID_ZIGZAGOON, 4
 
@@ -11,7 +33,6 @@ Route101_OnTransition:
 	end
 
 Route101_OnFrame:
-	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_HideMapNamePopup
 	.2byte 0
 
 Route101_EventScript_HideMapNamePopup::
@@ -299,3 +320,31 @@ Route101_Text_WildPokemonInTallGrass:
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
+
+Route101_TrainerBattle1_Text_0:
+	.string "Hey, that was a lot of fun!$"
+
+Route101_TrainerBattle2_Text_0:
+	.string "Oww...$"
+
+Route101_ExpertBattle_Text_0:
+	.string "Well fought. The West End awaits you.$"
+
+Route101_Text_Trainer1Intro::
+	.string "What a wonderful day. Let's battle!$"
+
+Route101_Text_Trainer1Defeated::
+	.string "I hope my Wurmple is okay...$"
+
+Route101_Text_Trainer2Intro::
+	.string "I'm tough! I'm tough! I'm tough!$"
+
+Route101_Text_Trainer2Defeated::
+	.string "Maybe I'm not so tough.$"
+
+Route101_Text_ExpertBattleIntro::
+	.string "So you've come to take my pin?\p"
+	.string "By all means, try your best!$"
+
+Route101_Text_ExpertBattleDefeated::
+	.string "Excellent! I proudly surrender my pin.$"

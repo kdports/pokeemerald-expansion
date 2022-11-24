@@ -1,3 +1,21 @@
+Route102_GuardAttendant::
+	faceplayer
+	msgbox Route102_GuardAttendant_Text_0
+	closemessage
+	return
+
+
+Route102_BlockPath::
+	msgbox Route102_BlockPath_Text_0
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Route102_WalkRight
+	return
+
+
+Route102_WalkRight:
+	walk_right
+	step_end
+
 Route102_MapScripts::
 	.byte 0
 
@@ -107,3 +125,12 @@ Route102_Text_RouteSignOldale:
 Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
+
+Route102_GuardAttendant_Text_0:
+	.string "I see you have enough pins to continue\n"
+	.string "on.\p"
+	.string "Best of luck.$"
+
+Route102_BlockPath_Text_0:
+	.string "I shouldn't go this way until I get more\n"
+	.string "pins.$"
