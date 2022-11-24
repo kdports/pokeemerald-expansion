@@ -1,0 +1,16 @@
+script LittlerootTown_PokemonCenter_ChairMan {
+	faceplayer
+	msgbox(format("There are so few people around now.\p I miss when everyone traveled here from across the world."))
+	closemessage
+}
+
+script LittlerootTown_PokemonCenter_Kid {
+	faceplayer
+	msgbox(format("One of the people who was with you seems scary. I don't like him at all!"))
+	closemessage
+}
+
+raw `
+LittlerootTown_PokemonCenter_MapScripts::
+	.byte 0
+`

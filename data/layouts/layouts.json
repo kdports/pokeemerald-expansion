@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/LittlerootTown_NorthApts_2F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_NorthApts_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_POKEMON_CENTER",
+      "name": "LittlerootTown_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/LittlerootTown_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_PokemonCenter/map.bin"
     }
   ]
 }

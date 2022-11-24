@@ -228,6 +228,13 @@
       "elevation": 0,
       "dest_map": "MAP_WEST_APT_COMPLEX",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN_POKEMON_CENTER",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
