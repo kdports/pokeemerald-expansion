@@ -7715,6 +7715,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
 
     // Berry was successfully used on a Pokemon.
     if (effect && (gLastUsedItem >= FIRST_BERRY_INDEX && gLastUsedItem <= LAST_BERRY_INDEX))
+		TrySaveUsedBerry(battlerId, gLastUsedItem);
         gBattleStruct->ateBerry[battlerId & BIT_SIDE] |= gBitTable[gBattlerPartyIndexes[battlerId]];
 
     return effect;
@@ -10335,6 +10336,13 @@ void TrySaveExchangedItem(u8 battlerId, u16 stolenItem)
       && stolenItem == gBattleStruct->itemStolen[gBattlerPartyIndexes[battlerId]].originalItem)
         gBattleStruct->itemStolen[gBattlerPartyIndexes[battlerId]].stolen = TRUE;
 #endif
+}
+
+void TrySaveUsedBerry(u8 battlerId, u16 stolenItem)
+{
+	if (GetBattlerSide(battlerId) == B_SIDE_PLAYER
+	  && stolenItem == gBattleStruct->itemStolen[gBattlerPartyIndexes[battlerId]].originalItem)
+		gBattleStruct->itemStolen[gBattlerPartyIndexes[battlerId]].stolen = TRUE;
 }
 
 bool32 IsBattlerAffectedByHazards(u8 battlerId, bool32 toxicSpikes)
