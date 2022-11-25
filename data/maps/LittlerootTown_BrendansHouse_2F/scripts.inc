@@ -89,10 +89,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_HouseFight::
 	waitmovement 0
 	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_2
 	closemessage
+	giveitem ITEM_POKE_BALL, 7
 	fadescreen FADE_TO_BLACK
 	warp MAP_LITTLEROOT_TOWN, 8, 21
-	waitstate
-	giveitem ITEM_POKE_BALL, 7
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_INTRO
