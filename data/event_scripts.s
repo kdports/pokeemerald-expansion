@@ -1067,3 +1067,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/LittlerootTown_NorthApts_2F/scripts.inc"
 
 	.include "data/maps/LittlerootTown_PokemonCenter/scripts.inc"
+
+	.include "data/maps/LittlerootTown_ResearchLab/scripts.inc"

@@ -17,7 +17,7 @@ LittlerootTown_MaysHouse_2F_StarterScene::
 	closemessage
 	setwildbattle SPECIES_GRIMER, 5, ITEM_NONE
 	dowildbattle
-	hideobjectat LOCALID_RIVAL, MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F
+	hideobjectat 1, MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F
 	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 	msgbox LittlerootTown_MaysHouse_2F_EeveeMeet
 	closemessage

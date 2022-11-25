@@ -11493,10 +11493,10 @@
           }
         },
         {
-          "map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
+          "map": "MAP_LITTLEROOT_TOWN_RESEARCH_LAB",
           "base_label": "gLittlerootTown_ProfessorBirchsLab0",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 10,
             "mons": [
               {
                 "min_level": 5,

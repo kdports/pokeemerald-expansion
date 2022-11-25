@@ -74,6 +74,7 @@
 #define MAP_LITTLEROOT_TOWN_NORTH_APTS           (6 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_NORTH_APTS_2F        (7 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_POKEMON_CENTER       (8 | (1 << 8))
+#define MAP_LITTLEROOT_TOWN_RESEARCH_LAB         (9 | (1 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))

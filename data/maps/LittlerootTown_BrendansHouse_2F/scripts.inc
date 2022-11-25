@@ -91,10 +91,8 @@ LittlerootTown_BrendansHouse_2F_EventScript_HouseFight::
 	closemessage
 	fadescreen FADE_TO_BLACK
 	warp MAP_LITTLEROOT_TOWN, 8, 21
+	waitstate
 	giveitem ITEM_POKE_BALL, 7
-	setflag FLAG_SYS_POKEDEX_GET
-	special SetUnlockedPokedexFlags
-	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_INTRO
@@ -102,6 +100,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_HouseFight::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD
 	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	setvar VAR_NUM_WON_PINS, 0
+	release
 	return
 
 
