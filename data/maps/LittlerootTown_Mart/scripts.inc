@@ -6,7 +6,7 @@ LittlerootTown_Mart_EventScript_Clerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart OldaleTown_Mart_Pokemart_Basic
+	pokemart LittlerootTown_Mart_Pokemart_Basic
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end

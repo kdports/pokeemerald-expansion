@@ -1,39 +1,45 @@
-static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = { // Overwritten
     {
     .iv = 0,
     .lvl = 6,
     .species = SPECIES_WURMPLE,
+	.abilityNums = 0,
     },
 	{
     .iv = 0,
     .lvl = 6,
     .species = SPECIES_CATERPIE,
+	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = { // Overwritten
     {
     .iv = 0,
     .lvl = 6,
     .species = SPECIES_STARYU,
+	.abilityNums = 0,
     },
     {
     .iv = 0,
     .lvl = 6,
     .species = SPECIES_ODDISH,
+	.abilityNums = 0,
     }	
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = { // Overwritten
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_POOCHYENA,
+    .species = SPECIES_SHINX,
+	.abilityNums = 1,
     },
     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_STARLY,
+	.abilityNums = 0,
     }
 };
 

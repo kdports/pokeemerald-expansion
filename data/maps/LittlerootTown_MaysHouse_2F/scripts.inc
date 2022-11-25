@@ -15,8 +15,8 @@ LittlerootTown_MaysHouse_2F_StarterScene::
 	delay 20
 	msgbox LittlerootTown_StartBattleText, MSGBOX_DEFAULT
 	closemessage
-	setwildbattle SPECIES_GRIMER, 5, ITEM_NONE
-	dowildbattle
+	special EeveeFirstBattle
+	waitstate
 	hideobjectat 1, MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F
 	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 	msgbox LittlerootTown_MaysHouse_2F_EeveeMeet
