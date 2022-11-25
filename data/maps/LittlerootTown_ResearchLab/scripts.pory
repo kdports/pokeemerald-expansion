@@ -1,0 +1,52 @@
+script LittlerootTown_ResearchLab_TrainerBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_3, LittlerootTown_ResearchLab_Text_Trainer1Intro, LittlerootTown_ResearchLab_Text_Trainer1Defeated)
+	msgbox(format("Mrgrgr..."))
+	release
+}
+	
+text LittlerootTown_ResearchLab_Text_Trainer1Intro {
+	format("Hey, show some respect here!")
+}
+
+text LittlerootTown_ResearchLab_Text_Trainer1Defeated {
+	format("Kids these days!")
+}
+
+script LittlerootTown_ResearchLab_TrainerBattle2 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_4, LittlerootTown_ResearchLab_Text_Trainer2Intro, LittlerootTown_ResearchLab_Text_Trainer2Defeated)
+	msgbox(format("Now I have to clean it up."))
+	release
+}
+	
+text LittlerootTown_ResearchLab_Text_Trainer2Intro {
+	format("Woah, hey, I'm carrying a beaker!")
+}
+
+text LittlerootTown_ResearchLab_Text_Trainer2Defeated {
+	format("I dropped the beaker...")
+}
+
+script LittlerootTown_ResearchLab_TrainerBattle3 {
+	trainerbattle_single(TRAINER_GRUNT_SEAFLOOR_CAVERN_1, LittlerootTown_ResearchLab_Text_Trainer3Intro, LittlerootTown_ResearchLab_Text_Trainer3Defeated)
+	msgbox(format("How awkward."))
+	release
+}
+	
+text LittlerootTown_ResearchLab_Text_Trainer3Intro {
+	format("I'm the head scientist, so I'll take the lead.")
+}
+
+text LittlerootTown_ResearchLab_Text_Trainer3Defeated {
+	format("Should I step down?")
+}
+
+script LittlerootTown_ResearchLab_GetItemQuickClaw { // INCORRECT, see data/scripts/item_ball_scripts.inc
+	giveitem(ITEM_QUICK_CLAW, 1)
+	setflag(FLAG_ITEM_ROUTE_102_POTION)
+}
+
+raw `
+LittlerootTown_ResearchLab_MapScripts::
+	.byte 0
+
+`

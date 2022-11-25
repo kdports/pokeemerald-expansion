@@ -1,5 +1,5 @@
 Route102_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_QUICK_CLAW
 	end
 
 Route103_EventScript_ItemGuardSpec::

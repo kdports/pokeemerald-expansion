@@ -43,27 +43,48 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = { 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout3[] = { // Overwritten
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 6,
     .species = SPECIES_ZUBAT,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_MACHOP,
+	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout4[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout4[] = { // Overwritten
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 6,
+    .species = SPECIES_MAREEP,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_PATRAT,
+	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern1[] = { // Overwritten
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 7,
+    .species = SPECIES_VULPIX,
+	.abilityNums = 2,
+    },
+    {
+    .iv = 0,
+    .lvl = 9,
+    .species = SPECIES_ODDISH,
+	.abilityNums = 0,
     }
 };
 
