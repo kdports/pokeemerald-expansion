@@ -88,73 +88,154 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern1[] =
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern2[] = { // Overwritten
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
-    }
+    .lvl = 10,
+    .species = SPECIES_STARLY,
+	.abilityNums = 1,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_LILLIPUP,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_SENTRET,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_BIDOOF,
+	.abilityNums = 0,
+    },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern3[] = { // Overwritten
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_ZUBAT,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Gabrielle1[] = {
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_SKITTY,
+    .lvl = 8,
+    .species = SPECIES_LITLEO,
+	.abilityNums = 1,
     },
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZIGZAGOON,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_LOTAD,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_SEEDOT,
-    },
-    {
-    .iv = 0,
-    .lvl = 26,
+    .lvl = 10,
     .species = SPECIES_TAILLOW,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntPetalburgWoods[] = {
+	.abilityNums = 0,
+    },
     {
     .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 10,
+    .species = SPECIES_STARLY,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_BUNNELBY,
+	.abilityNums = 0,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Gabrielle1[] = { // Overwritten
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_SKITTY,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_SLAKOTH,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_ZIGZAGOON,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_MACHOP,
+	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Marcel[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntPetalburgWoods[] = { // Overwritten
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_MANECTRIC,
+    .iv = 0,
+    .lvl = 10,
+    .species = SPECIES_VULPIX,
+	.abilityNums = 2,
+    },
+    {
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_LITLEO,
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_AIPOM,
+	.abilityNums = 2,
+    },
+    {
+    .iv = 0,
+    .lvl = 12,
+    .species = SPECIES_DODUO,
+	.abilityNums = 0,
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Marcel[] = { // Overwritten
+    {
+    .iv = 80,
+    .lvl = 12,
+    .species = SPECIES_SLAKOTH,
+	.heldItem = ITEM_NONE,
+	.moves = {MOVE_SCRATCH, MOVE_YAWN, MOVE_ENCORE, MOVE_SLACK_OFF},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 80,
+    .lvl = 13,
+    .species = SPECIES_STUFFUL,
+	.heldItem = ITEM_NONE,
+	.moves = {MOVE_TACKLE, MOVE_PAYBACK, MOVE_FORCE_PALM, MOVE_LEER},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 80,
+    .lvl = 13,
+    .species = SPECIES_STARLY,
+	.heldItem = ITEM_NONE,
+	.moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_LEER, MOVE_TACKLE},
+	.abilityNums = 0,
     },
     {
     .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SHIFTRY,
+    .lvl = 16,
+    .species = SPECIES_GROWLITHE,
+	.heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_HELPING_HAND, MOVE_FLAME_WHEEL, MOVE_HOWL, MOVE_LEER},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 16,
+    .species = SPECIES_HERDIER,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_HELPING_HAND, MOVE_BITE, MOVE_RETALIATE, MOVE_WORK_UP},
+	.abilityNums = 0,
     }
 };
 

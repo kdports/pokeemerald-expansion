@@ -36,7 +36,15 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_BEDROOM_MOM
 	end
+
+
+LittlerootTown_ManBlockingGym::
+	faceplayer
+	msgbox LittlerootTown_ManBlockingGym_Text_0
+	closemessage
+	return
 
 
 LittlerootTown_FaceRight:
@@ -1083,6 +1091,10 @@ LittlerootTown_EventScript_StepOffTruckMale_Text_0:
 	.string "Nervous?\p"
 	.string "MATTHEW: Here's your Pokéball. Good\n"
 	.string "luck!$"
+
+LittlerootTown_ManBlockingGym_Text_0:
+	.string "I'm afraid you must have all three pins\n"
+	.string "before you can proceed.$"
 
 LittlerootTown_EmersonComplains::
 	.string "EMERSON: Just who do you think you\n"

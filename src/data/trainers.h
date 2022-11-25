@@ -86,63 +86,63 @@ const struct Trainer gTrainers[] = {
     },
 
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_2] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+    { // Overwritten
+        .trainerClass = TRAINER_CLASS_PKMN_BREEDER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_POKEMON_BREEDER_M,
+        .trainerName = _("ETHAN"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntSeafloorCavern2),
     },
 
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_3] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+    { // Overwritten
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+        .trainerName = _("Abel"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntSeafloorCavern3),
     },
 
     [TRAINER_GABRIELLE_1] =
-    {
+    { // Overwritten
         .trainerClass = TRAINER_CLASS_PKMN_BREEDER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .trainerName = _("GABRIELLE"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Gabrielle1),
     },
 
     [TRAINER_GRUNT_PETALBURG_WOODS] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+    { // Overwritten
+        .trainerClass = TRAINER_CLASS_AROMA_LADY,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_AROMA_LADY,
+        .trainerName = _("JEZEBEL"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntPetalburgWoods),
     },
 
     [TRAINER_MARCEL] =
-    {
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
-        .trainerName = _("MARCEL"),
-        .items = {ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
-        .doubleBattle = FALSE,
+    { // Overwritten
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LEADER_TATE_AND_LIZA,
+        .trainerName = _("TATE&LIZA"),
+        .items = {ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Marcel),
+        .party = ITEM_CUSTOM_MOVES(sParty_Marcel),
     },
 
     [TRAINER_ALBERTO] =

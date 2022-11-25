@@ -105,20 +105,9 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_PINSIR]                = {{EVO_MEGA_EVOLUTION, ITEM_PINSIRITE, SPECIES_PINSIR_MEGA}},
     [SPECIES_MAGIKARP]              = {{EVO_LEVEL, 20, SPECIES_GYARADOS}},
     [SPECIES_GYARADOS]              = {{EVO_MEGA_EVOLUTION, ITEM_GYARADOSITE, SPECIES_GYARADOS_MEGA}},
-    [SPECIES_EEVEE]                 = {{EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_JOLTEON},
-                                       {EVO_ITEM, ITEM_WATER_STONE, SPECIES_VAPOREON},
-                                       {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON},
-                                       {EVO_FRIENDSHIP_DAY, 0, SPECIES_ESPEON},
+    [SPECIES_EEVEE]                 = {{EVO_FRIENDSHIP_DAY, 0, SPECIES_ESPEON},
                                        {EVO_FRIENDSHIP_NIGHT, 0, SPECIES_UMBREON},
-                                    #if P_GEN_4_POKEMON == TRUE
-                                       {EVO_SPECIFIC_MAP, MAP_PETALBURG_WOODS, SPECIES_LEAFEON},
-                                       {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
-                                       {EVO_SPECIFIC_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM, SPECIES_GLACEON},
-                                       {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON},
-                                    #endif
-                                    #if P_GEN_6_POKEMON == TRUE
                                        {EVO_MOVE_TYPE, TYPE_FAIRY, SPECIES_SYLVEON}
-                                    #endif
                                        },
     [SPECIES_PORYGON]               = {{EVO_TRADE_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2}},
     [SPECIES_OMANYTE]               = {{EVO_LEVEL, 40, SPECIES_OMASTAR}},

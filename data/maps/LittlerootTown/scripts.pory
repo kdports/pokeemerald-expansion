@@ -36,7 +36,14 @@ script LittlerootTown_EventScript_StepOffTruckMale {
 	turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
 	setflag(FLAG_HIDE_LITTLEROOT_TOWN_INTRO_CROWD)
 	setflag(FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_FIGHT)
+	clearflag(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_BEDROOM_MOM)
 	end
+}
+
+script LittlerootTown_ManBlockingGym {
+	faceplayer
+	msgbox(format("I'm afraid you must have all three pins before you can proceed."))
+	closemessage
 }
 
 	//fadescreen(FADE_FROM_BLACK)

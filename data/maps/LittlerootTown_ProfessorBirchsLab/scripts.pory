@@ -1,3 +1,73 @@
+script LittlerootTown_ProfessorBirchsLab_TrainerBattle1 {
+	trainerbattle_double(TRAINER_GRUNT_SEAFLOOR_CAVERN_2, LittlerootTown_ProfessorBirchsLab_Text_Trainer1Intro, LittlerootTown_ProfessorBirchsLab_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	msgbox(format("Keep going, you got this."))
+	release
+}
+	
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer1Intro {
+	format("Ready to go?")
+}
+
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer1Defeated {
+	format("Not too shabby.")
+}
+
+script LittlerootTown_ProfessorBirchsLab_TrainerBattle2 {
+	trainerbattle_double(TRAINER_GRUNT_SEAFLOOR_CAVERN_3, LittlerootTown_ProfessorBirchsLab_Text_Trainer1Intro, LittlerootTown_ProfessorBirchsLab_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	msgbox(format("Huh, I didn't expect that."))
+	release
+}
+	
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer2Intro {
+	format("I'm a challenging foe.")
+}
+
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer2Defeated {
+	format("You're somehow better!")
+}
+
+script LittlerootTown_ProfessorBirchsLab_TrainerBattle3 {
+	trainerbattle_double(TRAINER_GABRIELLE_1, LittlerootTown_ProfessorBirchsLab_Text_Trainer1Intro, LittlerootTown_ProfessorBirchsLab_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	msgbox(format("Shoot."))
+	release
+}
+	
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer3Intro {
+	format("Have you considered not battling me?")
+}
+
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer3Defeated {
+	format("Ah, well, I see I was too late.")
+}
+
+script LittlerootTown_ProfessorBirchsLab_TrainerBattle4 {
+	trainerbattle_double(TRAINER_GRUNT_PETALBURG_WOODS, LittlerootTown_ProfessorBirchsLab_Text_Trainer4Intro, LittlerootTown_ProfessorBirchsLab_Text_Trainer4Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	msgbox(format("The camp leader is next."))
+	release
+}
+	
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer4Intro {
+	format("I'm the last camp trainer.")
+}
+
+text LittlerootTown_ProfessorBirchsLab_Text_Trainer4Defeated {
+	format("You've surpassed me!")
+}
+
+script LittlerootTown_ProfessorBirchsLab_CampLeaderBattle {
+	trainerbattle_double(TRAINER_MARCEL, LittlerootTown_ProfessorBirchsLab_Text_Trainer4Intro, LittlerootTown_ProfessorBirchsLab_Text_Trainer4Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	msgbox(format("MATTHEW: We hope your journey goes well."))
+	release
+}
+	
+text LittlerootTown_ProfessorBirchsLab_Text_CampLeaderBattleIntro {
+	format("NATASHA: I'm surprised you've made it this far.\pMATTHEW: Pleasantly surprised.\pNATASHA: I hope you and your partner are ready.\pMATTHEW: Alright, let's get going!")
+}
+
+text LittlerootTown_ProfessorBirchsLab_Text_CampLeaderBattleDefeated {
+	format("NATASHA: Good work.\pMATTHEW: That was an impressive strategy!\pNATASHA: As your reward for defeating us, I award you both the First Cert.\pMATTHEW: This will allow you to truly begin your climb and make your way to the next camp.")
+}
+
 raw `
 LittlerootTown_ProfessorBirchsLab_MapScripts::
 	.byte 0
