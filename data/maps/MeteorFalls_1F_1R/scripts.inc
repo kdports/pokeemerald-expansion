@@ -1,3 +1,52 @@
+MeteorFalls_LevelCapManTalk::
+	msgbox MeteorFalls_LevelCapMan, MSGBOX_DEFAULT
+	giveitem ITEM_RARE_CANDY, 99
+	closemessage
+	return
+
+
+MeteorFalls_NoahBattle::
+	msgbox MeteorFalls_NoahSpeak, MSGBOX_DEFAULT
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, MeteorFalls_NoahBattle_3
+	case 0, MeteorFalls_NoahBattle_4
+MeteorFalls_NoahBattle_1:
+	closemessage
+	return
+
+MeteorFalls_NoahBattle_3:
+	call MeteorFalls_NoahHardFight
+	goto MeteorFalls_NoahBattle_1
+
+MeteorFalls_NoahBattle_4:
+	call MeteorFalls_NoahEasyFight
+	goto MeteorFalls_NoahBattle_1
+
+
+MeteorFalls_NoahEasyFight::
+	trainerbattle_single TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated
+	msgbox MeteorFalls_NoahEasyFight_Text_0
+	fadescreen FADE_TO_BLACK
+	warp MAP_METEOR_FALLS_1F_1R, 6, 39
+	waitstate
+	fadescreen FADE_FROM_BLACK
+	release
+	return
+
+
+MeteorFalls_NoahHardFight::
+	trainerbattle_single TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated
+	msgbox MeteorFalls_NoahEasyFight_Text_0
+	giveitem ITEM_POKE_BALL, 10
+	fadescreen FADE_TO_BLACK
+	warp MAP_METEOR_FALLS_1F_1R, 6, 39
+	waitstate
+	fadescreen FADE_FROM_BLACK
+	release
+	return
+
+
 .set LOCALID_MAGMA_GRUNT_1, 5
 .set LOCALID_MAGMA_GRUNT_2, 6
 .set LOCALID_ARCHIE, 7
@@ -313,3 +362,17 @@ MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney:
 	.string "PROF. COZMO: But that TEAM MAGMA…\p"
 	.string "What are they going to do with that\n"
 	.string "METEORITE at MT. CHIMNEY?$"
+
+MeteorFalls_NoahEasyFight_Text_0:
+	.string "NOAH: Fuck! Well, guess you get to keep\n"
+	.string "going.$"
+
+MeteorFalls_LevelCapMan::
+	.string "It's me, the level cap man! The level cap\n"
+	.string "for this gym is 22. Here are 99 rare\l"
+	.string "candies! Don't use them all on one\l"
+	.string "Pokemon.$"
+
+MeteorFalls_NoahSpeak::
+	.string "NOAH: What's up? It's my turn now. I\n"
+	.string "can't wait to get started!$"

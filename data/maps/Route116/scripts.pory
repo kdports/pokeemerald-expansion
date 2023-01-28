@@ -3,18 +3,18 @@ script Route116_NatashaMattBattle {
 	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
-			call(Route116_NatashaMattEasyFight)
-		case 0:
 			call(Route116_NatashaMattHardFight)
+		case 0:
+			call(Route116_NatashaMattEasyFight)
 	}
 	closemessage
 }
 
 script Route116_NatashaMattEasyFight {
-	trainerbattle_double(TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	trainerbattle_double(TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
 	msgbox(format("MATTHEW: Hey, that was a lot of fun!\pNATASHA: Good luck in the rest of your challenge."))
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_ROUTE116, 0, 10)
+	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 	release
@@ -25,7 +25,7 @@ script Route116_NatashaMattHardFight {
 	msgbox(format("MATTHEW: Hey, that was a lot of fun!\pNATASHA: Good luck in the rest of your challenge."))
 	giveitem(ITEM_POKE_BALL, 10)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_ROUTE116, 0, 10)
+	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 	release

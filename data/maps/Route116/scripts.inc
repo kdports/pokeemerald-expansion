@@ -9,19 +9,19 @@ Route116_NatashaMattBattle_1:
 	return
 
 Route116_NatashaMattBattle_3:
-	call Route116_NatashaMattEasyFight
+	call Route116_NatashaMattHardFight
 	goto Route116_NatashaMattBattle_1
 
 Route116_NatashaMattBattle_4:
-	call Route116_NatashaMattHardFight
+	call Route116_NatashaMattEasyFight
 	goto Route116_NatashaMattBattle_1
 
 
 Route116_NatashaMattEasyFight::
-	trainerbattle_double TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons
+	trainerbattle_double TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons
 	msgbox Route116_NatashaMattEasyFight_Text_0
 	fadescreen FADE_TO_BLACK
-	warp MAP_ROUTE116, 0, 10
+	warp MAP_METEOR_FALLS_1F_1R, 6, 39
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	release
@@ -33,7 +33,7 @@ Route116_NatashaMattHardFight::
 	msgbox Route116_NatashaMattEasyFight_Text_0
 	giveitem ITEM_POKE_BALL, 10
 	fadescreen FADE_TO_BLACK
-	warp MAP_ROUTE116, 0, 10
+	warp MAP_METEOR_FALLS_1F_1R, 6, 39
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	release

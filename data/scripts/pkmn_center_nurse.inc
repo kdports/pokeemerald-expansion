@@ -19,6 +19,7 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	call_if_eq VAR_0x8004, 0, EventScript_PkmnCenterNurse_IllTakeYourPkmn
 	call_if_eq VAR_0x8004, 1, EventScript_PkmnCenterNurse_IllTakeYourPkmn2
 	waitmessage
+	closemessage
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
 	end
 

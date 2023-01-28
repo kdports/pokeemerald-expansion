@@ -67,7 +67,7 @@ script LittlerootTown_BrendansHouse_2F_EventScript_HouseFight {
 	closemessage
 	msgbox(format("NATASHA: Go through the door in the back.\pMATTHEW: Once you enter, they'll be no turning back!.\pNATASHA: Check in with nurses to heal your Pokemon.\pMATTHEW: And make sure to catch more Pokemon!\pNATASHA: We'll see you again soon!"))
 	closemessage
-	giveitem(ITEM_POKE_BALL, 10)
+	giveitem(ITEM_POKE_BALL, 20)
 	fadescreen(FADE_TO_BLACK)
 	warp(MAP_ROUTE116, 0, 10)
 	waitstate

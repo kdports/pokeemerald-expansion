@@ -1,3 +1,50 @@
+script MeteorFalls_LevelCapManTalk {
+    msgbox(MeteorFalls_LevelCapMan, MSGBOX_DEFAULT)
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
+text MeteorFalls_LevelCapMan {
+    format("It's me, the level cap man! The level cap for this gym is 22. Here are 99 rare candies! Don't use them all on one Pokemon.")
+}
+
+script MeteorFalls_NoahBattle {
+    msgbox(MeteorFalls_NoahSpeak, MSGBOX_DEFAULT)
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(MeteorFalls_NoahHardFight)
+		case 0:
+			call(MeteorFalls_NoahEasyFight)
+	}
+	closemessage
+}
+
+text MeteorFalls_NoahSpeak {
+    format("NOAH: What's up? It's my turn now. I can't wait to get started!")
+}
+
+script MeteorFalls_NoahEasyFight {
+	trainerbattle_single(TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated)
+	msgbox(format("NOAH: Fuck! Well, guess you get to keep going."))
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+	release
+}
+
+script MeteorFalls_NoahHardFight {
+	trainerbattle_single(TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated)
+	msgbox(format("NOAH: Fuck! Well, guess you get to keep going."))
+	giveitem(ITEM_POKE_BALL, 10)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+	release
+}
+
 raw `
 .set LOCALID_MAGMA_GRUNT_1, 5
 .set LOCALID_MAGMA_GRUNT_2, 6

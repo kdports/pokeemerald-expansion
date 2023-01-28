@@ -274,24 +274,25 @@ static const struct TrainerMonItemCustomMoves sParty_Alberto[] = { // Overwritte
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Ed[] = {
+static const struct TrainerMonItemCustomMoves sParty_Ed[] = { // Overwritten, easy Noah
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_ZANGOOSE,
-    },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SEVIPER,
+    .iv = 80,
+    .lvl = 22,
+    .species = SPECIES_MACHOKE,
+	.heldItem = ITEM_NONE,
+	.moves = {MOVE_FORESIGHT, MOVE_SEISMIC_TOSS, MOVE_REVENGE, MOVE_FOCUS_ENERGY},
+	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern4[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern4[] = { // Overwritten, hard Noah
     {
-    .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .iv = 80,
+    .lvl = 22,
+    .species = SPECIES_MACHOKE,
+	.heldItem = ITEM_ORAN_BERRY,
+	.moves = {MOVE_THUNDER_PUNCH, MOVE_KNOCK_OFF, MOVE_REVENGE, MOVE_FOCUS_ENERGY},
+	.abilityNums = 0,
     }
 };
 

@@ -60,7 +60,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_HouseFight::
 	closemessage
 	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1
 	closemessage
-	giveitem ITEM_POKE_BALL, 10
+	giveitem ITEM_POKE_BALL, 20
 	fadescreen FADE_TO_BLACK
 	warp MAP_ROUTE116, 0, 10
 	waitstate
