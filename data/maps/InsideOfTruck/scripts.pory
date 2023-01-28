@@ -75,7 +75,7 @@ script InsideOfTruck_EventScript_DoorOpen {
 }
 
 text InsideOfTruck_DoorOpenSpeak {
-    format("EMERSON: Finally! Catch you around, I'm outta here!")
+    format("KEVIN: I have red hair now for technical reasons. I'm just gonna exposition dump when you get out of the truck.")
 }
 
 movement EmersonLeave {

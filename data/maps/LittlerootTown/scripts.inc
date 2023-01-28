@@ -5,12 +5,8 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	delay 15
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_ApproachEmerson
 	waitmovement 0
-	msgbox LittlerootTown_EmersonComplains, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_LEADERF, LittlerootTown_LeaderFIntervenes
 	waitmovement 0
-	msgbox LittlerootTown_LeaderFSpeaks, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_LEADERF, LittlerootTown_LeaderFReturns
 	waitmovement 0
 	msgbox LittlerootTown_LeaderMAgrees, MSGBOX_DEFAULT
@@ -1097,35 +1093,19 @@ LittlerootTown_ManBlockingGym_Text_0:
 	.string "before you can proceed.$"
 
 LittlerootTown_EmersonComplains::
-	.string "EMERSON: Just who do you think you\n"
-	.string "are?! Who do you think we are? We're\l"
-	.string "climbers! You can't just throw us\l"
-	.string "around like that!\p"
-	.string "ATTENDANT: Please join the rest of the\n"
-	.string "crowd.\p"
-	.string "EMERSON: Don't order me around!$"
+	.string "KEVIN: Nevermind they'll just\n"
+	.string "exposition dump for me.$"
 
 LittlerootTown_PreHouseTalk::
 	.string "MATTHEW: Alright, eyes up here please.\p"
-	.string "NATASHA: This is the first part of your\n"
-	.string "climb. If you fail here you'll be quickly\l"
-	.string "disqualified. Sorry, but we don't make\l"
-	.string "the rules.\p"
-	.string "MATTHEW: Right. Also, don't think that\n"
-	.string "this will be easy just because it's the\l"
-	.string "first camp.\p"
-	.string "NATASHA: You need to defeat both of us\n"
-	.string "before moving on.\p"
-	.string "MATTHEW: We won't give you the Pokémon\n"
-	.string "to do that.\p"
-	.string "EMERSON: Wait, then how-\p"
-	.string "NATASHA: Pay attention!\n"
-	.string "Behind us is an abandoned home. We've\l"
-	.string "released a variety of Pokémon inside.\p"
-	.string "MATTHEW: Convince one of those\n"
-	.string "Pokémon to ascend the mountain with\l"
-	.string "you. If you fail at that...\p"
-	.string "NATASHA: Then your climb will end here.$"
+	.string "NATASHA: You're here as part of a\n"
+	.string "special research group.\p"
+	.string "MATTHEW: You will have eight different\n"
+	.string "trainers to defeat. You will also have\l"
+	.string "the opportunity to catch Pokémon\l"
+	.string "during your challenge.\p"
+	.string "NATASHA: Plan ahead carefully! This\n"
+	.string "isn't as easy as it seems.$"
 
 LittlerootTown_LeaderFSpeaks::
 	.string "NATASHA: Don't bother the attendants.\n"

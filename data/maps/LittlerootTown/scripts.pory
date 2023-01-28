@@ -5,12 +5,8 @@ script LittlerootTown_EventScript_StepOffTruckMale {
 	delay(15)
 	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_ApproachEmerson)
 	waitmovement(0)
-    msgbox(LittlerootTown_EmersonComplains, MSGBOX_DEFAULT)
-	closemessage
 	applymovement(LOCALID_LEADERF, LittlerootTown_LeaderFIntervenes)
 	waitmovement(0)
-    msgbox(LittlerootTown_LeaderFSpeaks, MSGBOX_DEFAULT)
-	closemessage
 	applymovement(LOCALID_LEADERF, LittlerootTown_LeaderFReturns)
 	waitmovement(0)
     msgbox(LittlerootTown_LeaderMAgrees, MSGBOX_DEFAULT)
@@ -49,11 +45,11 @@ script LittlerootTown_ManBlockingGym {
 	//fadescreen(FADE_FROM_BLACK)
 
 text LittlerootTown_EmersonComplains {
-    format("EMERSON: Just who do you think you are?! Who do you think we are? We're climbers! You can't just throw us around like that!\pATTENDANT: Please join the rest of the crowd.\pEMERSON: Don't order me around!")
+    format("KEVIN: Nevermind they'll just exposition dump for me.")
 }
 
 text LittlerootTown_PreHouseTalk {
-	format("MATTHEW: Alright, eyes up here please.\pNATASHA: This is the first part of your climb. If you fail here you'll be quickly disqualified. Sorry, but we don't make the rules.\pMATTHEW: Right. Also, don't think that this will be easy just because it's the first camp.\pNATASHA: You need to defeat both of us before moving on.\pMATTHEW: We won't give you the Pokémon to do that.\pEMERSON: Wait, then how-\pNATASHA: Pay attention!\nBehind us is an abandoned home. We've released a variety of Pokémon inside.\pMATTHEW: Convince one of those Pokémon to ascend the mountain with you. If you fail at that...\pNATASHA: Then your climb will end here.")
+	format("MATTHEW: Alright, eyes up here please.\pNATASHA: You're here as part of a special research group.\pMATTHEW: You will have eight different trainers to defeat. You will also have the opportunity to catch Pokémon during your challenge.\pNATASHA: Plan ahead carefully! This isn't as easy as it seems.")
 }
 
 text LittlerootTown_LeaderFSpeaks {

@@ -78,5 +78,7 @@ EmersonLeave:
 	step_end
 
 InsideOfTruck_DoorOpenSpeak::
-	.string "EMERSON: Finally! Catch you around, I'm\n"
-	.string "outta here!$"
+	.string "KEVIN: I have red hair now for\n"
+	.string "technical reasons. I'm just gonna\l"
+	.string "exposition dump when you get out of\l"
+	.string "the truck.$"

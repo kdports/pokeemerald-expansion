@@ -53,45 +53,19 @@ LittlerootTown_BrendansHouse_2F_EventScript_TTileRight::
 
 
 LittlerootTown_BrendansHouse_2F_EventScript_HouseFight::
-	playmoncry SPECIES_HONEDGE, 2
-	delay 40
-	waitmoncry
-	applymovement LOCALID_HOPE, LittlerootTown_BrendansHouse_2F_HopeViewFight
-	waitmovement 0
-	applymovement 6, LittlerootTown_BrendansHouse_2F_EmersonViewFight
-	waitmovement 0
-	playmoncry SPECIES_HONEDGE, 2
-	delay 40
-	waitmoncry
-	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_JaceRetreat
-	waitmovement 0
-	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_0
-	closemessage
-	applymovement LOCALID_SADIE, LittlerootTown_BrendansHouse_2F_SadieMovePast
-	waitmovement 0
-	delay 40
-	applymovement 6, LittlerootTown_BrendansHouse_2F_EmersonBackUp
-	waitmovement 0
-	applymovement LOCALID_SADIE, LittlerootTown_BrendansHouse_2F_SadieMovePast2
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_FaceDown
-	waitmovement 0
-	applymovement 6, LittlerootTown_BrendansHouse_2F_FaceDown
-	waitmovement 0
-	applymovement LOCALID_HOPE, LittlerootTown_BrendansHouse_2F_FaceDown
-	waitmovement 0
 	applymovement LOCALID_NATASHA, LittlerootTown_BrendansHouse_2F_LeadersApproach
 	applymovement LOCALID_MATTHEW, LittlerootTown_BrendansHouse_2F_LeadersApproach
 	waitmovement 0
-	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1
+	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_0
 	closemessage
 	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_JaceMoveUp
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_SadieMovePast2
 	waitmovement 0
-	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_2
+	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1
 	closemessage
 	giveitem ITEM_POKE_BALL, 7
 	fadescreen FADE_TO_BLACK
-	warp MAP_LITTLEROOT_TOWN, 8, 21
+	warp MAP_ROUTE_116, 0, 10
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_INTRO
@@ -487,29 +461,18 @@ LittlerootTown_BrendansHouse_2F_EventScript_DontLeave_Text_0:
 	.string "You still need to find your Pokémon...$"
 
 LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_0:
-	.string "JACE: Hey, I give up!\n"
-	.string "You win, alright?\p"
-	.string "SADIE: Mmhmm.\n"
-	.string "If you'll excuse me, I'll be headed to\l"
-	.string "the camp leaders.$"
+	.string "MATTHEW: Are you ready?$"
 
 LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1:
-	.string "MATTHEW: Looking for us?$"
-
-LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_2:
-	.string "NATASHA: I thought I said that this\n"
-	.string "won't be easy.\p"
-	.string "MATTHEW: Three different captains,\n"
-	.string "each with their own pin, is somewhere\l"
-	.string "within or nearby the city.\p"
-	.string "NATASHA: The only way to challenge us\n"
-	.string "is to collect those three pins.\p"
-	.string "EMERSON: C'mon, man!\p"
-	.string "MATTHEW: I'd say your best best to\n"
-	.string "collect the pin from the eastern\l"
-	.string "neighborhood.\p"
-	.string "NATASHA: Both the north and northwest\n"
-	.string "captains are more challenging.$"
+	.string "NATASHA: Go through the door in the\n"
+	.string "back.\p"
+	.string "MATTHEW: Once you enter, they'll be no\n"
+	.string "turning back!.\p"
+	.string "NATASHA: Check in with nurses to heal\n"
+	.string "your Pokemon.\p"
+	.string "MATTHEW: And make sure to catch more\n"
+	.string "Pokemon!\p"
+	.string "NATASHA: We'll see you again soon!$"
 
 LittlerootTown_BackroomScary::
 	.string "Sounds of a fierce battle emanate from\n"

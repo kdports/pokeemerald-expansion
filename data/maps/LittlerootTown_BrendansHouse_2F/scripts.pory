@@ -60,45 +60,19 @@ script LittlerootTown_BrendansHouse_2F_EventScript_TTileRight {
 }
 
 script LittlerootTown_BrendansHouse_2F_EventScript_HouseFight {
-	playmoncry(SPECIES_HONEDGE, 2)
-    delay(40)
-    waitmoncry
-	applymovement(LOCALID_HOPE, LittlerootTown_BrendansHouse_2F_HopeViewFight)
-	waitmovement(0)
-	applymovement(6, LittlerootTown_BrendansHouse_2F_EmersonViewFight)
-	waitmovement(0)
-	playmoncry(SPECIES_HONEDGE, 2)
-    delay(40)
-    waitmoncry
-	applymovement(LOCALID_JACE, LittlerootTown_BrendansHouse_2F_JaceRetreat)
-	waitmovement(0)
-	msgbox(format("JACE: Hey, I give up!\n You win, alright?\pSADIE: Mmhmm.\n If you'll excuse me, I'll be headed to the camp leaders."))
-	closemessage
-	applymovement(LOCALID_SADIE, LittlerootTown_BrendansHouse_2F_SadieMovePast)
-	waitmovement(0)
-	delay(40)
-	applymovement(6, LittlerootTown_BrendansHouse_2F_EmersonBackUp)
-	waitmovement(0)
-	applymovement(LOCALID_SADIE, LittlerootTown_BrendansHouse_2F_SadieMovePast2)
-	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_FaceDown)
-	waitmovement(0)
-	applymovement(6, LittlerootTown_BrendansHouse_2F_FaceDown)
-	waitmovement(0)
-	applymovement(LOCALID_HOPE, LittlerootTown_BrendansHouse_2F_FaceDown)
-	waitmovement(0)
 	applymovement(LOCALID_NATASHA, LittlerootTown_BrendansHouse_2F_LeadersApproach)
 	applymovement(LOCALID_MATTHEW, LittlerootTown_BrendansHouse_2F_LeadersApproach)
 	waitmovement(0)
-	msgbox(format("MATTHEW: Looking for us?"))
+	msgbox(format("MATTHEW: Are you ready?"))
 	closemessage
 	applymovement(LOCALID_JACE, LittlerootTown_BrendansHouse_2F_JaceMoveUp)
 	applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_SadieMovePast2)
 	waitmovement(0)
-	msgbox(format("NATASHA: I thought I said that this won't be easy.\pMATTHEW: Three different captains, each with their own pin, is somewhere within or nearby the city.\pNATASHA: The only way to challenge us is to collect those three pins.\pEMERSON: C'mon, man!\pMATTHEW: I'd say your best best to collect the pin from the eastern neighborhood.\pNATASHA: Both the north and northwest captains are more challenging."))
+	msgbox(format("NATASHA: Go through the door in the back.\pMATTHEW: Once you enter, they'll be no turning back!.\pNATASHA: Check in with nurses to heal your Pokemon.\pMATTHEW: And make sure to catch more Pokemon!\pNATASHA: We'll see you again soon!"))
 	closemessage
 	giveitem(ITEM_POKE_BALL, 7)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_LITTLEROOT_TOWN, 8, 21)
+	warp(MAP_ROUTE_116, 0, 10)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 	// Add more here
@@ -131,7 +105,7 @@ movement LittlerootTown_BrendansHouse_2F_EmersonViewFight {
 movement LittlerootTown_BrendansHouse_2F_HopeViewFight {
 	walk_up * 3
 	walk_left
-	face_up	
+	face_up
 }
 movement LittlerootTown_BrendansHouse_2F_JaceRetreat {
 	walk_down * 2
