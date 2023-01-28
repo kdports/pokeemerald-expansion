@@ -1,3 +1,52 @@
+Route116_NatashaMattBattle::
+	msgbox Route116_NatashMattSpeak, MSGBOX_DEFAULT
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, Route116_NatashaMattBattle_3
+	case 0, Route116_NatashaMattBattle_4
+Route116_NatashaMattBattle_1:
+	closemessage
+	return
+
+Route116_NatashaMattBattle_3:
+	call Route116_NatashaMattEasyFight
+	goto Route116_NatashaMattBattle_1
+
+Route116_NatashaMattBattle_4:
+	call Route116_NatashaMattHardFight
+	goto Route116_NatashaMattBattle_1
+
+
+Route116_NatashaMattEasyFight::
+	trainerbattle_double TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons
+	msgbox Route116_NatashaMattEasyFight_Text_0
+	fadescreen FADE_TO_BLACK
+	warp MAP_ROUTE116, 0, 10
+	waitstate
+	fadescreen FADE_FROM_BLACK
+	release
+	return
+
+
+Route116_NatashaMattHardFight::
+	trainerbattle_double TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons
+	msgbox Route116_NatashaMattEasyFight_Text_0
+	giveitem ITEM_POKE_BALL, 10
+	fadescreen FADE_TO_BLACK
+	warp MAP_ROUTE116, 0, 10
+	waitstate
+	fadescreen FADE_FROM_BLACK
+	release
+	return
+
+
+Route116_LevelCapManTalk::
+	msgbox Route116_LevelCapMan, MSGBOX_DEFAULT
+	giveitem ITEM_RARE_CANDY, 99
+	closemessage
+	return
+
+
 .set LOCALID_BRINEY, 11
 .set LOCALID_WANDAS_BF_OUTSIDE, 21
 
@@ -470,3 +519,23 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "placed in the appropriate POCKETS.\p"
 	.string "No TRAINER can afford to be without\n"
 	.string "a BAG of their own.$"
+
+Route116_NatashaMattEasyFight_Text_0:
+	.string "MATTHEW: Hey, that was a lot of fun!\p"
+	.string "NATASHA: Good luck in the rest of your\n"
+	.string "challenge.$"
+
+Route116_LevelCapMan::
+	.string "Hey there, I'm the level cap man! The\n"
+	.string "level cap for this gym is 16. Here are 99\l"
+	.string "rare candies! Don't use them all on one\l"
+	.string "Pokemon.$"
+
+Route116_NatashMattSpeak::
+	.string "NATASHA: I'm excited for this.\p"
+	.string "MATTHEW: Do you want an easy fight? If\n"
+	.string "you say no, prepare for some crazy\l"
+	.string "shit!$"
+
+Route116_LeaderBattleIntro::
+	.string "Here we go!$"

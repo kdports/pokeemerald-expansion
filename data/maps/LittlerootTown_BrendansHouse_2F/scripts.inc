@@ -58,14 +58,11 @@ LittlerootTown_BrendansHouse_2F_EventScript_HouseFight::
 	waitmovement 0
 	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_0
 	closemessage
-	applymovement LOCALID_JACE, LittlerootTown_BrendansHouse_2F_JaceMoveUp
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_SadieMovePast2
-	waitmovement 0
 	msgbox LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1
 	closemessage
-	giveitem ITEM_POKE_BALL, 7
+	giveitem ITEM_POKE_BALL, 10
 	fadescreen FADE_TO_BLACK
-	warp MAP_ROUTE_116, 0, 10
+	warp MAP_ROUTE116, 0, 10
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_STARTER_HOUSE_INTRO

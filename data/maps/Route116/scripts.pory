@@ -1,3 +1,54 @@
+script Route116_NatashaMattBattle {
+    msgbox(Route116_NatashMattSpeak, MSGBOX_DEFAULT)
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(Route116_NatashaMattEasyFight)
+		case 0:
+			call(Route116_NatashaMattHardFight)
+	}
+	closemessage
+}
+
+script Route116_NatashaMattEasyFight {
+	trainerbattle_double(TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	msgbox(format("MATTHEW: Hey, that was a lot of fun!\pNATASHA: Good luck in the rest of your challenge."))
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_ROUTE116, 0, 10)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+	release
+}
+
+script Route116_NatashaMattHardFight {
+	trainerbattle_double(TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
+	msgbox(format("MATTHEW: Hey, that was a lot of fun!\pNATASHA: Good luck in the rest of your challenge."))
+	giveitem(ITEM_POKE_BALL, 10)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_ROUTE116, 0, 10)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+	release
+}
+
+script Route116_LevelCapManTalk {
+    msgbox(Route116_LevelCapMan, MSGBOX_DEFAULT)
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
+text Route116_LevelCapMan {
+    format("Hey there, I'm the level cap man! The level cap for this gym is 16. Here are 99 rare candies! Don't use them all on one Pokemon.")
+}
+
+text Route116_NatashMattSpeak {
+    format("NATASHA: I'm excited for this.\pMATTHEW: Do you want an easy fight? If you say no, prepare for some crazy shit!")
+}
+
+text Route116_LeaderBattleIntro {
+	format("Here we go!")
+}
+
 raw `
 .set LOCALID_BRINEY, 11
 .set LOCALID_WANDAS_BF_OUTSIDE, 21

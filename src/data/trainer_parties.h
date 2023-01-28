@@ -25,7 +25,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = { 
     .lvl = 6,
     .species = SPECIES_ODDISH,
 	.abilityNums = 0,
-    }	
+    }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = { // Overwritten
@@ -239,16 +239,38 @@ static const struct TrainerMonItemCustomMoves sParty_Marcel[] = { // Overwritten
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Alberto[] = {
+static const struct TrainerMonItemCustomMoves sParty_Alberto[] = { // Overwritten
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
+    .iv = 80,
+    .lvl = 10,
+    .species = SPECIES_SLAKOTH,
+	.heldItem = ITEM_NONE,
+	.moves = {MOVE_NONE, MOVE_YAWN, MOVE_ENCORE, MOVE_SLACK_OFF},
+	.abilityNums = 0,
     },
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_XATU,
+    .iv = 80,
+    .lvl = 11,
+    .species = SPECIES_STUFFUL,
+	.heldItem = ITEM_NONE,
+	.moves = {MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_LEER},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 16,
+    .species = SPECIES_GROWLITHE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_HELPING_HAND, MOVE_FLAME_WHEEL, MOVE_NONE, MOVE_LEER},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 16,
+    .species = SPECIES_HERDIER,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_BITE, MOVE_NONE, MOVE_WORK_UP},
+	.abilityNums = 0,
     }
 };
 
