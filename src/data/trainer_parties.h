@@ -199,7 +199,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntPetalburgWoods[] = 
 static const struct TrainerMonItemCustomMoves sParty_Marcel[] = { // Overwritten
     {
     .iv = 80,
-    .lvl = 12,
+    .lvl = 9,
     .species = SPECIES_SLAKOTH,
 	.heldItem = ITEM_NONE,
 	.moves = {MOVE_SCRATCH, MOVE_YAWN, MOVE_ENCORE, MOVE_SLACK_OFF},
@@ -207,18 +207,10 @@ static const struct TrainerMonItemCustomMoves sParty_Marcel[] = { // Overwritten
     },
     {
     .iv = 80,
-    .lvl = 13,
+    .lvl = 10,
     .species = SPECIES_STUFFUL,
 	.heldItem = ITEM_NONE,
 	.moves = {MOVE_TACKLE, MOVE_PAYBACK, MOVE_FORCE_PALM, MOVE_LEER},
-	.abilityNums = 0,
-    },
-    {
-    .iv = 80,
-    .lvl = 13,
-    .species = SPECIES_STARLY,
-	.heldItem = ITEM_NONE,
-	.moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK, MOVE_LEER, MOVE_TACKLE},
 	.abilityNums = 0,
     },
     {
@@ -241,26 +233,10 @@ static const struct TrainerMonItemCustomMoves sParty_Marcel[] = { // Overwritten
 
 static const struct TrainerMonItemCustomMoves sParty_Alberto[] = { // Overwritten
     {
-    .iv = 80,
-    .lvl = 10,
-    .species = SPECIES_SLAKOTH,
-	.heldItem = ITEM_NONE,
-	.moves = {MOVE_NONE, MOVE_YAWN, MOVE_ENCORE, MOVE_SLACK_OFF},
-	.abilityNums = 0,
-    },
-    {
-    .iv = 80,
-    .lvl = 11,
-    .species = SPECIES_STUFFUL,
-	.heldItem = ITEM_NONE,
-	.moves = {MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_LEER},
-	.abilityNums = 0,
-    },
-    {
     .iv = 100,
     .lvl = 16,
     .species = SPECIES_GROWLITHE,
-	.heldItem = ITEM_NONE,
+	.heldItem = ITEM_LAGGING_TAIL,
     .moves = {MOVE_HELPING_HAND, MOVE_FLAME_WHEEL, MOVE_NONE, MOVE_LEER},
 	.abilityNums = 0,
     },
@@ -268,24 +244,64 @@ static const struct TrainerMonItemCustomMoves sParty_Alberto[] = { // Overwritte
     .iv = 100,
     .lvl = 16,
     .species = SPECIES_HERDIER,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_NONE, MOVE_BITE, MOVE_NONE, MOVE_WORK_UP},
+    .heldItem = ITEM_LAGGING_TAIL,
+    .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_NONE, MOVE_WORK_UP},
 	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Ed[] = { // Overwritten, easy Noah
+static const struct TrainerMonItemCustomMoves sParty_Ed[] = { // Overwritten, easy Noah (single battle)
+    {
+    .iv = 10,
+    .lvl = 19,
+    .species = SPECIES_SUDOWOODO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_ROCK_THROW, MOVE_FLAIL, MOVE_ATTRACT, MOVE_MIMIC},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 21,
+    .species = SPECIES_ROCKRUFF,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_BITE, MOVE_HOWL, MOVE_ROCK_THROW, MOVE_SWAGGER},
+	.abilityNums = 0,
+    },
     {
     .iv = 80,
     .lvl = 22,
     .species = SPECIES_MACHOKE,
-	.heldItem = ITEM_NONE,
+	.heldItem = ITEM_LAGGING_TAIL,
 	.moves = {MOVE_FORESIGHT, MOVE_SEISMIC_TOSS, MOVE_REVENGE, MOVE_FOCUS_ENERGY},
 	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern4[] = { // Overwritten, hard Noah
+static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern4[] = { // Overwritten, hard Noah (double battle)
+    {
+    .iv = 10,
+    .lvl = 19,
+    .species = SPECIES_ARCHEN,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_ANCIENT_POWER, MOVE_SANDSTORM, MOVE_PLUCK, MOVE_QUICK_ATTACK},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 21,
+    .species = SPECIES_ROCKRUFF,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_BITE, MOVE_HOWL, MOVE_ROCK_THROW, MOVE_SWAGGER},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 21,
+    .species = SPECIES_OMANYTE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_WATER_GUN, MOVE_ROLLOUT, MOVE_LEER, MOVE_ENDURE},
+	.abilityNums = 0,
+    },
     {
     .iv = 80,
     .lvl = 22,

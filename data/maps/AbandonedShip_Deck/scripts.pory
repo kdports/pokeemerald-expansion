@@ -1,3 +1,8 @@
+script AbandonedShip_GamerTalk {
+	msgbox(format("GAMER: Gamer time! Gastly is great! Go, go gastly!"))
+	closemessage
+}
+
 raw `
 AbandonedShip_Deck_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, AbandonedShip_Deck_OnTransition

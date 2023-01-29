@@ -65,7 +65,7 @@ script LittlerootTown_BrendansHouse_2F_EventScript_HouseFight {
 	waitmovement(0)
 	msgbox(format("MATTHEW: Are you ready?"))
 	closemessage
-	msgbox(format("NATASHA: Go through the door in the back.\pMATTHEW: Once you enter, they'll be no turning back!.\pNATASHA: Check in with nurses to heal your Pokemon.\pMATTHEW: And make sure to catch more Pokemon!\pNATASHA: We'll see you again soon!"))
+	msgbox(format("NATASHA: Press Start to enter your menu. You can view your Pokemon and save your game there.\pNATASHA: Check in with nurses to heal your Pokemon.\pMATTHEW: And make sure to catch more Pokemon!\pNATASHA: We'll see you again soon!"))
 	closemessage
 	giveitem(ITEM_POKE_BALL, 20)
 	fadescreen(FADE_TO_BLACK)

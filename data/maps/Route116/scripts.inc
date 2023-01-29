@@ -18,24 +18,13 @@ Route116_NatashaMattBattle_4:
 
 
 Route116_NatashaMattEasyFight::
-	trainerbattle_double TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons
-	msgbox Route116_NatashaMattEasyFight_Text_0
-	fadescreen FADE_TO_BLACK
-	warp MAP_METEOR_FALLS_1F_1R, 6, 39
-	waitstate
-	fadescreen FADE_FROM_BLACK
+	trainerbattle_double TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route116_EndBossFight, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, Route116_EndBossFight, NO_MUSIC
 	release
 	return
 
 
 Route116_NatashaMattHardFight::
-	trainerbattle_double TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons
-	msgbox Route116_NatashaMattEasyFight_Text_0
-	giveitem ITEM_POKE_BALL, 10
-	fadescreen FADE_TO_BLACK
-	warp MAP_METEOR_FALLS_1F_1R, 6, 39
-	waitstate
-	fadescreen FADE_FROM_BLACK
+	trainerbattle_double TRAINER_MARCEL, Route116_LeaderBattleIntro, Route116_EndBossFight, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, Route116_EndBossFight, NO_MUSIC
 	release
 	return
 
@@ -43,6 +32,23 @@ Route116_NatashaMattHardFight::
 Route116_LevelCapManTalk::
 	msgbox Route116_LevelCapMan, MSGBOX_DEFAULT
 	giveitem ITEM_RARE_CANDY, 99
+	closemessage
+	return
+
+
+Route116_EndBossFight::
+	msgbox Route116_EndBossFight_Text_0
+	special HealPlayerParty
+	giveitem ITEM_POKE_BALL, 10
+	fadescreen FADE_TO_BLACK
+	warp MAP_METEOR_FALLS_1F_1R, 6, 39
+	waitstate
+	fadescreen FADE_FROM_BLACK
+	return
+
+
+Route116_GamerTalk::
+	msgbox Route116_GamerTalk_Text_0
 	closemessage
 	return
 
@@ -520,16 +526,28 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "No TRAINER can afford to be without\n"
 	.string "a BAG of their own.$"
 
-Route116_NatashaMattEasyFight_Text_0:
+Route116_EndBossFight_Text_0:
 	.string "MATTHEW: Hey, that was a lot of fun!\p"
 	.string "NATASHA: Good luck in the rest of your\n"
 	.string "challenge.$"
 
+Route116_GamerTalk_Text_0:
+	.string "GAMER: I'm a gamer! The\n"
+	.string "recommendations I give are totally\l"
+	.string "leet!\p"
+	.string "Hey, have you seen the Scrappy and\n"
+	.string "Tyrogue here? You gotta catch them!$"
+
 Route116_LevelCapMan::
 	.string "Hey there, I'm the level cap man! The\n"
-	.string "level cap for this gym is 16. Here are 99\l"
-	.string "rare candies! Don't use them all on one\l"
-	.string "Pokemon.$"
+	.string "level cap for this gym is 16. They're\l"
+	.string "normal-type lovers, so nothing\l"
+	.string "abnormal! Here are 99 rare candies!\l"
+	.string "Don't use them all on one Pokemon.\p"
+	.string "Oh, hey, I almost forgot! All of the\n"
+	.string "leaders have their own special ace.\l"
+	.string "That ace doesn't share a type with the\l"
+	.string "rest of their Pokemon, so stay alert.$"
 
 Route116_NatashMattSpeak::
 	.string "NATASHA: I'm excited for this.\p"

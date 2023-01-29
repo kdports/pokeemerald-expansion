@@ -461,10 +461,9 @@ LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_0:
 	.string "MATTHEW: Are you ready?$"
 
 LittlerootTown_BrendansHouse_2F_EventScript_HouseFight_Text_1:
-	.string "NATASHA: Go through the door in the\n"
-	.string "back.\p"
-	.string "MATTHEW: Once you enter, they'll be no\n"
-	.string "turning back!.\p"
+	.string "NATASHA: Press Start to enter your\n"
+	.string "menu. You can view your Pokemon and\l"
+	.string "save your game there.\p"
 	.string "NATASHA: Check in with nurses to heal\n"
 	.string "your Pokemon.\p"
 	.string "MATTHEW: And make sure to catch more\n"

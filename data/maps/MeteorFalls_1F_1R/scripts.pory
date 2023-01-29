@@ -4,8 +4,13 @@ script MeteorFalls_LevelCapManTalk {
 	closemessage
 }
 
+script MeteorFalls_GamerTalk {
+	msgbox(format("GAMER: I'm a gamer! I know so much! Marill is a such a great Pokemon! At level 20 it learns aqua tail. It's... it's crazy man!"))
+	closemessage
+}
+
 text MeteorFalls_LevelCapMan {
-    format("It's me, the level cap man! The level cap for this gym is 22. Here are 99 rare candies! Don't use them all on one Pokemon.")
+    format("It's me, the level cap man! The level cap for this gym is 22. Noah sure likes his rock types, so watch out. Here are 99 rare candies! Don't use them all on one Pokemon.")
 }
 
 script MeteorFalls_NoahBattle {
@@ -25,24 +30,22 @@ text MeteorFalls_NoahSpeak {
 }
 
 script MeteorFalls_NoahEasyFight {
-	trainerbattle_single(TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated)
-	msgbox(format("NOAH: Fuck! Well, guess you get to keep going."))
-	fadescreen(FADE_TO_BLACK)
-	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
-	waitstate
-	fadescreen(FADE_FROM_BLACK)
+	trainerbattle_single(TRAINER_ED, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, MeteorFalls_EndBossFight)
 	release
 }
 
 script MeteorFalls_NoahHardFight {
-	trainerbattle_single(TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated)
+	trainerbattle_double(TRAINER_GRUNT_SEAFLOOR_CAVERN_4, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, MeteorFalls_EndBossFight)
+	release
+}
+
+script MeteorFalls_EndBossFight {
 	msgbox(format("NOAH: Fuck! Well, guess you get to keep going."))
 	giveitem(ITEM_POKE_BALL, 10)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
+	warp(MAP_ABANDONED_SHIP_DECK, 13, 15)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
-	release
 }
 
 raw `

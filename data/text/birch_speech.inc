@@ -10,10 +10,6 @@ gText_Birch_Pokemon::
 gText_Birch_MainSpeech::
 	.string "I can't believe they'd make us\n"
 	.string "spend the journey in here.\p"
-	.string "Are all the other climbers stuck\n"
-	.string "like this too?\p"
-	.string "They better not be getting special\n"
-	.string "treatment!\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
@@ -33,15 +29,14 @@ gText_Birch_SoItsPlayer::
 
 gText_Birch_YourePlayer::
 	.string "Nice to meet you!\p"
-	.string "I'm Emerson.\n"
-	.string "Good luck on the climb.\p"
+	.string "Good luck on the challenge.\p"
 	.string "I'm gonna try and nap for a bit.\n"
 	.string "We've gotta be getting there soon.\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "{PLAYER}{KUN}? I'm Emerson.\n"
-	.string "Good luck on the climb.\p"
+	.string "{PLAYER}{KUN}?\n"
+	.string "Good luck on the challenge.\p"
 	.string "I'm gonna try and nap for a bit.\n"
 	.string "We've gotta be getting there soon.\p"
 	.string "$"

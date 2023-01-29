@@ -11,23 +11,12 @@ script Route116_NatashaMattBattle {
 }
 
 script Route116_NatashaMattEasyFight {
-	trainerbattle_double(TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
-	msgbox(format("MATTHEW: Hey, that was a lot of fun!\pNATASHA: Good luck in the rest of your challenge."))
-	fadescreen(FADE_TO_BLACK)
-	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
-	waitstate
-	fadescreen(FADE_FROM_BLACK)
+	trainerbattle_double(TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route116_EndBossFight, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, Route116_EndBossFight, NO_MUSIC)
 	release
 }
 
 script Route116_NatashaMattHardFight {
-	trainerbattle_double(TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons)
-	msgbox(format("MATTHEW: Hey, that was a lot of fun!\pNATASHA: Good luck in the rest of your challenge."))
-	giveitem(ITEM_POKE_BALL, 10)
-	fadescreen(FADE_TO_BLACK)
-	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
-	waitstate
-	fadescreen(FADE_FROM_BLACK)
+	trainerbattle_double(TRAINER_MARCEL, Route116_LeaderBattleIntro, Route116_EndBossFight, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, Route116_EndBossFight, NO_MUSIC)
 	release
 }
 
@@ -37,8 +26,18 @@ script Route116_LevelCapManTalk {
 	closemessage
 }
 
+script Route116_EndBossFight {
+	msgbox(format("MATTHEW: Hey, that was a lot of fun!\pNATASHA: Good luck in the rest of your challenge."))
+	special(HealPlayerParty)
+	giveitem(ITEM_POKE_BALL, 10)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_METEOR_FALLS_1F_1R, 6, 39)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+}
+
 text Route116_LevelCapMan {
-    format("Hey there, I'm the level cap man! The level cap for this gym is 16. Here are 99 rare candies! Don't use them all on one Pokemon.")
+    format("Hey there, I'm the level cap man! The level cap for this gym is 16. They're normal-type lovers, so nothing abnormal! Here are 99 rare candies! Don't use them all on one Pokemon.\pOh, hey, I almost forgot! All of the leaders have their own special ace. That ace doesn't share a type with the rest of their Pokemon, so stay alert.")
 }
 
 text Route116_NatashMattSpeak {
@@ -47,6 +46,11 @@ text Route116_NatashMattSpeak {
 
 text Route116_LeaderBattleIntro {
 	format("Here we go!")
+}
+
+script Route116_GamerTalk {
+	msgbox(format("GAMER: I'm a gamer! The recommendations I give are totally leet!\p Hey, have you seen the Scrappy and Tyrogue here? You gotta catch them!"))
+	closemessage
 }
 
 raw `

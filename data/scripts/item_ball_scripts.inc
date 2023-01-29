@@ -131,7 +131,7 @@ Route116_EventScript_ItemXSpecial::
 	end
 
 Route116_EventScript_ItemEther::
-	finditem ITEM_ETHER
+	finditem ITEM_QUICK_CLAW
 	end
 
 Route116_EventScript_ItemRepel::
@@ -379,19 +379,19 @@ FieryPath_EventScript_ItemTM06::
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemTM23::
-	finditem ITEM_TM23
+	finditem ITEM_TM09
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemFullHeal::
-	finditem ITEM_FULL_HEAL
+	finditem ITEM_ORAN_BERRY
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemMoonStone::
-	finditem ITEM_MOON_STONE
+	finditem ITEM_ORAN_BERRY
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemPPUP::
-	finditem ITEM_PP_UP
+	finditem ITEM_SITRUS_BERRY
 	end
 
 MeteorFalls_B1F_2R_EventScript_ItemTM02::
@@ -419,7 +419,7 @@ NewMauville_Inside_EventScript_ItemParalyzeHeal::
 	end
 
 AbandonedShip_Rooms_1F_EventScript_ItemHarborMail::
-	finditem ITEM_HARBOR_MAIL
+	finditem ITEM_FOCUS_SASH
 	end
 
 AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope::

@@ -5,6 +5,12 @@ MeteorFalls_LevelCapManTalk::
 	return
 
 
+MeteorFalls_GamerTalk::
+	msgbox MeteorFalls_GamerTalk_Text_0
+	closemessage
+	return
+
+
 MeteorFalls_NoahBattle::
 	msgbox MeteorFalls_NoahSpeak, MSGBOX_DEFAULT
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
@@ -25,25 +31,24 @@ MeteorFalls_NoahBattle_4:
 
 
 MeteorFalls_NoahEasyFight::
-	trainerbattle_single TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated
-	msgbox MeteorFalls_NoahEasyFight_Text_0
-	fadescreen FADE_TO_BLACK
-	warp MAP_METEOR_FALLS_1F_1R, 6, 39
-	waitstate
-	fadescreen FADE_FROM_BLACK
+	trainerbattle_single TRAINER_ED, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, MeteorFalls_EndBossFight
 	release
 	return
 
 
 MeteorFalls_NoahHardFight::
-	trainerbattle_single TRAINER_MARCEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated
-	msgbox MeteorFalls_NoahEasyFight_Text_0
+	trainerbattle_double TRAINER_GRUNT_SEAFLOOR_CAVERN_4, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, MeteorFalls_EndBossFight
+	release
+	return
+
+
+MeteorFalls_EndBossFight::
+	msgbox MeteorFalls_EndBossFight_Text_0
 	giveitem ITEM_POKE_BALL, 10
 	fadescreen FADE_TO_BLACK
-	warp MAP_METEOR_FALLS_1F_1R, 6, 39
+	warp MAP_ABANDONED_SHIP_DECK, 13, 15
 	waitstate
 	fadescreen FADE_FROM_BLACK
-	release
 	return
 
 
@@ -363,14 +368,21 @@ MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney:
 	.string "What are they going to do with that\n"
 	.string "METEORITE at MT. CHIMNEY?$"
 
-MeteorFalls_NoahEasyFight_Text_0:
+MeteorFalls_GamerTalk_Text_0:
+	.string "GAMER: I'm a gamer! I know so much!\n"
+	.string "Marill is a such a great Pokemon! At\l"
+	.string "level 20 it learns aqua tail. It's... it's\l"
+	.string "crazy man!$"
+
+MeteorFalls_EndBossFight_Text_0:
 	.string "NOAH: Fuck! Well, guess you get to keep\n"
 	.string "going.$"
 
 MeteorFalls_LevelCapMan::
 	.string "It's me, the level cap man! The level cap\n"
-	.string "for this gym is 22. Here are 99 rare\l"
-	.string "candies! Don't use them all on one\l"
+	.string "for this gym is 22. Noah sure likes his\l"
+	.string "rock types, so watch out. Here are 99\l"
+	.string "rare candies! Don't use them all on one\l"
 	.string "Pokemon.$"
 
 MeteorFalls_NoahSpeak::
