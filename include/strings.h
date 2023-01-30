@@ -1210,6 +1210,8 @@ extern const u8 gText_NotSoGood[];
 extern const u8 gText_LilycoveCity[];
 extern const u8 gText_Right[];
 extern const u8 gText_Left[];
+extern const u8 gText_Easy[];
+extern const u8 gText_Hard[];
 extern const u8 gText_RedShard[];
 extern const u8 gText_YellowShard[];
 extern const u8 gText_BlueShard[];

@@ -10,12 +10,12 @@ script MeteorFalls_GamerTalk {
 }
 
 text MeteorFalls_LevelCapMan {
-    format("It's me, the level cap man! The level cap for this gym is 22. Noah sure likes his rock types, so watch out. Here are 99 rare candies! Don't use them all on one Pokemon.")
+    format("MR. MAN: It's me, the level cap man! The level cap for this gym is 22. Noah sure likes his rock types, so watch out. Here are some more candies.")
 }
 
 script MeteorFalls_NoahBattle {
     msgbox(MeteorFalls_NoahSpeak, MSGBOX_DEFAULT)
-	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
 			call(MeteorFalls_NoahHardFight)

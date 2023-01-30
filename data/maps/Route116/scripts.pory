@@ -1,6 +1,6 @@
 script Route116_NatashaMattBattle {
     msgbox(Route116_NatashMattSpeak, MSGBOX_DEFAULT)
-	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
 			call(Route116_NatashaMattHardFight)
@@ -11,7 +11,7 @@ script Route116_NatashaMattBattle {
 }
 
 script Route116_NatashaMattEasyFight {
-	trainerbattle_double(TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route116_EndBossFight, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, Route116_EndBossFight, NO_MUSIC)
+	trainerbattle_single(TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route116_EndBossFight, Route116_EndBossFight, NO_MUSIC)
 	release
 }
 
@@ -37,7 +37,7 @@ script Route116_EndBossFight {
 }
 
 text Route116_LevelCapMan {
-    format("Hey there, I'm the level cap man! The level cap for this gym is 16. They're normal-type lovers, so nothing abnormal! Here are 99 rare candies! Don't use them all on one Pokemon.\pOh, hey, I almost forgot! All of the leaders have their own special ace. That ace doesn't share a type with the rest of their Pokemon, so stay alert.")
+    format("MR. MAN: Hey there, I'm the level cap man! The level cap for this gym is 16. They're normal-type lovers, so nothing abnormal! Here are 99 rare candies! Don't use them all on one Pokemon.\pOh, hey, I almost forgot! All of the leaders have their own special ace. That ace doesn't share a type with the rest of their Pokemon, so stay alert.")
 }
 
 text Route116_NatashMattSpeak {

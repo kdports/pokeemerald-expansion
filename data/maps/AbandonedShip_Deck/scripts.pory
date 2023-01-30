@@ -3,6 +3,12 @@ script AbandonedShip_GamerTalk {
 	closemessage
 }
 
+script AbandonedShip_LevelCapManTalk {
+    msgbox(format("MR. MAN: It's a me! You know, this job has started to really get to me. I'm thinking of taking a vacation. Anyway, the level cap is 29. This place sure is spooky. Watch out for ghost types!"))
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
 raw `
 AbandonedShip_Deck_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, AbandonedShip_Deck_OnTransition

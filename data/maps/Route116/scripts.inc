@@ -1,6 +1,6 @@
 Route116_NatashaMattBattle::
 	msgbox Route116_NatashMattSpeak, MSGBOX_DEFAULT
-	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
 	switch VAR_RESULT
 	case 1, Route116_NatashaMattBattle_3
 	case 0, Route116_NatashaMattBattle_4
@@ -18,7 +18,7 @@ Route116_NatashaMattBattle_4:
 
 
 Route116_NatashaMattEasyFight::
-	trainerbattle_double TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route116_EndBossFight, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, Route116_EndBossFight, NO_MUSIC
+	trainerbattle_single TRAINER_ALBERTO, Route116_LeaderBattleIntro, Route116_EndBossFight, Route116_EndBossFight, NO_MUSIC
 	release
 	return
 
@@ -539,9 +539,9 @@ Route116_GamerTalk_Text_0:
 	.string "Tyrogue here? You gotta catch them!$"
 
 Route116_LevelCapMan::
-	.string "Hey there, I'm the level cap man! The\n"
-	.string "level cap for this gym is 16. They're\l"
-	.string "normal-type lovers, so nothing\l"
+	.string "MR. MAN: Hey there, I'm the level cap\n"
+	.string "man! The level cap for this gym is 16.\l"
+	.string "They're normal-type lovers, so nothing\l"
 	.string "abnormal! Here are 99 rare candies!\l"
 	.string "Don't use them all on one Pokemon.\p"
 	.string "Oh, hey, I almost forgot! All of the\n"

@@ -13,7 +13,7 @@ MeteorFalls_GamerTalk::
 
 MeteorFalls_NoahBattle::
 	msgbox MeteorFalls_NoahSpeak, MSGBOX_DEFAULT
-	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
 	switch VAR_RESULT
 	case 1, MeteorFalls_NoahBattle_3
 	case 0, MeteorFalls_NoahBattle_4
@@ -379,11 +379,10 @@ MeteorFalls_EndBossFight_Text_0:
 	.string "going.$"
 
 MeteorFalls_LevelCapMan::
-	.string "It's me, the level cap man! The level cap\n"
-	.string "for this gym is 22. Noah sure likes his\l"
-	.string "rock types, so watch out. Here are 99\l"
-	.string "rare candies! Don't use them all on one\l"
-	.string "Pokemon.$"
+	.string "MR. MAN: It's me, the level cap man! The\n"
+	.string "level cap for this gym is 22. Noah sure\l"
+	.string "likes his rock types, so watch out. Here\l"
+	.string "are some more candies.$"
 
 MeteorFalls_NoahSpeak::
 	.string "NOAH: What's up? It's my turn now. I\n"

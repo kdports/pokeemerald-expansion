@@ -289,9 +289,9 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern4[] = { 
     {
     .iv = 10,
     .lvl = 21,
-    .species = SPECIES_ROCKRUFF,
+    .species = SPECIES_LILEEP,
 	.heldItem = ITEM_NONE,
-    .moves = {MOVE_BITE, MOVE_HOWL, MOVE_ROCK_THROW, MOVE_SWAGGER},
+    .moves = {MOVE_ANCIENT_POWER, MOVE_INGRAIN, MOVE_BULLET_SEED, MOVE_CONFUSE_RAY},
 	.abilityNums = 0,
     },
     {
