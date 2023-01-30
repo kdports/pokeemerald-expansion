@@ -355,7 +355,7 @@ GraniteCave_1F_EventScript_ItemEscapeRope::
 	end
 
 GraniteCave_B1F_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_BALL
+	finditem ITEM_ZOOM_LENS
 	end
 
 GraniteCave_B2F_EventScript_ItemRepel::
@@ -605,7 +605,7 @@ Route110_TrickHousePuzzle8_EventScript_ItemBeadMail::
 	end
 
 VictoryRoad_1F_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
+	finditem ITEM_LEFTOVERS
 	end
 
 VictoryRoad_1F_EventScript_ItemPPUp::

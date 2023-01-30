@@ -37,7 +37,6 @@ FarawayIsland_Interior_EventScript_TryRemoveMew::
 FarawayIsland_Interior_OnTransition:
 	setvar VAR_FARAWAY_ISLAND_STEP_COUNTER, 0
 	setvar VAR_TEMP_1, 1
-	call_if_unset FLAG_CAUGHT_MEW, FarawayIsland_Interior_EventScript_TryShowMew
 	end
 
 FarawayIsland_Interior_EventScript_TryShowMew::

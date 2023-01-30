@@ -1,3 +1,8 @@
+script FarawayIsland_Historian1 {
+	msgbox(format(""))
+	closemessage
+}
+
 raw `
 .set LOCALID_SAILOR, 1
 .set LOCALID_SS_TIDAL, 2
