@@ -10,39 +10,49 @@ script AbandonedShip_LevelCapManTalk {
 }
 
 script AbandonedShip_Ghost1 {
+	lockall
 	msgbox(format("It's cold here..."))
 	closemessage
+	releaseall
 	removeobject(3)
 }
 
 script AbandonedShip_Ghost2 {
+	lockall
 	msgbox(format("I like when she sings to us..."))
 	closemessage
+	releaseall
 	removeobject(3)
 }
 
 script AbandonedShip_Ghost3 {
+	lockall
 	msgbox(format("Why did this happen to me? I didn't do anything wrong."))
 	closemessage
+	releaseall
 	removeobject(4)
 }
 
 script AbandonedShip_Ghost4 {
+	lockall
 	msgbox(format("She can help me..."))
 	closemessage
+	releaseall
 	removeobject(5)
 }
 
 script AbandonedShip_CarolineBattle {
+	lockall
     msgbox(format("CAROLINE: Oh my god, hey! A real person! I've been singing to help get rid of these ghosts, but it's been so long since I saw a live human. Are you ready for a fight?"))
 	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
-			call(MeteorFalls_NoahHardFight)
+			call(AbandonedShip_CarolineHardFight)
 		case 0:
-			call(MeteorFalls_NoahEasyFight)
+			call(AbandonedShip_CarolineEasyFight)
 	}
 	closemessage
+	releaseall
 }
 
 script AbandonedShip_CarolineEasyFight {

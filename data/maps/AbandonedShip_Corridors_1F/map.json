@@ -60,21 +60,21 @@
       "y": 11,
       "elevation": 3,
       "dest_map": "MAP_ABANDONED_SHIP_DECK",
-      "dest_warp_id": "2"
+      "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 11,
       "elevation": 3,
       "dest_map": "MAP_ABANDONED_SHIP_DECK",
-      "dest_warp_id": "2"
+      "dest_warp_id": "0"
     },
     {
       "x": 16,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_ABANDONED_SHIP_CORRIDORS_B1F",
-      "dest_warp_id": "7"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
