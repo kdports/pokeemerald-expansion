@@ -1,6 +1,58 @@
 script FarawayIsland_Historian1 {
-	msgbox(format(""))
+	faceplayer
+	msgbox(format("HISTORIAN: Many years ago, bandits attacked and kidnapped a child from a village. The child was killed, and its head was sent to the village chieftan."))
 	closemessage
+}
+
+script FarawayIsland_Historian2 {
+	faceplayer
+	msgbox(format("HISTORIAN: The village priest saw the killing as an ill omen. She instructed the people to not fish for five days. During those five days, a typhoon came and killed the fishermen from nearby villages."))
+	closemessage
+}
+
+script FarawayIsland_NickBattle {
+	faceplayer
+	lockall
+    msgbox(format(""))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(FarawayIsland_NickNo)
+		case 0:
+			call(FarawayIsland_NickYes)
+	}
+    msgbox(format(""))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(FarawayIsland_NickHardFight)
+		case 0:
+			call(FarawayIsland_NickEasyFight)
+	}
+	closemessage
+	releaseall
+}
+
+script FarawayIsland_NickYes {
+	msgbox(format("I agree. The men you spoke to used to live in that village. They likely viewed the omen as an act of benevolence."))
+	giveitem(ITEM_TM11)
+	closemessage
+}
+
+script FarawayIsland_NickNo {
+	msgbox(format("Interesting. If you had known that the men were from the village, would you have changed your answer?"))
+	giveitem(ITEM_TM37)
+	closemessage
+}
+
+script FarawayIsland_NickEasyFight {
+	trainerbattle_single(TRAINER_DECLAN, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_EndBossFight, NO_MUSIC)
+	release
+}
+
+script FarawayIsland_NickHardFight {
+	trainerbattle_double(TRAINER_GRUNT_RUSTURF_TUNNEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, AbandonedShip_EndBossFight, NO_MUSIC)
+	release
 }
 
 raw `
@@ -16,7 +68,7 @@ FarawayIsland_Entrance_OnTransition:
 	end
 
 FarawayIsland_Entrance_EventScript_SetCloudsWeather::
-	setweather WEATHER_SUNNY_CLOUDS
+	setweather WEATHER_RAIN
 	doweather
 	end
 
