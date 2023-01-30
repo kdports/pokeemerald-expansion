@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"trainers.h": "c",
+			"battle_string_ids.h": "c",
+			"item_effects.h": "c"
+		}
+	}
+}
