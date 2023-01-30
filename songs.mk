@@ -52,7 +52,7 @@ $(MID_SUBDIR)/mus_vs_aqua_magma.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G118 -V080 -P1
 
 $(MID_SUBDIR)/mus_vs_gym_leader.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G120 -V080 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V130 -P1
 
 $(MID_SUBDIR)/mus_vs_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G121 -V080 -P1
@@ -112,7 +112,7 @@ $(MID_SUBDIR)/mus_abandoned_ship.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G030 -V080
 
 $(MID_SUBDIR)/mus_cave_of_origin.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G037 -V080
+	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V500
 
 $(MID_SUBDIR)/mus_underwater.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G057 -V094
@@ -304,7 +304,7 @@ $(MID_SUBDIR)/mus_surf.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G017 -V080
 
 $(MID_SUBDIR)/mus_route104.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G047 -V097
+	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V500
 
 $(MID_SUBDIR)/mus_gsc_pewter.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -V080
@@ -535,7 +535,7 @@ $(MID_SUBDIR)/mus_rg_vs_deoxys.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G185 -V080
 
 $(MID_SUBDIR)/mus_rg_vs_gym_leader.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G155 -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G155 -V490
 
 $(MID_SUBDIR)/mus_rg_vs_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G158 -V090

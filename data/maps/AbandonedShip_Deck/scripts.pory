@@ -42,6 +42,7 @@ script AbandonedShip_Ghost4 {
 }
 
 script AbandonedShip_CarolineBattle {
+	faceplayer
 	lockall
     msgbox(format("CAROLINE: Oh my god, hey! A real person! I've been singing to help get rid of these ghosts, but it's been so long since I saw a live human. Are you ready for a fight?"))
 	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
