@@ -427,7 +427,9 @@ AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope::
 	end
 
 AbandonedShip_Rooms2_B1F_EventScript_ItemDiveBall::
-	finditem ITEM_DIVE_BALL
+	finditem ITEM_FIRE_STONE
+	finditem ITEM_WATER_STONE
+	finditem ITEM_LEAF_STONE
 	end
 
 AbandonedShip_Room_B1F_EventScript_ItemTM13::

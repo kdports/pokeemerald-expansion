@@ -105,9 +105,9 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_PINSIR]                = {{EVO_MEGA_EVOLUTION, ITEM_PINSIRITE, SPECIES_PINSIR_MEGA}},
     [SPECIES_MAGIKARP]              = {{EVO_LEVEL, 20, SPECIES_GYARADOS}},
     [SPECIES_GYARADOS]              = {{EVO_MEGA_EVOLUTION, ITEM_GYARADOSITE, SPECIES_GYARADOS_MEGA}},
-    [SPECIES_EEVEE]                 = {{EVO_FRIENDSHIP_DAY, 0, SPECIES_ESPEON},
-                                       {EVO_FRIENDSHIP_NIGHT, 0, SPECIES_UMBREON},
-                                       {EVO_MOVE_TYPE, TYPE_FAIRY, SPECIES_SYLVEON}
+    [SPECIES_EEVEE]                 = {{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
+                                       {EVO_ITEM, ITEM_WATER_STONE, SPECIES_VAPOREON},
+                                       {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON}
                                        },
     [SPECIES_PORYGON]               = {{EVO_TRADE_ITEM, ITEM_UPGRADE, SPECIES_PORYGON2}},
     [SPECIES_OMANYTE]               = {{EVO_LEVEL, 40, SPECIES_OMASTAR}},

@@ -1884,8 +1884,8 @@
     {
       "id": "LAYOUT_ABANDONED_SHIP_CORRIDORS_B1F",
       "name": "AbandonedShip_Corridors_B1F_Layout",
-      "width": 13,
-      "height": 10,
+      "width": 23,
+      "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/AbandonedShip_Corridors_B1F/border.bin",

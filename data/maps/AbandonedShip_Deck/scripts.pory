@@ -4,9 +4,64 @@ script AbandonedShip_GamerTalk {
 }
 
 script AbandonedShip_LevelCapManTalk {
-    msgbox(format("MR. MAN: It's a me! You know, this job has started to really get to me. I'm thinking of taking a vacation. Anyway, the level cap is 29. This place sure is spooky. Watch out for ghost types!"))
+    msgbox(format("MR. MAN: Why'd the challenge have to be here? There are ghost types everywhere, and the level cap is only 29... By the way, some items can be used to evolve Pokemon. If you see any stones, try using them on your Eevee."))
 	giveitem(ITEM_RARE_CANDY, 99)
 	closemessage
+}
+
+script AbandonedShip_Ghost1 {
+	msgbox(format("It's cold here..."))
+	closemessage
+	removeobject(3)
+}
+
+script AbandonedShip_Ghost2 {
+	msgbox(format("I like when she sings to us..."))
+	closemessage
+	removeobject(3)
+}
+
+script AbandonedShip_Ghost3 {
+	msgbox(format("Why did this happen to me? I didn't do anything wrong."))
+	closemessage
+	removeobject(4)
+}
+
+script AbandonedShip_Ghost4 {
+	msgbox(format("She can help me..."))
+	closemessage
+	removeobject(5)
+}
+
+script AbandonedShip_CarolineBattle {
+    msgbox(format("CAROLINE: Oh my god, hey! A real person! I've been singing to help get rid of these ghosts, but it's been so long since I saw a live human. Are you ready for a fight?"))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(MeteorFalls_NoahHardFight)
+		case 0:
+			call(MeteorFalls_NoahEasyFight)
+	}
+	closemessage
+}
+
+script AbandonedShip_CarolineEasyFight {
+	trainerbattle_single(TRAINER_DECLAN, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_EndBossFight, NO_MUSIC)
+	release
+}
+
+script AbandonedShip_CarolineHardFight {
+	trainerbattle_double(TRAINER_GRUNT_RUSTURF_TUNNEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, AbandonedShip_EndBossFight, NO_MUSIC)
+	release
+}
+
+script AbandonedShip_EndBossFight {
+	msgbox(format("CAROLINE: Aww, dammit, man! Tch, get out of here. I've got stuff to do!"))
+	giveitem(ITEM_POKE_BALL, 15)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_ABANDONED_SHIP_DECK, 13, 15)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
 }
 
 raw `

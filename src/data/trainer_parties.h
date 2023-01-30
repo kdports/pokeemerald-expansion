@@ -238,7 +238,7 @@ static const struct TrainerMonItemCustomMoves sParty_Alberto[] = { // Overwritte
     .species = SPECIES_GROWLITHE,
 	.heldItem = ITEM_LAGGING_TAIL,
     .moves = {MOVE_HELPING_HAND, MOVE_FLAME_WHEEL, MOVE_NONE, MOVE_LEER},
-	.abilityNums = 0,
+	.abilityNums = 1,
     },
     {
     .iv = 100,
@@ -246,7 +246,7 @@ static const struct TrainerMonItemCustomMoves sParty_Alberto[] = { // Overwritte
     .species = SPECIES_HERDIER,
     .heldItem = ITEM_LAGGING_TAIL,
     .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_NONE, MOVE_WORK_UP},
-	.abilityNums = 0,
+	.abilityNums = 1,
     }
 };
 
@@ -312,19 +312,49 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern4[] = { 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
+static const struct TrainerMonItemCustomMoves sParty_Declan[] = { // Overwritten, easy Caroline
     {
-    .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_GYARADOS,
+    .iv = 10,
+    .lvl = 25,
+    .species = SPECIES_FRILLISH,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_NIGHT_SHADE, MOVE_ABSORB, MOVE_REST},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 27,
+    .species = SPECIES_DRIFLOON,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_GUST, MOVE_OMINOUS_WIND, MOVE_MUD_SLAP, MOVE_REST},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 10,
+    .lvl = 29,
+    .species = SPECIES_JIGGLYPUFF,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_DISARMING_VOICE, MOVE_SING, MOVE_WAKE_UP_SLAP, MOVE_ATTRACT},
+	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntRusturfTunnel[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntRusturfTunnel[] = { // Overwritten, hard Caroline
     {
-    .iv = 0,
-    .lvl = 11,
-    .species = SPECIES_POOCHYENA,
+    .iv = 10,
+    .lvl = 28,
+    .species = SPECIES_DRIFBLIM,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_GUST, MOVE_ICY_WIND, MOVE_CALM_MIND, MOVE_OMINOUS_WIND},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 29,
+    .species = SPECIES_JIGGLYPUFF,
+	.heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_DISARMING_VOICE, MOVE_SING, MOVE_WAKE_UP_SLAP, MOVE_ATTRACT},
+	.abilityNums = 2,
     }
 };
 
