@@ -16,7 +16,7 @@ $(MID_SUBDIR)/mus_encounter_suspicious.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G069 -V078
 
 $(MID_SUBDIR)/mus_b_arena.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G104 -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G000 -V990
 
 $(MID_SUBDIR)/mus_b_dome.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G111 -V090

@@ -48,6 +48,7 @@ AbandonedShip_Ghost4::
 
 
 AbandonedShip_CarolineBattle::
+	faceplayer
 	lockall
 	msgbox AbandonedShip_CarolineBattle_Text_0
 	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
@@ -84,7 +85,7 @@ AbandonedShip_EndBossFight::
 	msgbox AbandonedShip_EndBossFight_Text_0
 	giveitem ITEM_POKE_BALL, 15
 	fadescreen FADE_TO_BLACK
-	warp MAP_ABANDONED_SHIP_DECK, 13, 15
+	warp MAP_FARAWAY_ISLAND_ENTRANCE, 14, 38
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	return

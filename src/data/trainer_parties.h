@@ -390,29 +390,81 @@ static const struct TrainerMonItemCustomMoves sParty_GruntRusturfTunnel[] = { //
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst1[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst1[] = { // Overwritten, easy Nick
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_ZUBAT,
+    .iv = 10,
+    .lvl = 33,
+    .species = SPECIES_VICTREEBEL,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_RAZOR_LEAF, MOVE_KNOCK_OFF, MOVE_ACID},
+	.abilityNums = 0,
     },
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .iv = 10,
+    .lvl = 35,
+    .species = SPECIES_LUDICOLO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_ICE_BEAM, MOVE_MEGA_DRAIN, MOVE_WATER_PULSE, MOVE_TOXIC},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 36,
+    .species = SPECIES_ALAKAZAM,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_FOCUS_BLAST, MOVE_PSYCHIC, MOVE_SHOCK_WAVE, MOVE_FUTURE_SIGHT},
+	.abilityNums = 2,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst2[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst2[] = { // Overwritten, hard Nick
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_POOCHYENA,
+    .iv = 10,
+    .lvl = 34,
+    .species = SPECIES_LUDICOLO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_ICE_BEAM, MOVE_MEGA_DRAIN, MOVE_WATER_PULSE, MOVE_TOXIC},
+	.abilityNums = 0,
     },
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_CARVANHA,
+    .iv = 10,
+    .lvl = 34,
+    .species = SPECIES_MEGANIUM,
+	.heldItem = ITEM_LIGHT_CLAY,
+    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_DAZZLING_GLEAM, MOVE_MAGICAL_LEAF},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 34,
+    .species = SPECIES_BRELOOM,
+	.heldItem = ITEM_TOXIC_ORB,
+    .moves = {MOVE_MACH_PUNCH, MOVE_HEADBUTT, MOVE_SWORDS_DANCE, MOVE_BULLET_SEED},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 10,
+    .lvl = 34,
+    .species = SPECIES_ROTOM_MOW,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_THUNDERBOLT, MOVE_OMINOUS_WIND, MOVE_TRICK, MOVE_SWIFT},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 10,
+    .lvl = 34,
+    .species = SPECIES_RILLABOOM,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_DRUM_BEATING, MOVE_KNOCK_OFF, MOVE_EARTHQUAKE, MOVE_BODY_SLAM},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 36,
+    .species = SPECIES_ALAKAZAM,
+	.heldItem = ITEM_CHOICE_SPECS,
+    .moves = {MOVE_FOCUS_BLAST, MOVE_PSYCHIC, MOVE_SHOCK_WAVE, MOVE_FUTURE_SIGHT},
+	.abilityNums = 1,
     }
 };
 

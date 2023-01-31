@@ -70,7 +70,7 @@ script AbandonedShip_EndBossFight {
 	msgbox(format("CAROLINE: Aww, dammit, man! Tch, get out of here. I've got stuff to do!"))
 	giveitem(ITEM_POKE_BALL, 15)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_ABANDONED_SHIP_DECK, 13, 15)
+	warp(MAP_FARAWAY_ISLAND_ENTRANCE, 14, 38)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 }

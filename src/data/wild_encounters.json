@@ -11772,7 +11772,7 @@
           "map": "MAP_FARAWAY_ISLAND_INTERIOR",
           "base_label": "gFarawayIsland_Interior0",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 10,
             "mons": [
               {
                 "min_level": 25,
@@ -11792,47 +11792,47 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_BULBASAUR"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_DONPHAN"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_FLETCHINDER"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_TROPIUS"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_HELIOPTILE"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_HELIOPTILE"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_HELIOPTILE"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_BULBASAUR"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_KIRLIA"
+                "species": "SPECIES_FLETCHINDER"
               }
             ]
           }

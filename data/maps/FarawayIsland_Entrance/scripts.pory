@@ -1,6 +1,6 @@
 script FarawayIsland_Historian1 {
 	faceplayer
-	msgbox(format("HISTORIAN: Many years ago, bandits attacked and kidnapped a child from a village. The child was killed, and its head was sent to the village chieftan."))
+	msgbox(format("HISTORIAN: Many years ago, bandits attacked and kidnapped the child of the lowliest man in a village. The child was killed, and its head was sent to the village chieftan."))
 	closemessage
 }
 
@@ -13,7 +13,7 @@ script FarawayIsland_Historian2 {
 script FarawayIsland_NickBattle {
 	faceplayer
 	lockall
-    msgbox(format(""))
+    msgbox(format("NICK: On your way here you heard a story from two men. Some people believe that the story you heard portrays the gods' compassion. Do you think that those men agree that their story shows compassion?"))
 	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
@@ -21,7 +21,7 @@ script FarawayIsland_NickBattle {
 		case 0:
 			call(FarawayIsland_NickYes)
 	}
-    msgbox(format(""))
+    msgbox(format("Now, you aren't here for stories. Ready to begin?"))
 	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
@@ -46,13 +46,22 @@ script FarawayIsland_NickNo {
 }
 
 script FarawayIsland_NickEasyFight {
-	trainerbattle_single(TRAINER_DECLAN, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_EndBossFight, NO_MUSIC)
+	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, FarawayIsland_EndBossFight, NO_MUSIC)
 	release
 }
 
 script FarawayIsland_NickHardFight {
-	trainerbattle_double(TRAINER_GRUNT_RUSTURF_TUNNEL, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, AbandonedShip_EndBossFight, NO_MUSIC)
+	trainerbattle_double(TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
 	release
+}
+
+script FarawayIsland_EndBossFight {
+	msgbox(format("NICK: Superb. Toodaloo!"))
+	giveitem(ITEM_POKE_BALL, 15)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_ABANDONED_SHIP_DECK, 13, 15)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
 }
 
 raw `
