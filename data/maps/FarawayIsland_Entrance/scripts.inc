@@ -1,3 +1,9 @@
+FarawayIsland_GamerTalk::
+	msgbox FarawayIsland_GamerTalk_Text_0
+	closemessage
+	return
+
+
 FarawayIsland_Historian1::
 	faceplayer
 	msgbox FarawayIsland_Historian1_Text_0
@@ -83,9 +89,9 @@ FarawayIsland_NickHardFight::
 
 FarawayIsland_EndBossFight::
 	msgbox FarawayIsland_EndBossFight_Text_0
-	giveitem ITEM_POKE_BALL, 15
+	giveitem ITEM_ULTRA_BALL, 15
 	fadescreen FADE_TO_BLACK
-	warp MAP_ABANDONED_SHIP_DECK, 13, 15
+	warp MAP_AQUA_HIDEOUT_1F, 13, 27
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	return
@@ -138,6 +144,11 @@ FarawayIsland_Entrance_EventScript_AsYouLike::
 FarawayIsland_Entrance_EventScript_Sign::
 	msgbox FarawayIsland_Entrance_Text_Sign, MSGBOX_SIGN
 	end
+
+FarawayIsland_GamerTalk_Text_0:
+	.string "GAMER: Pineco is strong stuff! Just\n"
+	.string "don't try to eat it. Oh, and Sneasel can\l"
+	.string "be found later in.$"
 
 FarawayIsland_Historian1_Text_0:
 	.string "HISTORIAN: Many years ago, bandits\n"

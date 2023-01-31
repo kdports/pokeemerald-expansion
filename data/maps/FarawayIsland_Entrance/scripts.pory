@@ -1,3 +1,8 @@
+script FarawayIsland_GamerTalk {
+	msgbox(format("GAMER: Pineco is strong stuff! Just don't try to eat it. Oh, and Sneasel can be found later in."))
+	closemessage
+}
+
 script FarawayIsland_Historian1 {
 	faceplayer
 	msgbox(format("HISTORIAN: Many years ago, bandits attacked and kidnapped the child of the lowliest man in a village. The child was killed, and its head was sent to the village chieftan."))
@@ -69,7 +74,7 @@ script FarawayIsland_EndBossFight {
 	msgbox(format("NICK: Superb. Toodaloo!"))
 	giveitem(ITEM_ULTRA_BALL, 15)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_ABANDONED_SHIP_DECK, 13, 15)
+	warp(MAP_AQUA_HIDEOUT_1F, 13, 27)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 }

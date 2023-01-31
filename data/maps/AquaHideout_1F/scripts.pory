@@ -1,3 +1,184 @@
+script AquaHideout_GamerTalk {
+	msgbox(format("GAMER: "))
+	closemessage
+}
+
+script AquaHideout_KevinBattle {
+	faceplayer
+	lockall
+    msgbox(format("KEVIN: I'm not sure if anything you just played through was fun at all. But, it's in the game, so, eh. You ready?"))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_KevinHardFight)
+		case 0:
+			call(AquaHideout_KevinEasyFight)
+	}
+	closemessage
+	releaseall
+}
+
+script AquaHideout_KevinEasyFight {
+	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC)
+	release
+}
+
+script AquaHideout_KevinHardFight {
+	trainerbattle_double(TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
+	release
+}
+
+script AquaHideout_LevelCapManTalk {
+    msgbox(format("MR. MAN: The level cap here is 40. My mind is boggled after all of this... so it's no surprise Kevin uses psychic types."))
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
+script AquaHideout_Server {
+	msgbox(format("KEVIN: I don't know what this is, but it isn't the answer."))
+	closemessage
+}
+
+script AquaHideout_Ship {
+	msgbox(format("KEVIN: So, is the answer a ship?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			call(AquaHideout_WrongAnswer)
+			setwildbattle(SPECIES_STARMIE, 36, ITEM_NONE)
+			dowildbattle
+			warp(MAP_AQUA_HIDEOUT_1F, 13, 25)
+	}
+	closemessage
+}
+
+script AquaHideout_Tree {
+	msgbox(format("KEVIN: So, is the answer a tree?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			call(AquaHideout_WrongAnswer)
+			setwildbattle(SPECIES_MEGANIUM, 36, ITEM_NONE)
+			dowildbattle
+			warp(MAP_AQUA_HIDEOUT_1F, 13, 25)
+	}
+	closemessage
+}
+
+script AquaHideout_Shrub {
+	msgbox(format("KEVIN: So, is the answer a shrub?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			call(AquaHideout_WrongAnswer)
+			setwildbattle(SPECIES_LEAVANNY, 36, ITEM_NONE)
+			dowildbattle
+			warp(MAP_AQUA_HIDEOUT_1F, 13, 25)
+	}
+	closemessage
+}
+
+script AquaHideout_Computer {
+	msgbox(format("KEVIN: So, is the answer a computer?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			call(AquaHideout_WrongAnswer)
+			setwildbattle(SPECIES_ELECTRODE, 36, ITEM_NONE)
+			dowildbattle
+			warp(MAP_AQUA_HIDEOUT_1F, 13, 25)
+	}
+	closemessage
+}
+
+script AquaHideout_Sign {
+	msgbox(format("KEVIN: So, is the answer a sign?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			call(AquaHideout_WrongAnswer)
+			setwildbattle(SPECIES_GARDEVOIR, 36, ITEM_NONE)
+			dowildbattle
+			warp(MAP_AQUA_HIDEOUT_1F, 13, 25)
+	}
+	closemessage
+}
+
+script AquaHideout_Flowers {
+	msgbox(format("KEVIN: So, is the answer a flower?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			call(AquaHideout_WrongAnswer)
+			setwildbattle(SPECIES_FLORGES, 36, ITEM_NONE)
+			dowildbattle
+			warp(MAP_AQUA_HIDEOUT_1F, 13, 25)
+	}
+	closemessage
+}
+
+script AquaHideout_TrashCan {
+	msgbox(format("KEVIN: So, is the answer a trash can?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			call(AquaHideout_WrongAnswer)
+			setwildbattle(SPECIES_GARBODOR, 36, ITEM_NONE)
+			dowildbattle
+			warp(MAP_AQUA_HIDEOUT_1F, 13, 25)
+	}
+	closemessage
+}
+
+script AquaHideout_Cabinets {
+	msgbox(format("KEVIN: So, is the answer a cabinet?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(AquaHideout_BackOutAnswer)
+		case 0:
+			msgbox(format("Correct! I guess I'll see you soon."))
+			warp(MAP_AQUA_HIDEOUT_B1F, 7, 5)
+	}
+	closemessage
+}
+
+script AquaHideout_TriggerRiddle {
+	msgbox(format("KEVIN: Well, hi there. You're over halfway done! That's impressive. Now, I'm not gonna make this easy. In order to reach me, I'll first you need to solve a riddle.\pI cannot be carried by one person, am often found inside, and am often searched through. What am I?"))
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, AquaHideout_WalkUp)
+	waitmovement(0)
+}
+
+script AquaHideout_WrongAnswer {
+	msgbox(format("KEVIN: Nope! I'll give you another try, but, first..."))
+	closemessage
+}
+
+script AquaHideout_BackOutAnswer {
+	msgbox(format("KEVIN: Reconsidering your answer?"))
+	closemessage
+}
+
+movement AquaHideout_WalkUp {
+	face_up
+	walk_up
+}
+
 raw `
 AquaHideout_1F_MapScripts::
 	.byte 0

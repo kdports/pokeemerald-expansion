@@ -1434,7 +1434,7 @@
     {
       "id": "LAYOUT_AQUA_HIDEOUT_B1F",
       "name": "AquaHideout_B1F_Layout",
-      "width": 51,
+      "width": 25,
       "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
