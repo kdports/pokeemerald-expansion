@@ -468,29 +468,81 @@ static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst2[] = { // 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst3[] = { // Overwritten, easy Kevin
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_POOCHYENA,
+    .iv = 100,
+    .lvl = 38,
+    .species = SPECIES_MR_MIME,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM},
+	.abilityNums = 1,
     },
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ZUBAT,
+    .iv = 100,
+    .lvl = 39,
+    .species = SPECIES_SIGILYPH,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_AIR_SLASH, MOVE_PSYBEAM, MOVE_SHADOW_BALL, MOVE_ICY_WIND},
+	.abilityNums = 1,
     },
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_CARVANHA,
+    .iv = 100,
+    .lvl = 40,
+    .species = SPECIES_STEELIX,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_ROCK_SLIDE},
+	.abilityNums = 1,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum1[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntMuseum1[] = { // Overwritten, hard Kevin
     {
-    .iv = 0,
-    .lvl = 15,
-    .species = SPECIES_CARVANHA,
+    .iv = 50,
+    .lvl = 38,
+    .species = SPECIES_MR_MIME,
+	.heldItem = ITEM_LIGHT_CLAY,
+    .moves = {MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 50,
+    .lvl = 38,
+    .species = SPECIES_HATTREM,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_DAZZLING_GLEAM, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_TRICK_ROOM},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 50,
+    .lvl = 38,
+    .species = SPECIES_METAGROSS,
+	.heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BULLET_PUNCH, MOVE_ZEN_HEADBUTT, MOVE_ROCK_SLIDE, MOVE_PROTECT},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 50,
+    .lvl = 39,
+    .species = SPECIES_GOTHITELLE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_FUTURE_SIGHT, MOVE_FAKE_TEARS, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 39,
+    .species = SPECIES_SIGILYPH,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_AIR_SLASH, MOVE_PSYBEAM, MOVE_SHADOW_BALL, MOVE_ICY_WIND},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 40,
+    .species = SPECIES_STEELIX,
+	.heldItem = ITEM_AIR_BALLOON,
+    .moves = {MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_ROCK_SLIDE},
+	.abilityNums = 1,
     }
 };
 

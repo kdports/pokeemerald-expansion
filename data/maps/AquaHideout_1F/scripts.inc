@@ -27,13 +27,13 @@ AquaHideout_KevinBattle_4:
 
 
 AquaHideout_KevinEasyFight::
-	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC
+	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_3, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC
 	release
 	return
 
 
 AquaHideout_KevinHardFight::
-	trainerbattle_double TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC
+	trainerbattle_double TRAINER_GRUNT_MUSEUM_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC
 	release
 	return
 
@@ -370,7 +370,8 @@ AquaHideout_1F_Text_Grunt1PostBattle:
 	.string "but I did my job…$"
 
 AquaHideout_GamerTalk_Text_0:
-	.string "GAMER:$"
+	.string "GAMER: Skarmory can set spikes! Also,\n"
+	.string "Klefki is a must-have.$"
 
 AquaHideout_KevinBattle_Text_0:
 	.string "KEVIN: I'm not sure if anything you\n"

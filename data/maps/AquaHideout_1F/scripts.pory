@@ -1,5 +1,5 @@
 script AquaHideout_GamerTalk {
-	msgbox(format("GAMER: "))
+	msgbox(format("GAMER: Skarmory can set spikes! Also, Klefki is a must-have."))
 	closemessage
 }
 
@@ -19,12 +19,12 @@ script AquaHideout_KevinBattle {
 }
 
 script AquaHideout_KevinEasyFight {
-	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_3, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC)
 	release
 }
 
 script AquaHideout_KevinHardFight {
-	trainerbattle_double(TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_double(TRAINER_GRUNT_MUSEUM_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
 	release
 }
 
