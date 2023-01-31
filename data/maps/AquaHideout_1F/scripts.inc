@@ -27,14 +27,24 @@ AquaHideout_KevinBattle_4:
 
 
 AquaHideout_KevinEasyFight::
-	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_3, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC
+	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_3, Route116_LeaderBattleIntro, AquaHideout_BossDefeated, AquaHideout_EndBossFight, NO_MUSIC
 	release
 	return
 
 
 AquaHideout_KevinHardFight::
-	trainerbattle_double TRAINER_GRUNT_MUSEUM_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC
+	trainerbattle_double TRAINER_GRUNT_MUSEUM_1, Route116_LeaderBattleIntro, AquaHideout_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, AquaHideout_EndBossFight, NO_MUSIC
 	release
+	return
+
+
+AquaHideout_EndBossFight::
+	msgbox AquaHideout_EndBossFight_Text_0
+	giveitem ITEM_ULTRA_BALL, 25
+	fadescreen FADE_TO_BLACK
+	warp MAP_AQUA_HIDEOUT_1F, 13, 27
+	waitstate
+	fadescreen FADE_FROM_BLACK
 	return
 
 
@@ -378,6 +388,10 @@ AquaHideout_KevinBattle_Text_0:
 	.string "just played through was fun at all. But,\l"
 	.string "it's in the game, so, eh. You ready?$"
 
+AquaHideout_EndBossFight_Text_0:
+	.string "KEVIN: You only have a few bosses left!\n"
+	.string "Good luck.$"
+
 AquaHideout_LevelCapManTalk_Text_0:
 	.string "MR. MAN: The level cap here is 40. My\n"
 	.string "mind is boggled after all of this... so\l"
@@ -431,3 +445,6 @@ AquaHideout_WrongAnswer_Text_0:
 
 AquaHideout_BackOutAnswer_Text_0:
 	.string "KEVIN: Reconsidering your answer?$"
+
+AquaHideout_BossDefeated::
+	.string "...Fuck! I threw.$"

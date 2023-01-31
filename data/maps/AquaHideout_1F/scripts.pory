@@ -19,13 +19,26 @@ script AquaHideout_KevinBattle {
 }
 
 script AquaHideout_KevinEasyFight {
-	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_3, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_3, Route116_LeaderBattleIntro, AquaHideout_BossDefeated, AquaHideout_EndBossFight, NO_MUSIC)
 	release
 }
 
 script AquaHideout_KevinHardFight {
-	trainerbattle_double(TRAINER_GRUNT_MUSEUM_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_double(TRAINER_GRUNT_MUSEUM_1, Route116_LeaderBattleIntro, AquaHideout_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, AquaHideout_EndBossFight, NO_MUSIC)
 	release
+}
+
+text AquaHideout_BossDefeated {
+	format("...Fuck! I threw.")
+}
+
+script AquaHideout_EndBossFight {
+	msgbox(format("KEVIN: You only have a few bosses left! Good luck."))
+	giveitem(ITEM_ULTRA_BALL, 25)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_AQUA_HIDEOUT_1F, 13, 27)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
 }
 
 script AquaHideout_LevelCapManTalk {
