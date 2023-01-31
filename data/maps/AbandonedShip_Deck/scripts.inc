@@ -83,7 +83,7 @@ AbandonedShip_CarolineHardFight::
 
 AbandonedShip_EndBossFight::
 	msgbox AbandonedShip_EndBossFight_Text_0
-	giveitem ITEM_POKE_BALL, 15
+	giveitem ITEM_ULTRA_BALL, 15
 	fadescreen FADE_TO_BLACK
 	warp MAP_FARAWAY_ISLAND_ENTRANCE, 14, 38
 	waitstate

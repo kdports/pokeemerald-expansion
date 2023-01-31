@@ -10,6 +10,12 @@ script FarawayIsland_Historian2 {
 	closemessage
 }
 
+script FarawayIsland_LevelCapManTalk {
+    msgbox(format("MR. MAN: Ah, all this philosophy is so boring. The level cap here is 36, and Nick will stick to his grass types."))
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
 script FarawayIsland_NickBattle {
 	faceplayer
 	lockall
@@ -21,7 +27,7 @@ script FarawayIsland_NickBattle {
 		case 0:
 			call(FarawayIsland_NickYes)
 	}
-    msgbox(format("Now, you aren't here for stories. Ready to begin?"))
+    msgbox(format("But, you aren't here for stories. Ready to begin?"))
 	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
@@ -46,18 +52,22 @@ script FarawayIsland_NickNo {
 }
 
 script FarawayIsland_NickEasyFight {
-	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC)
 	release
 }
 
 script FarawayIsland_NickHardFight {
-	trainerbattle_double(TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_double(TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
 	release
+}
+
+text FarawayIsland_BossDefeated {
+	format("Gaaaaaaaaaah!")
 }
 
 script FarawayIsland_EndBossFight {
 	msgbox(format("NICK: Superb. Toodaloo!"))
-	giveitem(ITEM_POKE_BALL, 15)
+	giveitem(ITEM_ULTRA_BALL, 15)
 	fadescreen(FADE_TO_BLACK)
 	warp(MAP_ABANDONED_SHIP_DECK, 13, 15)
 	waitstate

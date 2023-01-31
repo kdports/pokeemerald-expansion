@@ -422,7 +422,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst2[] = { // 
     .iv = 10,
     .lvl = 34,
     .species = SPECIES_LUDICOLO,
-	.heldItem = ITEM_NONE,
+	.heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_ICE_BEAM, MOVE_MEGA_DRAIN, MOVE_WATER_PULSE, MOVE_TOXIC},
 	.abilityNums = 0,
     },
@@ -431,7 +431,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst2[] = { // 
     .lvl = 34,
     .species = SPECIES_MEGANIUM,
 	.heldItem = ITEM_LIGHT_CLAY,
-    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_DAZZLING_GLEAM, MOVE_MAGICAL_LEAF},
+    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_TOXIC, MOVE_MAGICAL_LEAF},
 	.abilityNums = 0,
     },
     {
@@ -462,7 +462,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst2[] = { // 
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_ALAKAZAM,
-	.heldItem = ITEM_CHOICE_SPECS,
+	.heldItem = ITEM_WISE_GLASSES,
     .moves = {MOVE_FOCUS_BLAST, MOVE_PSYCHIC, MOVE_SHOCK_WAVE, MOVE_FUTURE_SIGHT},
 	.abilityNums = 1,
     }

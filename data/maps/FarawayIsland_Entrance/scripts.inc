@@ -12,6 +12,13 @@ FarawayIsland_Historian2::
 	return
 
 
+FarawayIsland_LevelCapManTalk::
+	msgbox FarawayIsland_LevelCapManTalk_Text_0
+	giveitem ITEM_RARE_CANDY, 99
+	closemessage
+	return
+
+
 FarawayIsland_NickBattle::
 	faceplayer
 	lockall
@@ -63,13 +70,13 @@ FarawayIsland_NickNo::
 
 
 FarawayIsland_NickEasyFight::
-	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, FarawayIsland_EndBossFight, NO_MUSIC
+	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC
 	release
 	return
 
 
 FarawayIsland_NickHardFight::
-	trainerbattle_double TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, Route101_Text_Trainer1Defeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC
+	trainerbattle_double TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC
 	release
 	return
 
@@ -147,6 +154,11 @@ FarawayIsland_Historian2_Text_0:
 	.string "and killed the fishermen from nearby\l"
 	.string "villages.$"
 
+FarawayIsland_LevelCapManTalk_Text_0:
+	.string "MR. MAN: Ah, all this philosophy is so\n"
+	.string "boring. The level cap here is 36, and\l"
+	.string "Nick will stick to his grass types.$"
+
 FarawayIsland_NickBattle_Text_0:
 	.string "NICK: On your way here you heard a\n"
 	.string "story from two men. Some people believe\l"
@@ -156,7 +168,7 @@ FarawayIsland_NickBattle_Text_0:
 	.string "compassion?$"
 
 FarawayIsland_NickBattle_Text_1:
-	.string "Now, you aren't here for stories. Ready\n"
+	.string "But, you aren't here for stories. Ready\n"
 	.string "to begin?$"
 
 FarawayIsland_NickYes_Text_0:
@@ -171,3 +183,6 @@ FarawayIsland_NickNo_Text_0:
 
 FarawayIsland_EndBossFight_Text_0:
 	.string "NICK: Superb. Toodaloo!$"
+
+FarawayIsland_BossDefeated::
+	.string "Gaaaaaaaaaah!$"
