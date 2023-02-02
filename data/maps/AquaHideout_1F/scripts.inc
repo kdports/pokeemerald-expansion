@@ -42,7 +42,8 @@ AquaHideout_EndBossFight::
 	msgbox AquaHideout_EndBossFight_Text_0
 	giveitem ITEM_ULTRA_BALL, 25
 	fadescreen FADE_TO_BLACK
-	warp MAP_AQUA_HIDEOUT_1F, 13, 27
+	warp MAP_SCORCHED_SLAB, 7, 16
+	dofieldeffect FLDEFF_USE_SURF
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	return
