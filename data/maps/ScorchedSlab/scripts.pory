@@ -1,3 +1,47 @@
+script ScorchedSlab_AvaaniBattle {
+	faceplayer
+	lockall
+    msgbox(format("AVAANI: Hey!!!!!!!! \pDid you have fun swimming? I moved all those rocks into the river. Hope that wasn't too annoying! So..."))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(ScorchedSlab_AvaaniHardFight)
+		case 0:
+			call(ScorchedSlab_AvaaniEasyFight)
+	}
+	closemessage
+	releaseall
+}
+
+script ScorchedSlab_AvaaniEasyFight {
+	trainerbattle_single(TRAINER_GRUNT_MUSEUM_2, Route116_LeaderBattleIntro, ScorchedSlab_BossDefeated, ScorchedSlab_EndBossFight, NO_MUSIC)
+	release
+}
+
+script ScorchedSlab_AvaaniHardFight {
+	trainerbattle_double(TRAINER_GRUNT_SPACE_CENTER_1, Route116_LeaderBattleIntro, ScorchedSlab_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, ScorchedSlab_EndBossFight, NO_MUSIC)
+	release
+}
+
+text ScorchedSlab_BossDefeated {
+	format("Yipee! ...wait, I lost, didn't I?")
+}
+
+script ScorchedSlab_LevelCapManTalk {
+    msgbox(format("MR. MAN: *gasp*... I'm so tired. I'm not made for that swim... Believe it or not, Avaani uses fighting types. So why is she in an underground river? Training, obviously."))
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
+script ScorchedSlab_EndBossFight {
+	msgbox(format("AVAANI: That was great, high five! Ready?"))
+	giveitem(ITEM_ULTRA_BALL, 25)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_SCORCHED_SLAB, 7, 16)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+}
+
 raw `
 ScorchedSlab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ScorchedSlab_OnTransition

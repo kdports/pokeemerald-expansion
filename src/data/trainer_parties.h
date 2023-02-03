@@ -546,24 +546,81 @@ static const struct TrainerMonItemCustomMoves sParty_GruntMuseum1[] = { // Overw
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntMuseum2[] = { // Overwritten, easy Avaani
     {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
+    .iv = 100,
+    .lvl = 43,
+    .species = SPECIES_CONKELDURR,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_BULK_UP, MOVE_BRICK_BREAK, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE},
+	.abilityNums = 1,
     },
     {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_CARVANHA,
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_INFERNAPE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_CLOSE_COMBAT, MOVE_FLAME_WHEEL, MOVE_FEINT, MOVE_TAUNT},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 46,
+    .species = SPECIES_SHARPEDO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_ICE_FANG, MOVE_AQUA_JET, MOVE_CRUNCH, MOVE_POISON_FANG},
+	.abilityNums = 1,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter1[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // Overwritten, hard Avaani
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_NUMEL,
+    .iv = 100,
+    .lvl = 43,
+    .species = SPECIES_CONKELDURR,
+	.heldItem = ITEM_FLAME_ORB,
+    .moves = {MOVE_BULK_UP, MOVE_BRICK_BREAK, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_MARSHADOW,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_SHADOW_SNEAK, MOVE_SHADOW_PUNCH, MOVE_JUMP_KICK, MOVE_ICE_PUNCH},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_LUCARIO,
+	.heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_SWORDS_DANCE, MOVE_POWER_UP_PUNCH, MOVE_IRON_TAIL, MOVE_SUBSTITUTE},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 45,
+    .species = SPECIES_CRABOMINABLE,
+	.heldItem = ITEM_NEVER_MELT_ICE,
+    .moves = {MOVE_AVALANCHE, MOVE_PURSUIT, MOVE_REVERSAL, MOVE_ROCK_SLIDE},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 45,
+    .species = SPECIES_PANGORO,
+	.heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BULLET_PUNCH, MOVE_CRUNCH, MOVE_HAMMER_ARM, MOVE_DRAGON_CLAW},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 46,
+    .species = SPECIES_SHARPEDO,
+	.heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_ICE_FANG, MOVE_AQUA_JET, MOVE_CRUNCH, MOVE_POISON_FANG},
+	.abilityNums = 1,
     }
 };
 

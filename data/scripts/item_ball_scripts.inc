@@ -457,7 +457,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_ItemWaterStone::
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_ItemTM18::
-	finditem ITEM_TM18
+	finditem ITEM_TM23
 	end
 
 ScorchedSlab_EventScript_ItemTM11::
@@ -633,7 +633,7 @@ ArtisanCave_1F_EventScript_ItemCarbos::
 	end
 
 MagmaHideout_1F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+	finditem ITEM_TM30
 	end
 
 MagmaHideout_2F_2R_EventScript_ItemMaxElixir::
