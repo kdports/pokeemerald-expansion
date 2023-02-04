@@ -73,6 +73,7 @@ text FarawayIsland_BossDefeated {
 script FarawayIsland_EndBossFight {
 	msgbox(format("NICK: Superb. Toodaloo!"))
 	giveitem(ITEM_ULTRA_BALL, 15)
+	giveitem(ITEM_TM22, 1)
 	fadescreen(FADE_TO_BLACK)
 	warp(MAP_AQUA_HIDEOUT_1F, 13, 27)
 	waitstate

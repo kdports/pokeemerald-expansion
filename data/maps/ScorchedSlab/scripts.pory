@@ -28,7 +28,7 @@ text ScorchedSlab_BossDefeated {
 }
 
 script ScorchedSlab_LevelCapManTalk {
-    msgbox(format("MR. MAN: Gasp... I'm so tired. I'm not made for that swim... Believe it or not, Avaani uses fighting types. So why is she in an underground river? Training, obviously."))
+    msgbox(format("MR. MAN: Gasp... I'm so tired. I'm not made for that swim... Believe it or not, Avaani uses fighting types. Her level cap is 46. So why is she in an underground river? Training, obviously."))
 	giveitem(ITEM_RARE_CANDY, 99)
 	closemessage
 }
@@ -36,6 +36,7 @@ script ScorchedSlab_LevelCapManTalk {
 script ScorchedSlab_EndBossFight {
 	msgbox(format("AVAANI: That was great, high five! Ready to leave?"))
 	giveitem(ITEM_ULTRA_BALL, 25)
+	giveitem(ITEM_TM31, 1)
 	fadescreen(FADE_TO_BLACK)
 	warp(MAP_SCORCHED_SLAB, 7, 16)
 	waitstate

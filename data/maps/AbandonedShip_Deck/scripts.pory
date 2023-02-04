@@ -69,6 +69,7 @@ script AbandonedShip_CarolineHardFight {
 script AbandonedShip_EndBossFight {
 	msgbox(format("CAROLINE: Aww, dammit, man! Tch, get out of here. I've got stuff to do!"))
 	giveitem(ITEM_ULTRA_BALL, 15)
+	giveitem(ITEM_TM44, 1)
 	fadescreen(FADE_TO_BLACK)
 	warp(MAP_FARAWAY_ISLAND_ENTRANCE, 14, 38)
 	waitstate

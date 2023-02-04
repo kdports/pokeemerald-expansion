@@ -42,6 +42,7 @@ script MeteorFalls_NoahHardFight {
 script MeteorFalls_EndBossFight {
 	msgbox(format("NOAH: Fuck! Well, guess you get to keep going."))
 	giveitem(ITEM_POKE_BALL, 15)
+	giveitem(ITEM_TM39, 1)
 	fadescreen(FADE_TO_BLACK)
 	warp(MAP_ABANDONED_SHIP_DECK, 13, 15)
 	waitstate

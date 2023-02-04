@@ -12572,7 +12572,7 @@
           "map": "MAP_SCORCHED_SLAB",
           "base_label": "gScorchedSlab0",
           "water_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 10,
             "mons": [
               {
                 "min_level": 45,
