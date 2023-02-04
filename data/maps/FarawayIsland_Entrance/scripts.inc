@@ -90,6 +90,7 @@ FarawayIsland_NickHardFight::
 FarawayIsland_EndBossFight::
 	msgbox FarawayIsland_EndBossFight_Text_0
 	giveitem ITEM_ULTRA_BALL, 15
+	giveitem ITEM_TM22, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_AQUA_HIDEOUT_1F, 13, 27
 	waitstate

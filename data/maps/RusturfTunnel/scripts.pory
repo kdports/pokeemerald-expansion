@@ -31,7 +31,7 @@ text RusturfTunnel_BossDefeated {
 script RusturfTunnel_RealBrandon {
 	faceplayer
 	lockall
-    msgbox(format("BRANDON: "))
+    msgbox(format("BRANDON: I prefer animated movies to blockbusters. Is this true?"))
 	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
@@ -53,7 +53,7 @@ script RusturfTunnel_RealBrandon {
 script RusturfTunnel_FakeBrandon1 {
 	faceplayer
 	lockall
-    msgbox(format(""))
+    msgbox(format("BRANDON: I live on 100 Brunswick Ave. Is this true?"))
 	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
@@ -75,7 +75,7 @@ script RusturfTunnel_FakeBrandon1 {
 script RusturfTunnel_FakeBrandon2 {
 	faceplayer
 	lockall
-    msgbox(format(""))
+    msgbox(format("BRANDON: I am a happy and well-adjusted person. I did not ask for this prompt. Is this true?"))
 	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
@@ -97,7 +97,7 @@ script RusturfTunnel_FakeBrandon2 {
 script RusturfTunnel_FakeBrandon3 {
 	faceplayer
 	lockall
-    msgbox(format(""))
+    msgbox(format("BRANDON: I lived on Elmsley 2nd floor in first year. Is this true?"))
 	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
@@ -119,7 +119,7 @@ script RusturfTunnel_FakeBrandon3 {
 script RusturfTunnel_FakeBrandon4 {
 	faceplayer
 	lockall
-    msgbox(format(""))
+    msgbox(format("BRANDON: I lived with Minji in second year. Is this true?"))
 	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:

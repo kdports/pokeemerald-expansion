@@ -718,7 +718,7 @@
       "height": 7,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/FallarborTown_LeftoverRSContestLobby/border.bin",
+      "border_filepath": "data/layouts/FallarborTown_LeftoverR\u0000\u0000\u0000\u0000testLobby/border.bin",
       "blockdata_filepath": "data/layouts/FallarborTown_LeftoverRSContestLobby/map.bin"
     },
     {
@@ -2728,7 +2728,7 @@
       "height": 6,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
-      "border_filepath": "data/layouts/LilycoveCity_DepartmentStoreElevator/border.bin",
+      "border_filepath": "data/layouts/LilycoveCity_Department\u0000\u0000\u0000\u0000eElevator/border.bin",
       "blockdata_filepath": "data/layouts/LilycoveCity_DepartmentStoreElevator/map.bin"
     },
     {
@@ -3478,7 +3478,7 @@
       "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFactory",
-      "border_filepath": "data/layouts/BattleFrontier_BattleFactoryBattleRoom/border.bin",
+      "border_filepath": "data/layouts/BattleFrontier_BattleFa\u0000\u0000\u0000\u0000yBattleRoom/border.bin",
       "blockdata_filepath": "data/layouts/BattleFrontier_BattleFactoryBattleRoom/map.bin"
     },
     {
@@ -3558,7 +3558,7 @@
       "height": 11,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleArena",
-      "border_filepath": "data/layouts/BattleFrontier_BattleArenaBattleRoom/border.bin",
+      "border_filepath": "data/layouts/BattleFrontier_BattleAr\u0000\u0000\u0000\u0000attleRoom/border.bin",
       "blockdata_filepath": "data/layouts/BattleFrontier_BattleArenaBattleRoom/map.bin"
     },
     {
@@ -3899,7 +3899,7 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/BattleFrontier_BattleTowerMultiPartnerRoom/border.bin",
-      "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerMultiPartnerRoom/map.bin"
+      "blockdata_filepath": "data/layouts/BattleFrontier_BattleTo\u0000\u0000\u0000\u0000ultiPartnerRoom/map.bin"
     },
     {
       "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_CORRIDOR",
@@ -4319,7 +4319,7 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLabWithTable/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLabWithTable/map.bin"
+      "blockdata_filepath": "data/layouts/LittlerootTown_Professo\u0000\u0000\u0000\u0000chsLabWithTable/map.bin"
     },
     {
       "id": "LAYOUT_SKY_PILLAR_1F_CLEAN",

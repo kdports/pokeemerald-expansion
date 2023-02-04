@@ -45,6 +45,7 @@ MeteorFalls_NoahHardFight::
 MeteorFalls_EndBossFight::
 	msgbox MeteorFalls_EndBossFight_Text_0
 	giveitem ITEM_POKE_BALL, 15
+	giveitem ITEM_TM39, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_ABANDONED_SHIP_DECK, 13, 15
 	waitstate

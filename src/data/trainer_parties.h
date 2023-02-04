@@ -627,6 +627,22 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // 
 static const struct TrainerMonItemCustomMoves sParty_GruntMtPyre1[] = { // Overwritten, easy real Brandon
     {
     .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_DRAGONITE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_DRAGON_TAIL, MOVE_HURRICANE, MOVE_EXTREME_SPEED, MOVE_FIRE_PUNCH},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_DRUDDIGON,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_REVENGE, MOVE_DRAGON_TAIL, MOVE_NIGHT_SLASH, MOVE_HONE_CLAWS},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
     .lvl = 56,
     .species = SPECIES_SCEPTILE,
 	.heldItem = ITEM_NONE,
@@ -636,6 +652,46 @@ static const struct TrainerMonItemCustomMoves sParty_GruntMtPyre1[] = { // Overw
 };
 
 static const struct TrainerMonItemCustomMoves sParty_GruntMtPyre2[] = { // Overwritten, hard real Brandon
+    {
+    .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_GARCHOMP,
+	.heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_REST, MOVE_DRAGON_RUSH, MOVE_SWORDS_DANCE, MOVE_FIRE_FANG},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_DURALUDON,
+	.heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_BREAKING_SWIPE, MOVE_FLASH_CANNON, MOVE_REFLECT, MOVE_PROTECT},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_KOMMO_O,
+	.heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_SUBSTITUTE, MOVE_DRAGON_DANCE, MOVE_OUTRAGE, MOVE_CLOSE_COMBAT},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_DRAGAPULT,
+	.heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_U_TURN, MOVE_SUCKER_PUNCH, MOVE_DRAGON_DARTS, MOVE_HEX},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_DRAGONITE,
+	.heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_DRAGON_TAIL, MOVE_HURRICANE, MOVE_EXTREME_SPEED, MOVE_FIRE_PUNCH},
+	.abilityNums = 1,
+    },
     {
     .iv = 100,
     .lvl = 56,

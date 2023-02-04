@@ -1,3 +1,208 @@
+RusturfTunnel_GamerTalk::
+	msgbox RusturfTunnel_GamerTalk_Text_0
+	closemessage
+	return
+
+
+RusturfTunnel_LevelCapManTalk::
+	msgbox RusturfTunnel_LevelCapManTalk_Text_0
+	giveitem ITEM_RARE_CANDY, 99
+	closemessage
+	return
+
+
+RusturfTunnel_EndFakeFight::
+	msgbox RusturfTunnel_EndFakeFight_Text_0
+	closemessage
+	return
+
+
+RusturfTunnel_EndBossFight::
+	msgbox RusturfTunnel_EndBossFight_Text_0
+	giveitem ITEM_ULTRA_BALL, 15
+	giveitem ITEM_TM02, 1
+	fadescreen FADE_TO_BLACK
+	warp MAP_AQUA_HIDEOUT_1F, 13, 27
+	waitstate
+	fadescreen FADE_FROM_BLACK
+	return
+
+
+RusturfTunnel_RealBrandon::
+	faceplayer
+	lockall
+	msgbox RusturfTunnel_RealBrandon_Text_0
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_RealBrandon_3
+	case 0, RusturfTunnel_RealBrandon_4
+RusturfTunnel_RealBrandon_1:
+	releaseall
+	return
+
+RusturfTunnel_RealBrandon_3:
+	closemessage
+	goto RusturfTunnel_RealBrandon_1
+
+RusturfTunnel_RealBrandon_4:
+	msgbox RusturfTunnel_RealBrandon_Text_1
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_RealBrandon_7
+	case 0, RusturfTunnel_RealBrandon_8
+RusturfTunnel_RealBrandon_5:
+	closemessage
+	goto RusturfTunnel_RealBrandon_1
+
+RusturfTunnel_RealBrandon_7:
+	trainerbattle_double TRAINER_GRUNT_MT_PYRE_2, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndBossFight, NO_MUSIC
+	goto RusturfTunnel_RealBrandon_5
+
+RusturfTunnel_RealBrandon_8:
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_1, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndBossFight, NO_MUSIC
+	goto RusturfTunnel_RealBrandon_5
+
+
+RusturfTunnel_FakeBrandon1::
+	faceplayer
+	lockall
+	msgbox RusturfTunnel_FakeBrandon1_Text_0
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon1_3
+	case 0, RusturfTunnel_FakeBrandon1_4
+RusturfTunnel_FakeBrandon1_1:
+	releaseall
+	return
+
+RusturfTunnel_FakeBrandon1_3:
+	closemessage
+	goto RusturfTunnel_FakeBrandon1_1
+
+RusturfTunnel_FakeBrandon1_4:
+	msgbox RusturfTunnel_RealBrandon_Text_1
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon1_7
+	case 0, RusturfTunnel_FakeBrandon1_8
+RusturfTunnel_FakeBrandon1_5:
+	closemessage
+	goto RusturfTunnel_FakeBrandon1_1
+
+RusturfTunnel_FakeBrandon1_7:
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_3, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon1_5
+
+RusturfTunnel_FakeBrandon1_8:
+	trainerbattle_single TRAINER_GRUNT_MT_PYRE_3, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon1_5
+
+
+RusturfTunnel_FakeBrandon2::
+	faceplayer
+	lockall
+	msgbox RusturfTunnel_FakeBrandon2_Text_0
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon2_3
+	case 0, RusturfTunnel_FakeBrandon2_4
+RusturfTunnel_FakeBrandon2_1:
+	releaseall
+	return
+
+RusturfTunnel_FakeBrandon2_3:
+	closemessage
+	goto RusturfTunnel_FakeBrandon2_1
+
+RusturfTunnel_FakeBrandon2_4:
+	msgbox RusturfTunnel_RealBrandon_Text_1
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon2_7
+	case 0, RusturfTunnel_FakeBrandon2_8
+RusturfTunnel_FakeBrandon2_5:
+	closemessage
+	goto RusturfTunnel_FakeBrandon2_1
+
+RusturfTunnel_FakeBrandon2_7:
+	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_4, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon2_5
+
+RusturfTunnel_FakeBrandon2_8:
+	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_4, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon2_5
+
+
+RusturfTunnel_FakeBrandon3::
+	faceplayer
+	lockall
+	msgbox RusturfTunnel_FakeBrandon3_Text_0
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon3_3
+	case 0, RusturfTunnel_FakeBrandon3_4
+RusturfTunnel_FakeBrandon3_1:
+	releaseall
+	return
+
+RusturfTunnel_FakeBrandon3_3:
+	closemessage
+	goto RusturfTunnel_FakeBrandon3_1
+
+RusturfTunnel_FakeBrandon3_4:
+	msgbox RusturfTunnel_RealBrandon_Text_1
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon3_7
+	case 0, RusturfTunnel_FakeBrandon3_8
+RusturfTunnel_FakeBrandon3_5:
+	closemessage
+	goto RusturfTunnel_FakeBrandon3_1
+
+RusturfTunnel_FakeBrandon3_7:
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_5, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon3_5
+
+RusturfTunnel_FakeBrandon3_8:
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_5, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon3_5
+
+
+RusturfTunnel_FakeBrandon4::
+	faceplayer
+	lockall
+	msgbox RusturfTunnel_FakeBrandon4_Text_0
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon4_3
+	case 0, RusturfTunnel_FakeBrandon4_4
+RusturfTunnel_FakeBrandon4_1:
+	releaseall
+	return
+
+RusturfTunnel_FakeBrandon4_3:
+	closemessage
+	goto RusturfTunnel_FakeBrandon4_1
+
+RusturfTunnel_FakeBrandon4_4:
+	msgbox RusturfTunnel_RealBrandon_Text_1
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, RusturfTunnel_FakeBrandon4_7
+	case 0, RusturfTunnel_FakeBrandon4_8
+RusturfTunnel_FakeBrandon4_5:
+	closemessage
+	goto RusturfTunnel_FakeBrandon4_1
+
+RusturfTunnel_FakeBrandon4_7:
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_6, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon4_5
+
+RusturfTunnel_FakeBrandon4_8:
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_6, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC
+	goto RusturfTunnel_FakeBrandon4_5
+
+
 .equ LOCALID_WANDAS_BF, 1
 .set LOCALID_BRINEY, 5
 .set LOCALID_GRUNT, 6
@@ -529,3 +734,49 @@ RusturfTunnel_Text_MikePostBattle:
 	.string "They halted development here to\n"
 	.string "protect POKéMON, right?\l"
 	.string "There's a feel-good story!$"
+
+RusturfTunnel_GamerTalk_Text_0:
+	.string "GAMER: This is weird, man. Each Brandon\n"
+	.string "will tell you something, but all but one\l"
+	.string "is lying. Figure out who is telling the\l"
+	.string "truth and defeat them.$"
+
+RusturfTunnel_LevelCapManTalk_Text_0:
+	.string "MR. MAN: This is a tricky situation.\n"
+	.string "Brandon will stick to his dragon types,\l"
+	.string "with his highest being level 56.$"
+
+RusturfTunnel_EndFakeFight_Text_0:
+	.string "BRANDON: I'm afraid you chose wrong.\n"
+	.string "Best of luck.$"
+
+RusturfTunnel_EndBossFight_Text_0:
+	.string "BRANDON: Oh, you got it. Well, good\n"
+	.string "going.$"
+
+RusturfTunnel_RealBrandon_Text_0:
+	.string "BRANDON: I prefer animated movies to\n"
+	.string "blockbusters. Is this true?$"
+
+RusturfTunnel_RealBrandon_Text_1:
+	.string "Well, ready to find out?$"
+
+RusturfTunnel_FakeBrandon1_Text_0:
+	.string "BRANDON: I live on 100 Brunswick Ave. Is\n"
+	.string "this true?$"
+
+RusturfTunnel_FakeBrandon2_Text_0:
+	.string "BRANDON: I am a happy and\n"
+	.string "well-adjusted person. I did not ask for\l"
+	.string "this prompt. Is this true?$"
+
+RusturfTunnel_FakeBrandon3_Text_0:
+	.string "BRANDON: I lived on Elmsley 2nd floor in\n"
+	.string "first year. Is this true?$"
+
+RusturfTunnel_FakeBrandon4_Text_0:
+	.string "BRANDON: I lived with Minji in second\n"
+	.string "year. Is this true?$"
+
+RusturfTunnel_BossDefeated::
+	.string "Huh! Well, I didn't expect that.$"

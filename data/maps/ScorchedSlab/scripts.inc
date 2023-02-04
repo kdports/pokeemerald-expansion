@@ -42,6 +42,7 @@ ScorchedSlab_LevelCapManTalk::
 ScorchedSlab_EndBossFight::
 	msgbox ScorchedSlab_EndBossFight_Text_0
 	giveitem ITEM_ULTRA_BALL, 25
+	giveitem ITEM_TM31, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_SCORCHED_SLAB, 7, 16
 	waitstate
@@ -66,9 +67,9 @@ ScorchedSlab_AvaaniBattle_Text_0:
 ScorchedSlab_LevelCapManTalk_Text_0:
 	.string "MR. MAN: Gasp... I'm so tired. I'm not\n"
 	.string "made for that swim... Believe it or not,\l"
-	.string "Avaani uses fighting types. So why is\l"
-	.string "she in an underground river? Training,\l"
-	.string "obviously.$"
+	.string "Avaani uses fighting types. Her level\l"
+	.string "cap is 49. So why is she in an\l"
+	.string "underground river? Training, obviously.$"
 
 ScorchedSlab_EndBossFight_Text_0:
 	.string "AVAANI: That was great, high five!\n"

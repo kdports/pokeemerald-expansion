@@ -40,6 +40,7 @@ Route116_EndBossFight::
 	msgbox Route116_EndBossFight_Text_0
 	special HealPlayerParty
 	giveitem ITEM_POKE_BALL, 10
+	giveitem ITEM_TM27, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_METEOR_FALLS_1F_1R, 6, 39
 	waitstate

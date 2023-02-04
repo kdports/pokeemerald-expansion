@@ -38,7 +38,7 @@ script ScorchedSlab_EndBossFight {
 	giveitem(ITEM_ULTRA_BALL, 25)
 	giveitem(ITEM_TM31, 1)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_SCORCHED_SLAB, 7, 16)
+	warp(MAP_RUSTURF_TUNNEL, 18, 9)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 }
