@@ -271,82 +271,82 @@ const struct Trainer gTrainers[] = {
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
         .trainerName = _("AVAANI"),
-        .items = {ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .items = {ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_GruntSpaceCenter1),
     },
 
     [TRAINER_GRUNT_MT_PYRE_1] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+    { // Overwritten, easy Brandon
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_STEVEN,
+        .trainerName = _("BRANDON"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntMtPyre1),
+        .party = ITEM_CUSTOM_MOVES(sParty_GruntMtPyre1),
     },
 
     [TRAINER_GRUNT_MT_PYRE_2] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+    { // Overwritten, hard Brandon
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntMtPyre2),
+        .trainerPic = TRAINER_PIC_STEVEN,
+        .trainerName = _("BRANDON"),
+        .items = {ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_GruntMtPyre2),
     },
 
     [TRAINER_GRUNT_MT_PYRE_3] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+    { // Overwritten, fake Brandon 1
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_STEVEN,
+        .trainerName = _("BRANDON"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntMtPyre3),
+        .party = ITEM_CUSTOM_MOVES(sParty_GruntMtPyre3),
     },
 
     [TRAINER_GRUNT_WEATHER_INST_4] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+    { // Overwritten, fake Brandon 2
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_STEVEN,
+        .trainerName = _("BRANDON"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntWeatherInst4),
+        .party = ITEM_CUSTOM_MOVES(sParty_GruntWeatherInst4),
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_5] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+    { // Overwritten, fake Brandon 3
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_STEVEN,
+        .trainerName = _("BRANDON"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntAquaHideout5),
+        .party = ITEM_CUSTOM_MOVES(sParty_GruntAquaHideout5),
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_6] =
-    {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+    { // Overwritten, fake Brandon 4
+        .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
-        .trainerName = _("GRUNT"),
+        .trainerPic = TRAINER_PIC_STEVEN,
+        .trainerName = _("BRANDON"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_GruntAquaHideout6),
+        .party = ITEM_CUSTOM_MOVES(sParty_GruntAquaHideout6),
     },
 
     [TRAINER_FREDRICK] =

@@ -576,7 +576,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntMuseum2[] = { // Overw
 static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // Overwritten, hard Avaani
     {
     .iv = 100,
-    .lvl = 43,
+    .lvl = 46,
     .species = SPECIES_CONKELDURR,
 	.heldItem = ITEM_FLAME_ORB,
     .moves = {MOVE_BULK_UP, MOVE_BRICK_BREAK, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE},
@@ -584,7 +584,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // 
     },
     {
     .iv = 100,
-    .lvl = 44,
+    .lvl = 47,
     .species = SPECIES_MARSHADOW,
 	.heldItem = ITEM_NONE,
     .moves = {MOVE_SHADOW_SNEAK, MOVE_SHADOW_PUNCH, MOVE_JUMP_KICK, MOVE_ICE_PUNCH},
@@ -592,7 +592,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // 
     },
     {
     .iv = 100,
-    .lvl = 44,
+    .lvl = 47,
     .species = SPECIES_LUCARIO,
 	.heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_SWORDS_DANCE, MOVE_POWER_UP_PUNCH, MOVE_IRON_TAIL, MOVE_SUBSTITUTE},
@@ -600,7 +600,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // 
     },
     {
     .iv = 100,
-    .lvl = 45,
+    .lvl = 48,
     .species = SPECIES_CRABOMINABLE,
 	.heldItem = ITEM_NEVER_MELT_ICE,
     .moves = {MOVE_AVALANCHE, MOVE_PURSUIT, MOVE_REVERSAL, MOVE_ROCK_SLIDE},
@@ -608,7 +608,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // 
     },
     {
     .iv = 100,
-    .lvl = 45,
+    .lvl = 48,
     .species = SPECIES_PANGORO,
 	.heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_BULLET_PUNCH, MOVE_CRUNCH, MOVE_HAMMER_ARM, MOVE_DRAGON_CLAW},
@@ -616,7 +616,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // 
     },
     {
     .iv = 100,
-    .lvl = 46,
+    .lvl = 49,
     .species = SPECIES_SHARPEDO,
 	.heldItem = ITEM_CHOICE_BAND,
     .moves = {MOVE_ICE_FANG, MOVE_AQUA_JET, MOVE_CRUNCH, MOVE_POISON_FANG},
@@ -624,56 +624,165 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSpaceCenter1[] = { // 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtPyre1[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntMtPyre1[] = { // Overwritten, easy real Brandon
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .iv = 100,
+    .lvl = 56,
+    .species = SPECIES_SCEPTILE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_IRON_TAIL, MOVE_SWORDS_DANCE, MOVE_DRAGON_CLAW, MOVE_LEAF_BLADE},
+	.abilityNums = 1,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtPyre2[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntMtPyre2[] = { // Overwritten, hard real Brandon
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .iv = 100,
+    .lvl = 56,
+    .species = SPECIES_SCEPTILE,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_IRON_TAIL, MOVE_SWORDS_DANCE, MOVE_DRAGON_CLAW, MOVE_LEAF_BLADE},
+	.abilityNums = 1,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtPyre3[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntMtPyre3[] = { // Overwritten, fake Brandon 1
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_POOCHYENA,
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_DITTO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_TRANSFORM, MOVE_TRANSFORM, MOVE_TRANSFORM, MOVE_TRANSFORM},
+	.abilityNums = 1,
     },
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_CARVANHA,
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_ZOROARK,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_TAUNT, MOVE_FOUL_PLAY, MOVE_U_TURN, MOVE_HONE_CLAWS},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_DITTO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_TRANSFORM, MOVE_TRANSFORM, MOVE_TRANSFORM, MOVE_TRANSFORM},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_DITTO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_TRANSFORM, MOVE_TRANSFORM, MOVE_TRANSFORM, MOVE_TRANSFORM},
+	.abilityNums = 1,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst4[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntWeatherInst4[] = { // Overwritten, fake Brandon 2
     {
-    .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_CARVANHA,
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_SLOWKING,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_TELEPORT, MOVE_TELEPORT, MOVE_TELEPORT, MOVE_TELEPORT},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_TANGROWTH,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_U_TURN, MOVE_U_TURN, MOVE_U_TURN, MOVE_U_TURN},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_AUDINO,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_TELEPORT, MOVE_TELEPORT, MOVE_TELEPORT, MOVE_TELEPORT},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 54,
+    .species = SPECIES_GARDEVOIR,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_TELEPORT, MOVE_TELEPORT, MOVE_TELEPORT, MOVE_TELEPORT},
+	.abilityNums = 1,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout5[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout5[] = { // Overwritten, fake Brandon 3
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .iv = 10,
+    .lvl = 1,
+    .species = SPECIES_RATTATA_ALOLAN,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_ENDEAVOR, MOVE_QUICK_ATTACK, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 10,
+    .lvl = 54,
+    .species = SPECIES_WOBBUFFET,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_SAFEGUARD, MOVE_DESTINY_BOND},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 10,
+    .lvl = 54,
+    .species = SPECIES_SNORLAX,
+	.heldItem = ITEM_SILK_SCARF,
+    .moves = {MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_EXPLOSION, MOVE_EXPLOSION},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 10,
+    .lvl = 54,
+    .species = SPECIES_FURFROU_DEBUTANTE_TRIM,
+	.heldItem = ITEM_SILK_SCARF,
+    .moves = {MOVE_RETALIATE, MOVE_RETALIATE, MOVE_RETALIATE, MOVE_RETALIATE},
+	.abilityNums = 0,
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout6[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout6[] = { // Overwritten, fake Brandon 4
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .iv = 10,
+    .lvl = 54,
+    .species = SPECIES_SINISTEA,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_MEMENTO, MOVE_MEMENTO, MOVE_MEMENTO, MOVE_MEMENTO},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 54,
+    .species = SPECIES_PYUKUMUKU,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_MEMENTO, MOVE_MEMENTO, MOVE_MEMENTO, MOVE_MEMENTO},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 54,
+    .species = SPECIES_SPIRITOMB,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_MEMENTO, MOVE_MEMENTO, MOVE_MEMENTO, MOVE_MEMENTO},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 54,
+    .species = SPECIES_GYARADOS,
+	.heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_DRAGON_DANCE, MOVE_MIMIC, MOVE_DRAGON_RAGE, MOVE_ATTRACT},
+	.abilityNums = 0,
     }
 };
 

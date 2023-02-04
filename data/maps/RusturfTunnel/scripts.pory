@@ -1,3 +1,143 @@
+script RusturfTunnel_GamerTalk {
+	msgbox(format("GAMER: This is weird, man. Each Brandon will tell you something, but all but one is lying. Figure out who is telling the truth and defeat them."))
+	closemessage
+}
+
+script RusturfTunnel_LevelCapManTalk {
+    msgbox(format("MR. MAN: This is a tricky situation. Brandon will stick to his dragon types, with his highest being level 56."))
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
+script RusturfTunnel_EndFakeFight {
+	msgbox(format("BRANDON: I'm afraid you chose wrong. Best of luck."))
+	closemessage
+}
+
+script RusturfTunnel_EndBossFight {
+	msgbox(format("BRANDON: Oh, you got it. Well, good going."))
+	giveitem(ITEM_ULTRA_BALL, 15)
+	giveitem(ITEM_TM02, 1)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_AQUA_HIDEOUT_1F, 13, 27)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+}
+
+text RusturfTunnel_BossDefeated {
+	format("Huh! Well, I didn't expect that.")
+}
+
+script RusturfTunnel_RealBrandon {
+	faceplayer
+	lockall
+    msgbox(format("BRANDON: "))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			closemessage
+		case 0:
+			msgbox(format("Well, ready to find out?"))
+			multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+			switch(var(VAR_RESULT)) {
+				case 1:
+					trainerbattle_double(TRAINER_GRUNT_MT_PYRE_2, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndBossFight, NO_MUSIC)
+				case 0:
+					trainerbattle_single(TRAINER_GRUNT_MT_PYRE_1, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndBossFight, NO_MUSIC)
+			}
+			closemessage
+	}
+	releaseall
+}
+
+script RusturfTunnel_FakeBrandon1 {
+	faceplayer
+	lockall
+    msgbox(format(""))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			closemessage
+		case 0:
+			msgbox(format("Well, ready to find out?"))
+			multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+			switch(var(VAR_RESULT)) {
+				case 1:
+					trainerbattle_single(TRAINER_GRUNT_MT_PYRE_3, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+				case 0:
+					trainerbattle_single(TRAINER_GRUNT_MT_PYRE_3, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+			}
+			closemessage
+	}
+	releaseall
+}
+
+script RusturfTunnel_FakeBrandon2 {
+	faceplayer
+	lockall
+    msgbox(format(""))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			closemessage
+		case 0:
+			msgbox(format("Well, ready to find out?"))
+			multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+			switch(var(VAR_RESULT)) {
+				case 1:
+					trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_4, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+				case 0:
+					trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_4, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+			}
+			closemessage
+	}
+	releaseall
+}
+
+script RusturfTunnel_FakeBrandon3 {
+	faceplayer
+	lockall
+    msgbox(format(""))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			closemessage
+		case 0:
+			msgbox(format("Well, ready to find out?"))
+			multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+			switch(var(VAR_RESULT)) {
+				case 1:
+					trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_5, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+				case 0:
+					trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_5, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+			}
+			closemessage
+	}
+	releaseall
+}
+
+script RusturfTunnel_FakeBrandon4 {
+	faceplayer
+	lockall
+    msgbox(format(""))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			closemessage
+		case 0:
+			msgbox(format("Well, ready to find out?"))
+			multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+			switch(var(VAR_RESULT)) {
+				case 1:
+					trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_6, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+				case 0:
+					trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_6, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndFakeFight, NO_MUSIC)
+			}
+			closemessage
+	}
+	releaseall
+}
+
 raw `
 .equ LOCALID_WANDAS_BF, 1
 .set LOCALID_BRINEY, 5
