@@ -643,6 +643,14 @@ static const struct TrainerMonItemCustomMoves sParty_GruntMtPyre1[] = { // Overw
     },
     {
     .iv = 100,
+    .lvl = 55,
+    .species = SPECIES_FLYGON,
+	.heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_DRAGON_DANCE, MOVE_U_TURN},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
     .lvl = 56,
     .species = SPECIES_SCEPTILE,
 	.heldItem = ITEM_NONE,
