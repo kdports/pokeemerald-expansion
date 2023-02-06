@@ -26,21 +26,21 @@ script ShoalCave_BelindaBattle {
 	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 	switch(var(VAR_RESULT)) {
 		case 1:
-			call(FarawayIsland_NickHardFight)
+			call(ShoalCave_BelindaHardFight)
 		case 0:
-			call(FarawayIsland_NickEasyFight)
+			call(ShoalCave_BelindaEasyFight)
 	}
 	closemessage
 	releaseall
 }
 
 script ShoalCave_BelindaEasyFight {
-	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_single(TRAINER_FREDRICK, Route116_LeaderBattleIntro, ShoalCave_BossDefeated, ShoalCave_EndBossFight, NO_MUSIC)
 	release
 }
 
 script ShoalCave_BelindaHardFight {
-	trainerbattle_double(TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
+	trainerbattle_double(TRAINER_MATT, Route116_LeaderBattleIntro, ShoalCave_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, ShoalCave_EndBossFight, NO_MUSIC)
 	release
 }
 

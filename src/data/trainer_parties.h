@@ -850,7 +850,7 @@ static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout6[] = { // 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Fredrick[] = {
+static const struct TrainerMonItemCustomMoves sParty_Fredrick[] = { // Overwritten, easy Belinda
     {
     .iv = 100,
     .lvl = 30,
@@ -863,7 +863,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Fredrick[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Matt[] = {
+static const struct TrainerMonItemCustomMoves sParty_Matt[] = { // Overwritten, hard Belinda
     {
     .iv = 50,
     .lvl = 34,
