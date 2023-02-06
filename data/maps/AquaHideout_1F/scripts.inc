@@ -391,8 +391,10 @@ AquaHideout_KevinBattle_Text_0:
 	.string "it's in the game, so, eh. You ready?$"
 
 AquaHideout_EndBossFight_Text_0:
-	.string "KEVIN: You only have a few bosses left!\n"
-	.string "Good luck.$"
+	.string "KEVIN: Have you evolved your Eevee\n"
+	.string "yet? Well, if you have, try leveling it\l"
+	.string "to level 44. You only have a few bosses\l"
+	.string "left! Good luck.$"
 
 AquaHideout_LevelCapManTalk_Text_0:
 	.string "MR. MAN: The level cap here is 40. My\n"

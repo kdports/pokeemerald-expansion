@@ -852,27 +852,87 @@ static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout6[] = { // 
 
 static const struct TrainerMonItemCustomMoves sParty_Fredrick[] = { // Overwritten, easy Belinda
     {
-    .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MAKUHITA,
+    .iv = 10,
+    .lvl = 62,
+    .species = SPECIES_WEAVILE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_FAKE_OUT, MOVE_NIGHT_SLASH, MOVE_ICE_PUNCH, MOVE_BRICK_BREAK},
+	.abilityNums = 0,
     },
     {
-    .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MACHOKE,
+    .iv = 10,
+    .lvl = 63,
+    .species = SPECIES_FROSLASS,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
+    .lvl = 63,
+    .species = SPECIES_ABOMASNOW,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_BLIZZARD, MOVE_WOOD_HAMMER, MOVE_ICE_SHARD, MOVE_TOXIC},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 0,
+    .lvl = 64,
+    .species = SPECIES_HYDREIGON,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_CRUNCH, MOVE_DRAGON_PULSE, MOVE_BODY_SLAM, MOVE_TRI_ATTACK},
+	.abilityNums = 0,
     }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Matt[] = { // Overwritten, hard Belinda
     {
-    .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_MIGHTYENA,
+    .iv = 100,
+    .lvl = 62,
+    .species = SPECIES_WEAVILE,
+	.heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_FAKE_OUT, MOVE_NIGHT_SLASH, MOVE_ICE_PUNCH, MOVE_BRICK_BREAK},
+	.abilityNums = 0,
     },
     {
-    .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_GOLBAT,
+    .iv = 100,
+    .lvl = 62,
+    .species = SPECIES_NINETALES_ALOLAN,
+	.heldItem = ITEM_LIGHT_CLAY,
+    .moves = {MOVE_DAZZLING_GLEAM, MOVE_AURORA_VEIL, MOVE_BLIZZARD, MOVE_CALM_MIND},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 63,
+    .species = SPECIES_WALREIN,
+	.heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_BLIZZARD, MOVE_BRINE, MOVE_REST, MOVE_SLEEP_TALK},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 63,
+    .species = SPECIES_FROSLASS,
+	.heldItem = ITEM_WISE_GLASSES,
+    .moves = {MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 63,
+    .species = SPECIES_ABOMASNOW,
+	.heldItem = ITEM_OCCA_BERRY,
+    .moves = {MOVE_BLIZZARD, MOVE_WOOD_HAMMER, MOVE_EARTHQUAKE, MOVE_TOXIC},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 64,
+    .species = SPECIES_HYDREIGON,
+	.heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_CRUNCH, MOVE_DRAGON_PULSE, MOVE_FIRE_BLAST, MOVE_IRON_TAIL},
+	.abilityNums = 0,
     }
 };
 

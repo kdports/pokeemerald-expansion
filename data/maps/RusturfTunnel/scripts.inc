@@ -19,10 +19,10 @@ RusturfTunnel_EndFakeFight::
 
 RusturfTunnel_EndBossFight::
 	msgbox RusturfTunnel_EndBossFight_Text_0
-	giveitem ITEM_ULTRA_BALL, 15
+	giveitem ITEM_ULTRA_BALL, 25
 	giveitem ITEM_TM02, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_AQUA_HIDEOUT_1F, 13, 27
+	warp MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM, 15, 11
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	return
