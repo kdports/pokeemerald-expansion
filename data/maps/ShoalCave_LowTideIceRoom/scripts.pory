@@ -1,3 +1,53 @@
+script ShoalCave_GamerTalk {
+	msgbox(format("GAMER: Am I in your way? I-I'm so cold I can't even move! The worst part is the ice falling from the ceiling. Seriously, who made this place?"))
+	closemessage
+}
+
+script ShoalCave_LevelCapManTalk {
+    msgbox(format("MR. MAN: It feels good to be out of the cold. Belinda's level cap is 64. Watch out for her ice types!"))
+	giveitem(ITEM_RARE_CANDY, 99)
+	closemessage
+}
+
+script ShoalCave_EndBossFight {
+	msgbox(format("BELINDA: Pretty good."))
+	giveitem(ITEM_ULTRA_BALL, 15)
+	giveitem(ITEM_TM14, 1)
+	fadescreen(FADE_TO_BLACK)
+	warp(MAP_AQUA_HIDEOUT_1F, 13, 27)
+	waitstate
+	fadescreen(FADE_FROM_BLACK)
+}
+
+script ShoalCave_BelindaBattle {
+	faceplayer
+	lockall
+    msgbox(format("BELINDA: Hello. Did you make it here okay? I am the final battle before the gauntlet. So you better be ready."))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(FarawayIsland_NickHardFight)
+		case 0:
+			call(FarawayIsland_NickEasyFight)
+	}
+	closemessage
+	releaseall
+}
+
+script ShoalCave_BelindaEasyFight {
+	trainerbattle_single(TRAINER_GRUNT_WEATHER_INST_1, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, FarawayIsland_EndBossFight, NO_MUSIC)
+	release
+}
+
+script ShoalCave_BelindaHardFight {
+	trainerbattle_double(TRAINER_GRUNT_WEATHER_INST_2, Route116_LeaderBattleIntro, FarawayIsland_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, FarawayIsland_EndBossFight, NO_MUSIC)
+	release
+}
+
+text ShoalCave_BossDefeated {
+	format("Urgh... alright.")
+}
+
 raw `
 ShoalCave_LowTideIceRoom_MapScripts::
 	.byte 0

@@ -429,7 +429,7 @@ AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope::
 AbandonedShip_Rooms2_B1F_EventScript_ItemDiveBall::
 	finditem ITEM_FIRE_STONE
 	finditem ITEM_THUNDER_STONE
-	finditem ITEM_LEAF_STONE
+	finditem ITEM_WATER_STONE
 	end
 
 AbandonedShip_Room_B1F_EventScript_ItemTM13::
@@ -557,11 +557,11 @@ ShoalCave_LowTideStairsRoom_EventScript_ItemIceHeal::
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_ItemTM07::
-	finditem ITEM_TM07
+	finditem ITEM_LIFE_ORB
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_ItemNeverMeltIce::
-	finditem ITEM_NEVER_MELT_ICE
+	finditem ITEM_CHOICE_BAND
 	end
 
 SeafloorCavern_Room9_EventScript_ItemTM26::
@@ -649,7 +649,7 @@ MagmaHideout_3F_1R_EventScript_ItemNugget::
 	end
 
 MagmaHideout_3F_2R_EventScript_ItemPPMax::
-	finditem ITEM_PP_MAX
+	finditem ITEM_TM06
 	end
 
 MagmaHideout_4F_EventScript_ItemMaxRevive::

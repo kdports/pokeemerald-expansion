@@ -16,10 +16,10 @@ script RusturfTunnel_EndFakeFight {
 
 script RusturfTunnel_EndBossFight {
 	msgbox(format("BRANDON: Oh, you got it. Well, good going."))
-	giveitem(ITEM_ULTRA_BALL, 15)
+	giveitem(ITEM_ULTRA_BALL, 25)
 	giveitem(ITEM_TM02, 1)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_AQUA_HIDEOUT_1F, 13, 27)
+	warp(MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM, 15, 11)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 }

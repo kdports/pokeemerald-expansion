@@ -33,7 +33,7 @@ text AquaHideout_BossDefeated {
 }
 
 script AquaHideout_EndBossFight {
-	msgbox(format("KEVIN: You only have a few bosses left! Good luck."))
+	msgbox(format("KEVIN: Have you evolved your Eevee yet? Well, if you have, try leveling it to level 44. You only have a few bosses left! Good luck."))
 	giveitem(ITEM_ULTRA_BALL, 25)
 	giveitem(ITEM_TM29, 1)
 	fadescreen(FADE_TO_BLACK)
