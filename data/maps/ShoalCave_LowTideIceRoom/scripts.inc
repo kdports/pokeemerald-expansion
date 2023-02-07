@@ -16,7 +16,7 @@ ShoalCave_EndBossFight::
 	giveitem ITEM_ULTRA_BALL, 15
 	giveitem ITEM_TM14, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_AQUA_HIDEOUT_1F, 13, 27
+	warp MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F, 9, 8
 	waitstate
 	fadescreen FADE_FROM_BLACK
 	return
@@ -71,7 +71,11 @@ ShoalCave_LevelCapManTalk_Text_0:
 	.string "out for her ice types!$"
 
 ShoalCave_EndBossFight_Text_0:
-	.string "BELINDA: Pretty good.$"
+	.string "BELINDA: Pretty good. The gauntlet is\n"
+	.string "the only challenge remaining. You'll\l"
+	.string "have to face all of us in a series of\l"
+	.string "four double battles. You better be\l"
+	.string "ready!$"
 
 ShoalCave_BelindaBattle_Text_0:
 	.string "BELINDA: Hello. Did you make it here\n"

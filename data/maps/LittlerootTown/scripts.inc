@@ -48,11 +48,11 @@ Tutorial_SpeakMattandTasha_1:
 	return
 
 Tutorial_SpeakMattandTasha_3:
-	call Tutorial_HowToBattle
+	call Tutorial_SkipBattle
 	goto Tutorial_SpeakMattandTasha_1
 
 Tutorial_SpeakMattandTasha_4:
-	call Tutorial_SkipBattle
+	call Tutorial_HowToBattle
 	goto Tutorial_SpeakMattandTasha_1
 
 

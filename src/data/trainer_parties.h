@@ -853,6 +853,14 @@ static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout6[] = { // 
 static const struct TrainerMonItemCustomMoves sParty_Fredrick[] = { // Overwritten, easy Belinda
     {
     .iv = 10,
+    .lvl = 63,
+    .species = SPECIES_ABOMASNOW,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_BLIZZARD, MOVE_WOOD_HAMMER, MOVE_ICE_SHARD, MOVE_TOXIC},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 10,
     .lvl = 62,
     .species = SPECIES_WEAVILE,
 	.heldItem = ITEM_NONE,
@@ -868,14 +876,6 @@ static const struct TrainerMonItemCustomMoves sParty_Fredrick[] = { // Overwritt
 	.abilityNums = 0,
     },
     {
-    .iv = 10,
-    .lvl = 63,
-    .species = SPECIES_ABOMASNOW,
-	.heldItem = ITEM_NONE,
-    .moves = {MOVE_BLIZZARD, MOVE_WOOD_HAMMER, MOVE_ICE_SHARD, MOVE_TOXIC},
-	.abilityNums = 0,
-    },
-    {
     .iv = 0,
     .lvl = 64,
     .species = SPECIES_HYDREIGON,
@@ -888,10 +888,10 @@ static const struct TrainerMonItemCustomMoves sParty_Fredrick[] = { // Overwritt
 static const struct TrainerMonItemCustomMoves sParty_Matt[] = { // Overwritten, hard Belinda
     {
     .iv = 100,
-    .lvl = 62,
-    .species = SPECIES_WEAVILE,
-	.heldItem = ITEM_LIFE_ORB,
-    .moves = {MOVE_FAKE_OUT, MOVE_NIGHT_SLASH, MOVE_ICE_PUNCH, MOVE_BRICK_BREAK},
+    .lvl = 63,
+    .species = SPECIES_ABOMASNOW,
+	.heldItem = ITEM_OCCA_BERRY,
+    .moves = {MOVE_BLIZZARD, MOVE_WOOD_HAMMER, MOVE_EARTHQUAKE, MOVE_TOXIC},
 	.abilityNums = 0,
     },
     {
@@ -900,6 +900,14 @@ static const struct TrainerMonItemCustomMoves sParty_Matt[] = { // Overwritten, 
     .species = SPECIES_NINETALES_ALOLAN,
 	.heldItem = ITEM_LIGHT_CLAY,
     .moves = {MOVE_DAZZLING_GLEAM, MOVE_AURORA_VEIL, MOVE_BLIZZARD, MOVE_CALM_MIND},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 62,
+    .species = SPECIES_WEAVILE,
+	.heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_FAKE_OUT, MOVE_NIGHT_SLASH, MOVE_ICE_PUNCH, MOVE_BRICK_BREAK},
 	.abilityNums = 0,
     },
     {
@@ -916,14 +924,6 @@ static const struct TrainerMonItemCustomMoves sParty_Matt[] = { // Overwritten, 
     .species = SPECIES_FROSLASS,
 	.heldItem = ITEM_WISE_GLASSES,
     .moves = {MOVE_PSYCHIC, MOVE_ICY_WIND, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL},
-	.abilityNums = 0,
-    },
-    {
-    .iv = 100,
-    .lvl = 63,
-    .species = SPECIES_ABOMASNOW,
-	.heldItem = ITEM_OCCA_BERRY,
-    .moves = {MOVE_BLIZZARD, MOVE_WOOD_HAMMER, MOVE_EARTHQUAKE, MOVE_TOXIC},
 	.abilityNums = 0,
     },
     {
