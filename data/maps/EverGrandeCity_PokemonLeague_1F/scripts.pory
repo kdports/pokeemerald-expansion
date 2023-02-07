@@ -15,8 +15,8 @@ EverGrandeCity_PokemonLeague_1F_OnTransition:
 	end
 
 EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor::
-	setobjectxyperm LOCALID_GUARD_1, 9, 2
-	setobjectxyperm LOCALID_GUARD_2, 10, 2
+	setobjectxyperm LOCALID_GUARD_1, 8, 2
+	setobjectxyperm LOCALID_GUARD_2, 11, 2
 	return
 
 EverGrandeCity_PokemonLeague_1F_EventScript_Nurse::
