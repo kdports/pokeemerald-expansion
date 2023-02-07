@@ -14,7 +14,7 @@ script ShoalCave_EndBossFight {
 	giveitem(ITEM_ULTRA_BALL, 15)
 	giveitem(ITEM_TM14, 1)
 	fadescreen(FADE_TO_BLACK)
-	warp(MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F, 9, 8)
+	warp(MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F, 9, 8)
 	waitstate
 	fadescreen(FADE_FROM_BLACK)
 }
