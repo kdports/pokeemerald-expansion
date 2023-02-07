@@ -36,6 +36,29 @@ script LittlerootTown_EventScript_StepOffTruckMale {
 	end
 }
 
+script Tutorial_SpeakMattandTasha {
+	faceplayer
+	msgbox(format("MATTHEW: Hey, welcome to the tutorial house!\pNATASHA: Since you already know how to move, we'll teach you a bit about how to battle.\pMATTHEW: This is all basic information - do you want to hear it?"))
+	multichoicedefault(20, 8, MULTI_YESNO, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			call(Tutorial_SkipBattle)
+		case 0:
+			call(Tutorial_HowToBattle)
+	}
+	closemessage
+}
+
+script Tutorial_HowToBattle {
+	msgbox(format("MATTHEW: First, you'll need a Pokémon, which you don't have yet.\pNATASHA: During battle, each fighter selects their moves at the same time. Then, the Pokémon with the highest speed moves first. Reduce your opponent's HP to 0 to win!\pMATTHEW: Not all moves damage the opponent, though. Press START once you have a Pokémon in order to check out their moves."))
+	closemessage
+}
+
+script Tutorial_SkipBattle {
+	msgbox(format("MATTHEW: Oh, you already got it?\pNATASHA: That was simple!"))
+	closemessage
+}
+
 script LittlerootTown_ManBlockingGym {
 	faceplayer
 	msgbox(format("I'm afraid you must have all three pins before you can proceed."))

@@ -134,7 +134,8 @@ movement LittlerootTown_BrendansHouse_2F_EmersonBackUp {
 }
 
 movement LittlerootTown_BrendansHouse_2F_LeadersApproach {
-	walk_up * 4
+	face_up
+	walk_up
 }
 
 text LittlerootTown_JaceConcedetoSadie {

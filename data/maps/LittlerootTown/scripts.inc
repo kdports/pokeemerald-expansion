@@ -36,6 +36,38 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	end
 
 
+Tutorial_SpeakMattandTasha::
+	faceplayer
+	msgbox Tutorial_SpeakMattandTasha_Text_0
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, Tutorial_SpeakMattandTasha_3
+	case 0, Tutorial_SpeakMattandTasha_4
+Tutorial_SpeakMattandTasha_1:
+	closemessage
+	return
+
+Tutorial_SpeakMattandTasha_3:
+	call Tutorial_HowToBattle
+	goto Tutorial_SpeakMattandTasha_1
+
+Tutorial_SpeakMattandTasha_4:
+	call Tutorial_SkipBattle
+	goto Tutorial_SpeakMattandTasha_1
+
+
+Tutorial_HowToBattle::
+	msgbox Tutorial_HowToBattle_Text_0
+	closemessage
+	return
+
+
+Tutorial_SkipBattle::
+	msgbox Tutorial_SkipBattle_Text_0
+	closemessage
+	return
+
+
 LittlerootTown_ManBlockingGym::
 	faceplayer
 	msgbox LittlerootTown_ManBlockingGym_Text_0
@@ -1087,6 +1119,32 @@ LittlerootTown_EventScript_StepOffTruckMale_Text_0:
 	.string "Nervous?\p"
 	.string "MATTHEW: Here's your Pokéball. Good\n"
 	.string "luck!$"
+
+Tutorial_SpeakMattandTasha_Text_0:
+	.string "MATTHEW: Hey, welcome to the tutorial\n"
+	.string "house!\p"
+	.string "NATASHA: Since you already know how to\n"
+	.string "move, we'll teach you a bit about how to\l"
+	.string "battle.\p"
+	.string "MATTHEW: This is all basic information -\n"
+	.string "do you want to hear it?$"
+
+Tutorial_HowToBattle_Text_0:
+	.string "MATTHEW: First, you'll need a Pokémon,\n"
+	.string "which you don't have yet.\p"
+	.string "NATASHA: During battle, each fighter\n"
+	.string "selects their moves at the same time.\l"
+	.string "Then, the Pokémon with the highest\l"
+	.string "speed moves first. Reduce your\l"
+	.string "opponent's HP to 0 to win!\p"
+	.string "MATTHEW: Not all moves damage the\n"
+	.string "opponent, though. Press START once\l"
+	.string "you have a Pokémon in order to check\l"
+	.string "out their moves.$"
+
+Tutorial_SkipBattle_Text_0:
+	.string "MATTHEW: Oh, you already got it?\p"
+	.string "NATASHA: That was simple!$"
 
 LittlerootTown_ManBlockingGym_Text_0:
 	.string "I'm afraid you must have all three pins\n"

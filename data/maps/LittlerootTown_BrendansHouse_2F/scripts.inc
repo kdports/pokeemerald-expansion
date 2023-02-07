@@ -138,9 +138,7 @@ LittlerootTown_BrendansHouse_2F_EmersonBackUp:
 	step_end
 
 LittlerootTown_BrendansHouse_2F_LeadersApproach:
-	walk_up
-	walk_up
-	walk_up
+	face_up
 	walk_up
 	step_end
 

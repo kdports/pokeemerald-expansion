@@ -18,7 +18,7 @@ InsideOfTruck_OnResume:
 
 InsideOfTruck_EventScript_SetIntroFlags::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-	setdynamicwarp MAP_LITTLEROOT_TOWN, 11, 29
+	setdynamicwarp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 7, 10
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	setvar VAR_LITTLEROOT_INTRO_STATE, 1
@@ -57,16 +57,13 @@ InsideOfTruck_EventScript_MovingBox::
 	end
 
 InsideOfTruck_Text_BoxPrintedWithMonLogo:
-	.string "TODO\p"
+	.string "It's a box!\p"
 	.string "It's a POKéMON brand moving and\n"
 	.string "delivery service.$"
 
 InsideOfTruck_EventScript_DoorOpen::
 	msgbox InsideOfTruck_DoorOpenSpeak, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_EMERSON, EmersonLeave
-	waitmovement 0
-	hideobjectat LOCALID_EMERSON, MAP_INSIDE_OF_TRUCK
 	setvar VAR_TEMP_0, 1
 	end
 
@@ -78,7 +75,6 @@ EmersonLeave:
 	step_end
 
 InsideOfTruck_DoorOpenSpeak::
-	.string "KEVIN: I have red hair now for\n"
-	.string "technical reasons. I'm just gonna\l"
-	.string "exposition dump when you get out of\l"
-	.string "the truck.$"
+	.string "MATTHEW: Hey, step outside! Use the\n"
+	.string "arrow keys to move around and the A\l"
+	.string "button to interact with objects.$"
