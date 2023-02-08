@@ -1,3 +1,7 @@
+script EverGrandeCity_E4Battle1 {
+
+}
+
 raw `
 .set LOCALID_NURSE, 1
 .set LOCALID_GUARD_1, 3

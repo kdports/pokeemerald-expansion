@@ -12631,7 +12631,7 @@
               {
                 "min_level": 55,
                 "max_level": 55,
-                "species": "SPECIES_DECIDUEYE_HISUIAN"
+                "species": "SPECIES_DECIDUEYE"
               },
               {
                 "min_level": 55,
@@ -12679,7 +12679,7 @@
                 "species": "SPECIES_GRIMMSNARL"
               },
               {
-                "min_level": 5,
+                "min_level": 55,
                 "max_level": 55,
                 "species": "SPECIES_SWAMPERT"
               }
