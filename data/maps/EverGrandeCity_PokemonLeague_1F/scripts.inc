@@ -1,3 +1,63 @@
+EverGrandeCity_E4Battle1_CenterTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_CenterTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle1_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle1_PrepDialogue::
+	msgbox EverGrandeCity_E4Battle1_PrepDialogue_Text_0
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, EverGrandeCity_E4Battle1_PrepDialogue_3
+	case 0, EverGrandeCity_E4Battle1_PrepDialogue_4
+EverGrandeCity_E4Battle1_PrepDialogue_1:
+	closemessage
+	return
+
+EverGrandeCity_E4Battle1_PrepDialogue_3:
+	trainerbattle_double TRAINER_ZANDER, Route116_LeaderBattleIntro, E4Battle1_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle1_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle1_PrepDialogue_1
+
+EverGrandeCity_E4Battle1_PrepDialogue_4:
+	trainerbattle_double TRAINER_LEAH, Route116_LeaderBattleIntro, E4Battle1_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle1_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle1_PrepDialogue_1
+
+
+E4Battle1_EndBossFight::
+	msgbox E4Battle1_EndBossFight_Text_0
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	closemessage
+	return
+
+
+E4_CenterTrigger:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+E4_RightTrigger:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	step_end
+
+E4_LeftTrigger:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	step_end
+
 .set LOCALID_NURSE, 1
 .set LOCALID_GUARD_1, 3
 .set LOCALID_GUARD_2, 4
@@ -127,3 +187,22 @@ EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges:
 EverGrandeCity_PokemonLeague_1F_Text_GoForth:
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "POKéMON, and go forth!$"
+
+EverGrandeCity_E4Battle1_PrepDialogue_Text_0:
+	.string "CAROLINE: Think you're ready for this,\n"
+	.string "bitch?\p"
+	.string "BRANDON: Caroline, calm down. No need to\n"
+	.string "be so worked up.\p"
+	.string "CAROLINE: Whatever, I'm ready to go! No\n"
+	.string "need for a warm up!$"
+
+E4Battle1_EndBossFight_Text_0:
+	.string "CAROLINE: Good job, I guess.\p"
+	.string "BRANDON: I hope you're ready for what\n"
+	.string "comes next.$"
+
+E4Battle1_BossDefeated::
+	.string "CAROLINE: Wha- argh, I thought we were\n"
+	.string "in tune!\p"
+	.string "BRANDON: ...Congratulations. This was\n"
+	.string "well done.$"

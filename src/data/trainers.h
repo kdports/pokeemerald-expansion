@@ -374,55 +374,55 @@ const struct Trainer gTrainers[] = {
     },
 
     [TRAINER_ZANDER] =
-    {  // Overwritten, E4 easy Belinda
+    {  // Overwritten, E4 fight one hard
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_LEADER_WINONA,
-        .trainerName = _("BELINDA"),
+        .trainerName = _("CAROLINE & BRANDON"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Zander),
     },
 
     [TRAINER_SHELLY_WEATHER_INSTITUTE] =
-    {  // Overwritten, E4 hard Belinda
+    {  // Overwritten, E4 fight two
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_LEADER_WINONA,
-        .trainerName = _("BELINDA"),
+        .trainerName = _("NOAH & NICK"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_ShellyWeatherInstitute),
     },
 
     [TRAINER_SHELLY_SEAFLOOR_CAVERN] =
-    {  // Overwritten, E4 easy Brandon
+    {  // Overwritten, E4 fight three
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_STEVEN,
-        .trainerName = _("BRANDON"),
+        .trainerName = _("MATTHEW & AVAANI"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_ShellySeafloorCavern),
     },
 
     [TRAINER_ARCHIE] =
-    {  // Overwritten, E4 hard Brandon
+    {  // Overwritten, E4 fight four
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_STEVEN,
-        .trainerName = _("BRANDON"),
+        .trainerName = _("NATASHA & BELINDA"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_Archie),
     },
 
     [TRAINER_LEAH] =
-    {  // Overwritten, E4 easy Avaani
+    {  // Overwritten, E4 fight one easy
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
@@ -434,7 +434,7 @@ const struct Trainer gTrainers[] = {
     },
 
     [TRAINER_DAISY] =
-    {  // Overwritten, E4 hard Avaani
+    {  // Overwritten, E4 fight two easy
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
@@ -446,7 +446,7 @@ const struct Trainer gTrainers[] = {
     },
 
     [TRAINER_ROSE_1] =
-    {  // Overwritten, E4 easy Nick
+    {  // Overwritten, E4 fight three easy
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,
@@ -458,7 +458,7 @@ const struct Trainer gTrainers[] = {
     },
 
     [TRAINER_FELIX] =
-    {  // Overwritten, E4 hard Nick
+    {  // Overwritten, E4 fight four easy
         .trainerClass = TRAINER_CLASS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,

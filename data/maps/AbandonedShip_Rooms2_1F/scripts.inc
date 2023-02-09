@@ -79,7 +79,7 @@ AbandonedShip_Rooms2_1F_Text_KiraPostBattle:
 	.string "when we find the treasures!$"
 
 AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons:
-	.string "KIRA: Oh, you don't have two POKéMON?\n"
+	.string "Oh, you don't have two POKéMON?\n"
 	.string "We'll have to battle some other time!$"
 
 AbandonedShip_Rooms2_1F_Text_KiraRegister:

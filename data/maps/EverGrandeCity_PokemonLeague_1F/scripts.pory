@@ -1,5 +1,45 @@
-script EverGrandeCity_E4Battle1 {
+script EverGrandeCity_E4Battle1_CenterTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_CenterTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle1_PrepDialogue)
+}
 
+script EverGrandeCity_E4Battle1_PrepDialogue {
+	msgbox(format("CAROLINE: Think you're ready for this, bitch?\pBRANDON: Caroline, calm down. No need to be so worked up.\pCAROLINE: Whatever, I'm ready to go! No need for a warm up!"))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			trainerbattle_double(TRAINER_ZANDER, Route116_LeaderBattleIntro, E4Battle1_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle1_EndBossFight, NO_MUSIC)
+		case 0:
+			trainerbattle_double(TRAINER_LEAH, Route116_LeaderBattleIntro, E4Battle1_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle1_EndBossFight, NO_MUSIC)
+	}
+	closemessage
+}
+
+text E4Battle1_BossDefeated {
+	format("CAROLINE: Wha- argh, I thought we were in tune!\pBRANDON: ...Congratulations. This was well done.")
+}
+
+script E4Battle1_EndBossFight {
+	msgbox(format("CAROLINE: Good job, I guess.\pBRANDON: I hope you're ready for what comes next."))
+	call(PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles)
+	closemessage
+}
+
+movement E4_CenterTrigger {
+	walk_up * 5
+}
+
+movement E4_RightTrigger {
+	walk_up * 4
+	walk_left
+	walk_up
+}
+
+movement E4_LeftTrigger {
+	walk_up * 5
+	walk_right
+	walk_up
 }
 
 raw `
