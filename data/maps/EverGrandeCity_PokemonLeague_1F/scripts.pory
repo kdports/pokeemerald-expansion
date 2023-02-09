@@ -17,7 +17,7 @@ script EverGrandeCity_E4Battle1_PrepDialogue {
 }
 
 text E4Battle1_BossDefeated {
-	format("CAROLINE: Wha- argh, I thought we were in tune!\pBRANDON: ...Congratulations. This was well done.")
+	format("CAROLINE: Wha- argh, I thought we were in tune!\pBRANDON: ...Congratulations. That was well done.")
 }
 
 script E4Battle1_EndBossFight {

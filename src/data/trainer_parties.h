@@ -939,6 +939,38 @@ static const struct TrainerMonItemCustomMoves sParty_Matt[] = { // Overwritten, 
 static const struct TrainerMonItemCustomMoves sParty_Zander[] = {  // Overwritten, E4 fight one (Caroline + Brandon)
     {
     .iv = 100,
+    .lvl = 64,
+    .species = SPECIES_AEGISLASH,
+	.heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SWORDS_DANCE, MOVE_KINGS_SHIELD, MOVE_IRON_HEAD, MOVE_SHADOW_SNEAK},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 64,
+    .species = SPECIES_NOIVERN,
+	.heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_TAILWIND, MOVE_BOOMBURST, MOVE_U_TURN, MOVE_DRACO_METEOR},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 64,
+    .species = SPECIES_MISMAGIUS,
+	.heldItem = ITEM_EXPERT_BELT,
+    .moves = {MOVE_MYSTICAL_FIRE, MOVE_CALM_MIND, MOVE_SHADOW_BALL, MOVE_ICY_WIND},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 64,
+    .species = SPECIES_DRAGONITE,
+    .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_EXTREME_SPEED, MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_ICE_BEAM}
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
     .lvl = 66,
     .species = SPECIES_WIGGLYTUFF,
 	.heldItem = ITEM_CHOICE_SPECS,
@@ -957,7 +989,39 @@ static const struct TrainerMonItemCustomMoves sParty_Zander[] = {  // Overwritte
 
 static const struct TrainerMonItemCustomMoves sParty_ShellyWeatherInstitute[] = {  // Overwritten, E4 fight two (Noah + Nick)
     {
-    .iv = 80,
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_MAGCARGO,
+	.heldItem = ITEM_HEAT_ROCK,
+	.moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER, MOVE_ANCIENT_POWER},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_ROSERADE,
+	.heldItem = ITEM_AIR_BALLOON,
+    .moves = {MOVE_WEATHER_BALL, MOVE_MEGA_DRAIN, MOVE_TOXIC_SPIKES, MOVE_SYNTHESIS},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_COALOSSAL,
+	.heldItem = ITEM_PASSHO_BERRY,
+	.moves = {MOVE_BURN_UP, MOVE_ANCIENT_POWER, MOVE_RAPID_SPIN, MOVE_EARTHQUAKE},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_SERPERIOR,
+	.heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_LEAF_STORM, MOVE_DRACO_METEOR, MOVE_GLARE, MOVE_SUBSTITUTE},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
     .lvl = 67,
     .species = SPECIES_MACHAMP,
 	.heldItem = ITEM_FLAME_ORB,
@@ -1015,6 +1079,22 @@ static const struct TrainerMonItemCustomMoves sParty_Archie[] = {  // Overwritte
 static const struct TrainerMonItemCustomMoves sParty_Leah[] = {  // Overwritten, E4 fight one easy
     {
     .iv = 100,
+    .lvl = 64,
+    .species = SPECIES_MISMAGIUS,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_MYSTICAL_FIRE, MOVE_CALM_MIND, MOVE_SHADOW_BALL, MOVE_ICY_WIND},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 64,
+    .species = SPECIES_DRAGONITE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_EXTREME_SPEED, MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_ICE_BEAM}
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
     .lvl = 66,
     .species = SPECIES_WIGGLYTUFF,
 	.heldItem = ITEM_SITRUS_BERRY,
@@ -1033,7 +1113,23 @@ static const struct TrainerMonItemCustomMoves sParty_Leah[] = {  // Overwritten,
 
 static const struct TrainerMonItemCustomMoves sParty_Daisy[] = {  // Overwritten, E4 fight two easy
     {
-    .iv = 80,
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_MAGCARGO,
+	.heldItem = ITEM_NONE,
+	.moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER, MOVE_ANCIENT_POWER},
+	.abilityNums = 0,
+    },
+    {
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_ROSERADE,
+	.heldItem = ITEM_NONE,
+    .moves = {MOVE_WEATHER_BALL, MOVE_MEGA_DRAIN, MOVE_TOXIC_SPIKES, MOVE_SYNTHESIS},
+	.abilityNums = 1,
+    },
+    {
+    .iv = 100,
     .lvl = 67,
     .species = SPECIES_MACHAMP,
 	.heldItem = ITEM_SITRUS_BERRY,
