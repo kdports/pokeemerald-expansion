@@ -11883,6 +11883,7 @@ static const u16 sSlakingTeachableLearnset[] = {
     MOVE_DOUBLE_TEAM,
     MOVE_EARTHQUAKE,
     MOVE_FACADE,
+    MOVE_EXPLOSION,
     MOVE_FIRE_BLAST,
     MOVE_FLAMETHROWER,
     MOVE_FOCUS_PUNCH,

@@ -3291,7 +3291,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         #if P_UPDATED_ABILITIES >= GEN_7
-            .abilities = {ABILITY_CURSED_BODY, ABILITY_NONE},
+            .abilities = {ABILITY_CURSED_BODY, ABILITY_LEVITATE},
         #else
             .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
         #endif
@@ -12755,7 +12755,7 @@ const struct BaseStats gBaseStats[] =
             .eggGroup1 = EGG_GROUP_AMORPHOUS,
         #endif
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
-        .abilities = {ABILITY_STEADFAST, ABILITY_NONE, ABILITY_JUSTIFIED},
+        .abilities = {ABILITY_STEADFAST, ABILITY_JUSTIFIED, ABILITY_JUSTIFIED},
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
@@ -17215,7 +17215,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_1,
-        .abilities = {ABILITY_TORRENT, ABILITY_NONE, ABILITY_PROTEAN},
+        .abilities = {ABILITY_TORRENT, ABILITY_PROTEAN, ABILITY_PROTEAN},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -17239,7 +17239,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_1,
-        .abilities = {ABILITY_TORRENT, ABILITY_NONE, ABILITY_PROTEAN},
+        .abilities = {ABILITY_TORRENT, ABILITY_PROTEAN, ABILITY_PROTEAN},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
@@ -17263,7 +17263,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_1,
-        .abilities = {ABILITY_TORRENT, ABILITY_NONE, ABILITY_PROTEAN},
+        .abilities = {ABILITY_TORRENT, ABILITY_PROTEAN, ABILITY_PROTEAN},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = TRUE,
     },

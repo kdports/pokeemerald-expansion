@@ -65,7 +65,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "EverGrandeCity_E4Battle1_LeftTrigger"
     },
     {
       "type": "trigger",
@@ -74,7 +74,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "EverGrandeCity_E4Battle1_CenterTrigger"
     },
     {
       "type": "trigger",
@@ -83,7 +83,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "EverGrandeCity_E4Battle1_RightTrigger"
     }
   ],
   "bg_events": [

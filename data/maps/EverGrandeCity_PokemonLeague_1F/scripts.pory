@@ -4,6 +4,18 @@ script EverGrandeCity_E4Battle1_CenterTrigger {
 	call(EverGrandeCity_E4Battle1_PrepDialogue)
 }
 
+script EverGrandeCity_E4Battle1_RightTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_RightTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle1_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle1_LeftTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_LeftTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle1_PrepDialogue)
+}
+
 script EverGrandeCity_E4Battle1_PrepDialogue {
 	msgbox(format("CAROLINE: Think you're ready for this, bitch?\pBRANDON: Caroline, calm down. No need to be so worked up.\pCAROLINE: Whatever, I'm ready to go! No need for a warm up!"))
 	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
