@@ -55,7 +55,7 @@ RusturfTunnel_RealBrandon_5:
 	goto RusturfTunnel_RealBrandon_1
 
 RusturfTunnel_RealBrandon_7:
-	trainerbattle_double TRAINER_GRUNT_MT_PYRE_2, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndBossFight, NO_MUSIC
+	trainerbattle_double TRAINER_GRUNT_MT_PYRE_2, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, RusturfTunnel_EndBossFight, NO_MUSIC
 	goto RusturfTunnel_RealBrandon_5
 
 RusturfTunnel_RealBrandon_8:

@@ -41,7 +41,7 @@ script RusturfTunnel_RealBrandon {
 			multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 			switch(var(VAR_RESULT)) {
 				case 1:
-					trainerbattle_double(TRAINER_GRUNT_MT_PYRE_2, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndBossFight, NO_MUSIC)
+					trainerbattle_double(TRAINER_GRUNT_MT_PYRE_2, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, RusturfTunnel_EndBossFight, NO_MUSIC)
 				case 0:
 					trainerbattle_single(TRAINER_GRUNT_MT_PYRE_1, Route116_LeaderBattleIntro, RusturfTunnel_BossDefeated, RusturfTunnel_EndBossFight, NO_MUSIC)
 			}
