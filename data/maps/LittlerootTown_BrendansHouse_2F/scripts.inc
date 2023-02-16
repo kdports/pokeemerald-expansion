@@ -35,19 +35,16 @@ LittlerootTown_BrendansHouse_2F_GoUp:
 	step_end
 
 LittlerootTown_BrendansHouse_2F_EventScript_TTileLeft::
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_PlayerViewFight
 	goto LittlerootTown_BrendansHouse_2F_EventScript_HouseFight
 	return
 
 
 LittlerootTown_BrendansHouse_2F_EventScript_TTileBottom::
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_PlayerViewFight2
 	goto LittlerootTown_BrendansHouse_2F_EventScript_HouseFight
 	return
 
 
 LittlerootTown_BrendansHouse_2F_EventScript_TTileRight::
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_BrendansHouse_2F_PlayerViewFight3
 	goto LittlerootTown_BrendansHouse_2F_EventScript_HouseFight
 	return
 

@@ -19,7 +19,6 @@ EverGrandeCity_GlaciasRoom_OnFrame:
 
 EverGrandeCity_GlaciasRoom_EventScript_WalkInCloseDoor::
 	lockall
-	call PokemonLeague_EliteFour_EventScript_WalkInCloseDoor
 	setvar VAR_ELITE_4_STATE, 3
 	releaseall
 	end

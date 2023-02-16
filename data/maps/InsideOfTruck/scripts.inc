@@ -65,6 +65,7 @@ InsideOfTruck_EventScript_DoorOpen::
 	msgbox InsideOfTruck_DoorOpenSpeak, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_0, 1
+	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	end
 
 

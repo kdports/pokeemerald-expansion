@@ -19,7 +19,6 @@ EverGrandeCity_DrakesRoom_OnFrame:
 
 EverGrandeCity_DrakesRoom_EventScript_WalkInCloseDoor::
 	lockall
-	call PokemonLeague_EliteFour_EventScript_WalkInCloseDoor
 	setvar VAR_ELITE_4_STATE, 4
 	releaseall
 	end

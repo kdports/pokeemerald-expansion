@@ -966,7 +966,7 @@ static const struct TrainerMonItemCustomMoves sParty_Zander[] = {  // Overwritte
     .lvl = 64,
     .species = SPECIES_DRAGONITE,
     .heldItem = ITEM_LIFE_ORB,
-    .moves = {MOVE_EXTREME_SPEED, MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_ICE_BEAM}
+    .moves = {MOVE_EXTREME_SPEED, MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_ICE_BEAM},
 	.abilityNums = 1,
     },
     {
@@ -1154,7 +1154,7 @@ static const struct TrainerMonItemCustomMoves sParty_Leah[] = {  // Overwritten,
     .lvl = 64,
     .species = SPECIES_DRAGONITE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_EXTREME_SPEED, MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_ICE_BEAM}
+    .moves = {MOVE_EXTREME_SPEED, MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_ICE_BEAM},
 	.abilityNums = 1,
     },
     {
