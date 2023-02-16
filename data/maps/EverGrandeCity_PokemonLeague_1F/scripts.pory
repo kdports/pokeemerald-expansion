@@ -17,6 +17,14 @@ script EverGrandeCity_E4Battle1_LeftTrigger {
 }
 
 script EverGrandeCity_E4Battle1_PrepDialogue {
+	playse(SE_TRUCK_DOOR)
+	setmetatile(5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	special(DrawWholeMapView)
 	msgbox(format("CAROLINE: Think you're ready for this, bitch?\pBRANDON: Caroline, calm down. No need to be so worked up.\pCAROLINE: Whatever, I'm ready to go! No need for a warm up!"))
 	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
 	switch(var(VAR_RESULT)) {
@@ -38,6 +46,150 @@ script E4Battle1_EndBossFight {
 	closemessage
 }
 
+script EverGrandeCity_E4Battle2_CenterTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_CenterTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle2_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle2_RightTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_RightTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle2_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle2_LeftTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_LeftTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle2_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle2_PrepDialogue {
+	playse(SE_TRUCK_DOOR)
+	setmetatile(5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	special(DrawWholeMapView)
+	msgbox(format("NOAH: Lookie here! I spy, with my little eye...\pNICK: Hmmm.... are you afraid?"))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			trainerbattle_double(TRAINER_SHELLY_WEATHER_INSTITUTE, Route116_LeaderBattleIntro, E4Battle2_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle2_EndBossFight, NO_MUSIC)
+		case 0:
+			trainerbattle_double(TRAINER_DAISY, Route116_LeaderBattleIntro, E4Battle2_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle2_EndBossFight, NO_MUSIC)
+	}
+	closemessage
+}
+
+text E4Battle2_BossDefeated {
+	format("NICK: Fuck! Shit! Fuck!\pNOAH: GRAAAAAAH!")
+}
+
+script E4Battle2_EndBossFight {
+	msgbox(format("NOAH: ...\pNICK: ...\pNOAH:...\pNICK: You can keep going. Did we not mention that?"))
+	call(PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles)
+	closemessage
+}
+
+script EverGrandeCity_E4Battle3_CenterTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_CenterTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle3_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle3_RightTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_RightTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle3_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle3_LeftTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_LeftTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle3_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle3_PrepDialogue {
+	playse(SE_TRUCK_DOOR)
+	setmetatile(5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	special(DrawWholeMapView)
+	msgbox(format("AVAANI: Why, hello!\pMATTHEW: Hi.\pAVAANI: Ooooooh, I can't wait! I'm so excited!\pMATTHEW: Me too. Ready?"))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			trainerbattle_double(TRAINER_SHELLY_SEAFLOOR_CAVERN, Route116_LeaderBattleIntro, E4Battle3_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle3_EndBossFight, NO_MUSIC)
+		case 0:
+			trainerbattle_double(TRAINER_ROSE_1, Route116_LeaderBattleIntro, E4Battle3_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle3_EndBossFight, NO_MUSIC)
+	}
+	closemessage
+}
+
+text E4Battle3_BossDefeated {
+	format("AVAANI: Yep, that was so cool!\pMATTHEW: Pretty good!")
+}
+
+script E4Battle3_EndBossFight {
+	msgbox(format("AVAANI: I'll be watching your next battle, I can't miss this.\pMATTHEW: Me neither. Good luck!"))
+	call(PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles)
+	closemessage
+}
+
+script EverGrandeCity_E4Battle4_CenterTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_CenterTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle4_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle4_RightTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_RightTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle4_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle4_LeftTrigger {
+	applymovement(OBJ_EVENT_ID_PLAYER, E4_LeftTrigger)
+	waitmovement(0)
+	call(EverGrandeCity_E4Battle4_PrepDialogue)
+}
+
+script EverGrandeCity_E4Battle4_PrepDialogue {
+	playse(SE_TRUCK_DOOR)
+	setmetatile(5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE)
+	setmetatile(5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	setmetatile(7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE)
+	special(DrawWholeMapView)
+	msgbox(format("BELINDA: Well.\pNATASHA: Hey! Long time no see.\pBELINDA: You haven't seen all my tricks yet. Are you fine with that?"))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			trainerbattle_double(TRAINER_ARCHIE, Route116_LeaderBattleIntro, E4Battle4_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle4_EndBossFight, NO_MUSIC)
+		case 0:
+			trainerbattle_double(TRAINER_FELIX, Route116_LeaderBattleIntro, E4Battle4_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle4_EndBossFight, NO_MUSIC)
+	}
+	closemessage
+}
+
+text E4Battle4_BossDefeated {
+	format("NATASHA: That was great!\pBELINDA: I'm so tired...")
+}
+
+script E4Battle4_EndBossFight {
+	msgbox(format("BELINDA: Yawn...\pNATASHA: Woohoo! Just one fight left!"))
+	call(PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles)
+	closemessage
+}
+
 movement E4_CenterTrigger {
 	walk_up * 5
 }
@@ -49,7 +201,7 @@ movement E4_RightTrigger {
 }
 
 movement E4_LeftTrigger {
-	walk_up * 5
+	walk_up * 4
 	walk_right
 	walk_up
 }

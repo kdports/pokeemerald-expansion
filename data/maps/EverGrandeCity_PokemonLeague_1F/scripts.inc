@@ -5,7 +5,29 @@ EverGrandeCity_E4Battle1_CenterTrigger::
 	return
 
 
+EverGrandeCity_E4Battle1_RightTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_RightTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle1_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle1_LeftTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_LeftTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle1_PrepDialogue
+	return
+
+
 EverGrandeCity_E4Battle1_PrepDialogue::
+	playse SE_TRUCK_DOOR
+	setmetatile 5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	special DrawWholeMapView
 	msgbox EverGrandeCity_E4Battle1_PrepDialogue_Text_0
 	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
 	switch VAR_RESULT
@@ -31,6 +53,171 @@ E4Battle1_EndBossFight::
 	return
 
 
+EverGrandeCity_E4Battle2_CenterTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_CenterTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle2_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle2_RightTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_RightTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle2_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle2_LeftTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_LeftTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle2_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle2_PrepDialogue::
+	playse SE_TRUCK_DOOR
+	setmetatile 5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	special DrawWholeMapView
+	msgbox EverGrandeCity_E4Battle2_PrepDialogue_Text_0
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, EverGrandeCity_E4Battle2_PrepDialogue_3
+	case 0, EverGrandeCity_E4Battle2_PrepDialogue_4
+EverGrandeCity_E4Battle2_PrepDialogue_1:
+	closemessage
+	return
+
+EverGrandeCity_E4Battle2_PrepDialogue_3:
+	trainerbattle_double TRAINER_SHELLY_WEATHER_INSTITUTE, Route116_LeaderBattleIntro, E4Battle2_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle2_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle2_PrepDialogue_1
+
+EverGrandeCity_E4Battle2_PrepDialogue_4:
+	trainerbattle_double TRAINER_DAISY, Route116_LeaderBattleIntro, E4Battle2_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle2_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle2_PrepDialogue_1
+
+
+E4Battle2_EndBossFight::
+	msgbox E4Battle2_EndBossFight_Text_0
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	closemessage
+	return
+
+
+EverGrandeCity_E4Battle3_CenterTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_CenterTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle3_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle3_RightTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_RightTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle3_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle3_LeftTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_LeftTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle3_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle3_PrepDialogue::
+	playse SE_TRUCK_DOOR
+	setmetatile 5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	special DrawWholeMapView
+	msgbox EverGrandeCity_E4Battle3_PrepDialogue_Text_0
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, EverGrandeCity_E4Battle3_PrepDialogue_3
+	case 0, EverGrandeCity_E4Battle3_PrepDialogue_4
+EverGrandeCity_E4Battle3_PrepDialogue_1:
+	closemessage
+	return
+
+EverGrandeCity_E4Battle3_PrepDialogue_3:
+	trainerbattle_double TRAINER_SHELLY_SEAFLOOR_CAVERN, Route116_LeaderBattleIntro, E4Battle3_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle3_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle3_PrepDialogue_1
+
+EverGrandeCity_E4Battle3_PrepDialogue_4:
+	trainerbattle_double TRAINER_ROSE_1, Route116_LeaderBattleIntro, E4Battle3_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle3_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle3_PrepDialogue_1
+
+
+E4Battle3_EndBossFight::
+	msgbox E4Battle3_EndBossFight_Text_0
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	closemessage
+	return
+
+
+EverGrandeCity_E4Battle4_CenterTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_CenterTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle4_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle4_RightTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_RightTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle4_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle4_LeftTrigger::
+	applymovement OBJ_EVENT_ID_PLAYER, E4_LeftTrigger
+	waitmovement 0
+	call EverGrandeCity_E4Battle4_PrepDialogue
+	return
+
+
+EverGrandeCity_E4Battle4_PrepDialogue::
+	playse SE_TRUCK_DOOR
+	setmetatile 5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	special DrawWholeMapView
+	msgbox EverGrandeCity_E4Battle4_PrepDialogue_Text_0
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, EverGrandeCity_E4Battle4_PrepDialogue_3
+	case 0, EverGrandeCity_E4Battle4_PrepDialogue_4
+EverGrandeCity_E4Battle4_PrepDialogue_1:
+	closemessage
+	return
+
+EverGrandeCity_E4Battle4_PrepDialogue_3:
+	trainerbattle_double TRAINER_ARCHIE, Route116_LeaderBattleIntro, E4Battle4_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle4_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle4_PrepDialogue_1
+
+EverGrandeCity_E4Battle4_PrepDialogue_4:
+	trainerbattle_double TRAINER_FELIX, Route116_LeaderBattleIntro, E4Battle4_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, E4Battle4_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_E4Battle4_PrepDialogue_1
+
+
+E4Battle4_EndBossFight::
+	msgbox E4Battle4_EndBossFight_Text_0
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	closemessage
+	return
+
+
 E4_CenterTrigger:
 	walk_up
 	walk_up
@@ -49,7 +236,6 @@ E4_RightTrigger:
 	step_end
 
 E4_LeftTrigger:
-	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -201,8 +387,54 @@ E4Battle1_EndBossFight_Text_0:
 	.string "BRANDON: I hope you're ready for what\n"
 	.string "comes next.$"
 
+EverGrandeCity_E4Battle2_PrepDialogue_Text_0:
+	.string "NOAH: Lookie here! I spy, with my little\n"
+	.string "eye...\p"
+	.string "NICK: Hmmm.... are you afraid?$"
+
+E4Battle2_EndBossFight_Text_0:
+	.string "NOAH: ...\p"
+	.string "NICK: ...\p"
+	.string "NOAH:...\p"
+	.string "NICK: You can keep going. Did we not\n"
+	.string "mention that?$"
+
+EverGrandeCity_E4Battle3_PrepDialogue_Text_0:
+	.string "AVAANI: Why, hello!\p"
+	.string "MATTHEW: Hi.\p"
+	.string "AVAANI: Ooooooh, I can't wait! I'm so\n"
+	.string "excited!\p"
+	.string "MATTHEW: Me too. Ready?$"
+
+E4Battle3_EndBossFight_Text_0:
+	.string "AVAANI: I'll be watching your next\n"
+	.string "battle, I can't miss this.\p"
+	.string "MATTHEW: Me neither. Good luck!$"
+
+EverGrandeCity_E4Battle4_PrepDialogue_Text_0:
+	.string "BELINDA: Well.\p"
+	.string "NATASHA: Hey! Long time no see.\p"
+	.string "BELINDA: You haven't seen all my tricks\n"
+	.string "yet. Are you fine with that?$"
+
+E4Battle4_EndBossFight_Text_0:
+	.string "BELINDA: Yawn...\p"
+	.string "NATASHA: Woohoo! Just one fight left!$"
+
 E4Battle1_BossDefeated::
 	.string "CAROLINE: Wha- argh, I thought we were\n"
 	.string "in tune!\p"
-	.string "BRANDON: ...Congratulations. This was\n"
+	.string "BRANDON: ...Congratulations. That was\n"
 	.string "well done.$"
+
+E4Battle2_BossDefeated::
+	.string "NICK: Fuck! Shit! Fuck!\p"
+	.string "NOAH: GRAAAAAAH!$"
+
+E4Battle3_BossDefeated::
+	.string "AVAANI: Yep, that was so cool!\p"
+	.string "MATTHEW: Pretty good!$"
+
+E4Battle4_BossDefeated::
+	.string "NATASHA: That was great!\p"
+	.string "BELINDA: I'm so tired...$"

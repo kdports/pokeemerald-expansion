@@ -1,3 +1,32 @@
+script EverGrandeCity_ChampionsRoom_EventScript_Kevin {
+	playbgm(MUS_ENCOUNTER_CHAMPION, FALSE)
+	msgbox(format("KEVIN: You've come a long way to get here. I'm your final challenge. After this you will truly be a champion."))
+	multichoicedefault(20, 8, MULTI_EASYHARD, 1, FALSE)
+	switch(var(VAR_RESULT)) {
+		case 1:
+			trainerbattle_double(TRAINER_ROSE_2, Route116_LeaderBattleIntro, ChampionBattle_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, ChampionBattle_EndBossFight, NO_MUSIC)
+		case 0:
+			trainerbattle_double(TRAINER_VIOLET, Route116_LeaderBattleIntro, ChampionBattle_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, ChampionBattle_EndBossFight, NO_MUSIC)
+	}
+	closemessage
+}
+
+script ChampionBattle_EndBossFight {
+	msgbox(format("KEVIN: This was no small feat. I hope you've enjoyed playing. Now, please, follow me."))
+	closemessage
+	applymovement(LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit)
+	applymovement(OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit)
+	waitmovement(0)
+	setflag(FLAG_HIDE_PETALBURG_GYM_GREETER)
+	warp(MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16)
+	waitstate
+	releaseall
+}
+
+text ChampionBattle_BossDefeated {
+	format("KEVIN: Well... how about that.")
+}
+
 raw `
 .set LOCALID_WALLACE, 1
 .set LOCALID_RIVAL, 2
@@ -33,7 +62,7 @@ EverGrandeCity_ChampionsRoom_EventScript_EnterRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace
 	waitmovement 0
 	setvar VAR_TEMP_1, 1
-	goto EverGrandeCity_ChampionsRoom_EventScript_Wallace
+	goto EverGrandeCity_ChampionsRoom_EventScript_Kevin
 	releaseall
 	end
 
@@ -168,6 +197,8 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerExitStart:
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerExit:
 	walk_up
+	walk_up
+	walk_up
 	delay_16
 	walk_up
 	delay_8
@@ -208,6 +239,8 @@ EverGrandeCity_ChampionsRoom_Movement_WallaceExitStart:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Movement_WallaceExit:
+	walk_up
+	walk_up
 	walk_up
 	delay_8
 	set_invisible

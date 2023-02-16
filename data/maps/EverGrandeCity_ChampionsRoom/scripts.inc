@@ -1,3 +1,36 @@
+EverGrandeCity_ChampionsRoom_EventScript_Kevin::
+	playbgm MUS_ENCOUNTER_CHAMPION, FALSE
+	msgbox EverGrandeCity_ChampionsRoom_EventScript_Kevin_Text_0
+	multichoicedefault 20, 8, MULTI_EASYHARD, 1, FALSE
+	switch VAR_RESULT
+	case 1, EverGrandeCity_ChampionsRoom_EventScript_Kevin_3
+	case 0, EverGrandeCity_ChampionsRoom_EventScript_Kevin_4
+EverGrandeCity_ChampionsRoom_EventScript_Kevin_1:
+	closemessage
+	return
+
+EverGrandeCity_ChampionsRoom_EventScript_Kevin_3:
+	trainerbattle_double TRAINER_ROSE_2, Route116_LeaderBattleIntro, ChampionBattle_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, ChampionBattle_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_ChampionsRoom_EventScript_Kevin_1
+
+EverGrandeCity_ChampionsRoom_EventScript_Kevin_4:
+	trainerbattle_double TRAINER_VIOLET, Route116_LeaderBattleIntro, ChampionBattle_BossDefeated, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, ChampionBattle_EndBossFight, NO_MUSIC
+	goto EverGrandeCity_ChampionsRoom_EventScript_Kevin_1
+
+
+ChampionBattle_EndBossFight::
+	msgbox ChampionBattle_EndBossFight_Text_0
+	closemessage
+	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
+	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit
+	waitmovement 0
+	setflag FLAG_HIDE_PETALBURG_GYM_GREETER
+	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
+	waitstate
+	releaseall
+	return
+
+
 .set LOCALID_WALLACE, 1
 .set LOCALID_RIVAL, 2
 .set LOCALID_BIRCH, 3
@@ -32,7 +65,7 @@ EverGrandeCity_ChampionsRoom_EventScript_EnterRoom::
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace
 	waitmovement 0
 	setvar VAR_TEMP_1, 1
-	goto EverGrandeCity_ChampionsRoom_EventScript_Wallace
+	goto EverGrandeCity_ChampionsRoom_EventScript_Kevin
 	releaseall
 	end
 
@@ -167,6 +200,8 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerExitStart:
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerExit:
 	walk_up
+	walk_up
+	walk_up
 	delay_16
 	walk_up
 	delay_8
@@ -207,6 +242,8 @@ EverGrandeCity_ChampionsRoom_Movement_WallaceExitStart:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Movement_WallaceExit:
+	walk_up
+	walk_up
 	walk_up
 	delay_8
 	set_invisible
@@ -341,3 +378,16 @@ EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
 	.string "It can't be helped if that's the rule.\p"
 	.string "{PLAYER}, way to go!\n"
 	.string "Congratulations!$"
+
+EverGrandeCity_ChampionsRoom_EventScript_Kevin_Text_0:
+	.string "KEVIN: You've come a long way to get\n"
+	.string "here. I'm your final challenge. After\l"
+	.string "this you will truly be a champion.$"
+
+ChampionBattle_EndBossFight_Text_0:
+	.string "KEVIN: This was no small feat. I hope\n"
+	.string "you've enjoyed playing. Now, please,\l"
+	.string "follow me.$"
+
+ChampionBattle_BossDefeated::
+	.string "KEVIN: Well... how about that.$"
